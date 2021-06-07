@@ -1,4 +1,4 @@
-let state = false;
+﻿let state = false;
 let div_1 = false;
 let div_2 = false;
 let div_3 = false;

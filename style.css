@@ -16,7 +16,6 @@ nav {
   width: 100%;
   position: fixed;
   z-index: 1;
-  overflow: hidden;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 nav div {
@@ -100,9 +99,6 @@ button:hover {
   display: flex;
   align-items: center;
 }
-.visible:hover {
-  background: #888888;
-}
 .side_menu_list p {
   padding-left: 17px;
   font-size: 1rem;
@@ -141,8 +137,6 @@ button:hover {
 .line_break {
   height: 0.1px;
   width: 100%;
-  margin-bottom: 5px;
-  margin-top: 2px;
   background: #3c4858;
 }
 /* Section CSS */
@@ -493,13 +487,13 @@ input {
   border-top-right-radius: 0;
 }
 .slide_nav {
-  visibility: visible;
   margin: 10px;
   cursor: pointer;
 }
 .slide_nav > img {
   width: 24.5px;
-  height: 51.5px;
+  height: 25px;
+  margin: 5px;
 }
 /* Media Queries */
 @media (max-width: 952px) {
@@ -579,9 +573,6 @@ input {
   .section_5_content > p {
     font-size: 0.8rem;
   }
-  .slide_nav {
-    display: none;
-  }
   .section_6_cart {
     width: 100vw;
   }
@@ -594,6 +585,9 @@ input {
     margin-left: 20px;
   }
   .section_6_cart > div:nth-child(2) {
+    display: none;
+  }
+  .slide_nav {
     display: none;
   }
 }
