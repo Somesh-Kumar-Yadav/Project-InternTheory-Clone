@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Internships and Online Courses for College Students | Intern Theory
+    </title>
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="side_menu" id="side_bar">
+        <div class="menu_btn" id="menu_btn_2">
+          <img class="menu_image" src="images/menu.png" />
+        </div>
+        <div class="logo_btn">
+          <img class="logo" src="images/logo.png" />
+        </div>
+        <div class="side_menu_list">
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Home</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path
+                  d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"
+                ></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Internships</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Jobs</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Post Internship</p>
+            </div>
+          </div>
+          <div class="visible" onclick="disappear(1)">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Courses</p>
+              <svg
+                class="drop_down"
+                id="drop_down_1"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+              <svg
+                class="drop_up"
+                id="drop_up_1"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="div_1_1" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Online Courses</p>
+            </div>
+          </div>
+          <div id="div_1_2" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Classroom Training</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Contact Us</p>
+            </div>
+          </div>
+          <div class="line_break"></div>
+          <div class="visible" onclick="disappear(2)">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Register</p>
+              <svg
+                class="drop_down"
+                id="drop_down_2"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+              <svg
+                class="drop_up"
+                id="drop_up_2"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="div_2_1" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Company</p>
+            </div>
+          </div>
+          <div id="div_2_2" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Student</p>
+            </div>
+          </div>
+          <div class="visible" onclick="disappear(3)">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M14 6v15H3v-2h2V3h9v1h5v15h2v2h-4V6h-3zm-4 5v2h2v-2h-2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Login</p>
+              <svg
+                class="drop_down"
+                id="drop_down_3"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+              <svg
+                class="drop_up"
+                id="drop_up_3"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="div_3_1" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Company</p>
+            </div>
+          </div>
+          <div id="div_3_2" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Student</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu_btn" id="menu_btn">
+        <img class="menu_image" src="images/menu.png" />
+      </div>
+      <div class="logo_btn" id="logo_btn">
+        <img class="logo" src="images/logo.png" />
+      </div>
+      <div class="sign_btn">
+        <button>SIGN IN</button>
+      </div>
+      <div class="cart_btn">
+        <img class="cart_image" src="images/shopping_cart.svg" />
+      </div>
+    </nav>
+    <div class="container" id="container">
+      <section class="section_1">
+        <div>
+          <div>
+            <h5>Let’s Get You <span> Ready</span></h5>
+            <p>
+              The One Stop to Upgrade Your Resume. Expand Your Skillset. Do An
+              Internship. Get Placed
+            </p>
+          </div>
+          <div class="search_box">
+            <form>
+              <div class="search_box_1">
+                <input type="text" placeholder="Cities..." />
+                <input type="text" placeholder="Types..." />
+                <input type="text" placeholder="Preferences..." />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="section_2">
+        <div>
+          <div class="section_2_cont_1">
+            <h1>PLETHORA OF OPPORTUNITIES<span> FOR YOU</span></h1>
+            <hr />
+            <p>
+              We are on a mission to connect employers to young talent all over
+              India. With our strong corporate network, it will no longer be a
+              challenge to find the right internship for you
+            </p>
+          </div>
+          <div class="section_2_cont_2">
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-1.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-2.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-3.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-4.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-6.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-7.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-8.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-9.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-10.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-11.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-12.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-13.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-14.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-15.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-16.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-17.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-18.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-19.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-20.png"
+              />
+            </div>
+            <div>
+              <img
+                class="partner_logo"
+                src="https://assets.interntheory.com/creative/home-logo/logo-21.png"
+              />
+            </div>
+          </div>
+          <br />
+        </div>
+      </section>
+      <section class="section_3">
+        <div class="section_3_title">
+          <h1>LET’S GET SOME <span> WORK EXPERIENCE </span></h1>
+        </div>
+        <div class="section_3_body">
+          <div class="cart_work_exp">
+            <img
+              src="https://assets.interntheory.com/creative/home-internships/Marketing-Icon.jpg"
+            />
+          </div>
+          <div class="cart_work_exp">
+            <img
+              src="https://assets.interntheory.com/creative/home-internships/BD.jpg"
+            />
+          </div>
+          <div class="cart_work_exp">
+            <img
+              src="https://assets.interntheory.com/creative/home-internships/Content-Writing.jpg"
+            />
+          </div>
+          <div class="cart_work_exp">
+            <img
+              src="https://assets.interntheory.com/creative/home-internships/Graphic.jpg"
+            />
+          </div>
+          <div class="cart_work_exp">
+            <img
+              src="https://assets.interntheory.com/creative/home-internships/Finance.jpg"
+            />
+          </div>
+          <div class="cart_work_exp">
+            <img
+              src="https://assets.interntheory.com/creative/home-internships/HR.jpg"
+            />
+          </div>
+          <div class="cart_work_exp">
+            <img
+              src="https://assets.interntheory.com/creative/home-internships/Eng.jpg"
+            />
+          </div>
+          <div class="cart_work_exp">
+            <img
+              src="https://assets.interntheory.com/creative/home-internships/All-Internships.jpg"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="section_4">
+        <div class="section_4_title">
+          <h1>HOW ABOUT <span> UPSKILLING ?</span></h1>
+        </div>
+        <div class="section_4_body">
+          <div class="cart_upskill">
+            <img
+              src="https://assets.interntheory.com/creative/home-courses/Homepage-stock.jpg"
+            />
+          </div>
+          <div class="cart_upskill">
+            <img
+              src="https://assets.interntheory.com/creative/home-courses/Homepage-digital.jpg"
+            />
+          </div>
+          <div class="cart_upskill">
+            <img
+              src="https://assets.interntheory.com/creative/home-courses/Homepage-web.jpg"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="section_5">
+        <div>
+          <div class="section_5_img">
+            <img src="https://assets.interntheory.com/creative/chart.png" />
+          </div>
+          <div class="section_5_content">
+            <h1>WE ARE CONSTANTLY <span>GROWING</span></h1>
+
+            <p>
+              We are on a mission to help every student in India. Upgrading your
+              CV and getting you a meaningful job remains our sole motive and we
+              are not stopping anytime soon.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section_6">
+        <div class="slide_nav" onclick="left()">
+          <img src="/images/left.svg" />
+        </div>
+        <div class="section_6_cart">
+          <div>
+            <div class="section_6_cart_sec_1">
+              <img
+                class="section_6_cart_img"
+                src="https://assets.interntheory.com/img/testimonial-image/in1.jpg"
+              />
+              <h5>Sshikha Bodwaani</h5>
+              <span class="section_6_cart_position"
+                >Sr. Exec. HR at BookMyShow</span
+              >
+            </div>
+            <div class="section_6_cart_sec_2">
+              <p>
+                "We have been using InternTheory for over a year now and are
+                very happy with the quality of applications that we receive.
+                Their team has been very helpful in screening applications for
+                the various internship requirements we had. It has been a
+                delight working with them."
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="section_6_cart_sec_1 section_6_cart_sec_1_2">
+              <img
+                class="section_6_cart_img"
+                src="https://assets.interntheory.com/img/testimonial-image/in4.jpg"
+              />
+              <h5>Harshil Bhadra</h5>
+              <span class="section_6_cart_position">Intern at Porsche</span>
+            </div>
+          </div>
+        </div>
+        <div class="slide_nav" onclick="right()">
+          <img src="/images/right.svg" />
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+<script src="index.js"></script>
