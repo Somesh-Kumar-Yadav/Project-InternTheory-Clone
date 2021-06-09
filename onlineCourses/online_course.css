@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* Navigation CSS */
+nav {
+  background: #ffffff;
+  height: 66px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+nav div {
+  float: left;
+}
+.menu_btn,
+.cart_btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  margin-top: 9px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.cart_btn,
+.sign_btn {
+  cursor: pointer;
+  float: right;
+}
+.cart_btn {
+  margin-right: 20px;
+}
+button {
+  border: none;
+  border-radius: 5px;
+  background: #dd1e2e;
+  height: 36px;
+  color: white;
+  width: 90px;
+  margin-top: 15px;
+  font-weight: bold;
+  margin-right: 25px;
+  box-shadow: 0.5px 0.5px 3px #888888;
+}
+button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.menu_btn:hover,
+.cart_btn:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+.menu_image {
+  width: 48px;
+  height: 48px;
+}
+.cart_image {
+  width: 28px;
+  height: 28px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.logo {
+  cursor: pointer;
+  width: 85px;
+  height: 48px;
+  margin-top: 9px;
+  margin-left: 18px;
+}
+/* Side Menu */
+.side_menu {
+  display: absolute;
+  float: left;
+  left: 0px;
+  height: 100vh;
+  width: 300px;
+  background-color: white;
+  display: none;
+  box-shadow: 0.5px 0.5px 8px #888888;
+}
+.side_menu_list {
+  width: 100%;
+  clear: both;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.visible {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.visible:hover {
+  background-color: rgba(102, 102, 102, 0.2);
+}
+
+.side_menu_list p {
+  padding-left: 17px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.side_menu_svg_cont {
+  width: 20%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side_menu_svg {
+  color: #446478;
+  height: 24px;
+  width: 24px;
+}
+.side_menu_content {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.drop_down,
+.drop_up {
+  color: blue;
+  height: 24px;
+  width: 24px;
+  margin-right: 15px;
+}
+.drop_up,
+.hidden {
+  display: none;
+}
+.line_break {
+  height: 0.1px;
+  width: 100%;
+  background: #3c4858;
+}
+
+.online_course {
+  background-color: rgb(248, 248, 248);
+  max-width: 100%;
+  box-sizing: border-box;
+
+  color: #3c4858;
+
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+  position: absolute;
+  top: 66px;
+}
+.online_course_upper {
+  width: 100%;
+
+  text-align: center;
+  background: url(https://assets.interntheory.com/creative/courses/listpage/Course-bannerbg.jpg);
+  margin: auto;
+  background-repeat: no-repeat;
+
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.online_course_upper img {
+  width: 75%;
+}
+.online_course_lower {
+  width: 80%;
+  margin: auto;
+}
+.carts {
+  display: flex;
+
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+.cart {
+  width: 23%;
+  padding: 0.01%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  margin: 0.8%;
+  box-shadow: 0.5px 0.5px 8px #7a77776e;
+  justify-content: space-between;
+  background-color: white;
+}
+.carts > .cart > .padding {
+  padding: 5%;
+}
+.carts > .cart > .padding p {
+  font-size: 14px;
+}
+.cart img {
+  width: 100%;
+  height: 110%;
+  border-radius: 2px;
+  border-image-repeat: none;
+}
+.border_bottom {
+  border-bottom: 1.5px dashed gray;
+  padding-bottom: 10%;
+}
+.border_bottom > p {
+  font-size: 0.875rem;
+}
+
+.left_align {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 15px;
+  margin: 1%;
+  margin-top: 0px;
+}
+.left_align * {
+  margin: 1%;
+}
+.color_gray {
+  color: gray;
+  font-weight: normal;
+}
+.line_through {
+  text-decoration: line-through;
+}
+.color_black {
+  color: black;
+}
+.color_yellow {
+  color: rgb(254, 179, 39);
+  font-weight: bold;
+  text-decoration: none;
+  margin: 1%;
+  margin-top: 0px;
+  font-size: 13px;
+}
+.border_radius {
+  border-radius: 130%;
+  border: 1px solid rgb(254, 179, 39);
+  margin: 0px 0px -1px 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.color_green {
+  color: rgb(80, 126, 221);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 5px;
+}
+.color_green:hover {
+  background-color: rgba(80, 127, 221, 0.055);
+}
+.button {
+  background-color: rgb(222, 30, 47);
+  border: none;
+  padding: 1px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  width: 100px;
+}
+.button:hover {
+  background-color: rgb(161, 4, 4);
+  cursor: pointer;
+}
+
+/*///////////////////////////////////////////////////// footer//////////////////////////////////////////////////// */
+
+.footer {
+  background-color: rgb(69, 101, 120);
+
+  color: rgb(254, 254, 251);
+
+  padding: 2%;
+
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01071em;
+}
+.footer_upper {
+  display: flex;
+  text-decoration: none;
+  width: 80%;
+  margin: auto;
+}
+.links {
+  width: 6%;
+
+  margin-top: 3%;
+}
+.search {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid rgb(153, 51, 73); */
+}
+.search > div {
+  width: 25%;
+}
+.footer_lower {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.footer_lower_links {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  /* border: 1px solid lawngreen; */
+  margin-top: 2%;
+}
+.copyright {
+  text-align: center;
+}
+.hr_line {
+  background-color: rgb(152, 152, 153);
+  height: 1px;
+  width: 100%;
+  margin: 5px;
+}
+@media (max-width: 942px) {
+  .footer_upper {
+    display: none;
+  }
+  .footer_lower {
+    display: none;
+  }
+}
+
+/* ############################################### MEDIA QUARY ####################################################### */
+
+@media (max-width: 587px) {
+  .carts {
+    flex-direction: column;
+    width: 98%;
+    justify-content: center;
+    margin: auto;
+  }
+  .cart {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (min-width: 588px) and (max-width: 1000px) {
+  .carts {
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .cart {
+    width: 38vw;
+    justify-content: center;
+  }
+}

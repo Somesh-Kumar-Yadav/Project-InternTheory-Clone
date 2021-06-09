@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      async=""
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"
+      rel="stylesheet"
+    />
+ <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+    <link
+      async=""
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      async=""
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+    <title>Online Courses | Intern Theory</title>
+    <link rel="stylesheet" href="online_course.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="side_menu" id="side_bar">
+        <div class="menu_btn" id="menu_btn_2">
+          <img class="menu_image" src="images/menu.png" />
+        </div>
+        <div class="logo_btn">
+          <img class="logo" src="images/logo.png" />
+        </div>
+        <div class="side_menu_list">
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Home</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path
+                  d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"
+                ></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Internships</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Jobs</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Post Internship</p>
+            </div>
+          </div>
+          <div class="visible" onclick="disappear(1)">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Courses</p>
+              <svg
+                class="drop_down"
+                id="drop_down_1"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+              <svg
+                class="drop_up"
+                id="drop_up_1"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="div_1_1" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Online Courses</p>
+            </div>
+          </div>
+          <div id="div_1_2" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Classroom Training</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Contact Us</p>
+            </div>
+          </div>
+          <div class="line_break"></div>
+          <div class="visible" onclick="disappear(2)">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Register</p>
+              <svg
+                class="drop_down"
+                id="drop_down_2"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+              <svg
+                class="drop_up"
+                id="drop_up_2"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="div_2_1" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Company</p>
+            </div>
+          </div>
+          <div id="div_2_2" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Student</p>
+            </div>
+          </div>
+          <div class="visible" onclick="disappear(3)">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M14 6v15H3v-2h2V3h9v1h5v15h2v2h-4V6h-3zm-4 5v2h2v-2h-2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Login</p>
+              <svg
+                class="drop_down"
+                id="drop_down_3"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+              <svg
+                class="drop_up"
+                id="drop_up_3"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="div_3_1" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Company</p>
+            </div>
+          </div>
+          <div id="div_3_2" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Student</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu_btn" id="menu_btn">
+        <img class="menu_image" src="images/menu.png" />
+      </div>
+      <div class="logo_btn" id="logo_btn">
+        <img class="logo" src="images/logo.png" />
+      </div>
+      <div class="sign_btn">
+        <button>SIGN IN</button>
+      </div>
+      <div class="cart_btn">
+        <img class="cart_image" src="images/shopping_cart.svg" />
+      </div>
+    </nav>
+
+    <div class="online_course" id="online_course">
+      <div class="online_course_upper">
+        <img
+          src="https://assets.interntheory.com/creative/courses/listpage/Course-banner1.png"
+          alt="Image of words"
+        />
+      </div>
+      <div class="online_course_lower">
+        <div class="color_gray" style="padding: 10px">
+          <h3 style="font-weight: normal; font-size: 20px">
+            Certified Online Courses
+          </h3>
+          <p style="font-size: 14px">
+            Upgrade your skills with Intern Theory's online learning platform.
+            Enrol for any certified online courses and get a step ahead of
+            competition. Select from a range of skill based online courses and
+            kickstart your career.
+          </p>
+        </div>
+        <div class="carts" id="carts">
+          <div class="cart" id="cart_1">
+            <div>
+              <img
+                style="height: 115px"
+                src="https://assets.interntheory.com/creative/courses/thumbnails/it.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div>
+                <h4 class="color_black">IT Stater Pack(4 Courses)</h4>
+                <p class="color_gray">
+                  Learn the most demanded skills in the IT industry today Sig...
+                </p>
+              </div>
+              <div class="border_bottom"></div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 32999</h5>
+                <h3 class="color_black">₹ 15999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 915/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_1_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+          <div class="cart" id="cart_2">
+            <div>
+              <img
+                style="height: 115px"
+                src="https://assets.interntheory.com/creative/courses/thumbnails/finthumbnail.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div>
+                <h4 class="color_black">Finance Starter Pack (3 Courses)</h4>
+                <p class="color_gray" style="margin-bottom: -18px">
+                  Learn the most demanded skills in the Finance industry today
+                  ...
+                </p>
+              </div>
+              <div class="border_bottom"></div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 23999</h5>
+                <h3 class="color_black">₹ 11999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 687/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_2_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+          <div class="cart" id="cart_2">
+            <div>
+              <img
+                src="https://assets.interntheory.com/creative/courses/thumbnails/digital-marketing-course.png"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div class="border_bottom">
+                <h4 class="color_black">Digital Marketing Course</h4>
+                <p class="color_gray">
+                  Learn the art of digital marketing. Sign up for this online
+                  ...
+                </p>
+              </div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 11999</h5>
+                <h3 class="color_black">₹ 5999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 343/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_3_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+          <div class="cart" id="cart_4">
+            <div>
+              <img
+                src="https://assets.interntheory.com/creative/courses/thumbnails/stock-market-course.png"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div class="border_bottom">
+                <h4 class="color_black">Stock Market Course</h4>
+                <p class="color_gray">
+                  Learn how to trade and invest in stock markets. Enrol for th
+                  ...
+                </p>
+              </div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 11999</h5>
+                <h3 class="color_black">₹ 5999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 343/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_4_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+        </div>
+        <div class="carts">
+          <div class="cart" id="cart_5">
+            <div>
+              <img
+                src="https://assets.interntheory.com/creative/courses/thumbnails/data-analytics-r-programming-course.png"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div class="border_bottom">
+                <h4 class="color_black">
+                  Data Analytics With R Programming CourseI
+                </h4>
+                <p class="color_gray">
+                  Learn data science online. Join this online data analytics c
+                  ...
+                </p>
+              </div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 11999</h5>
+                <h3 class="color_black">₹ 5999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 343/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_5_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+          <div class="cart" id="cart_6">
+            <div>
+              <img
+                src="https://assets.interntheory.com/creative/courses/thumbnails/web-development-course.png"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div class="border_bottom">
+                <h4 class="color_black">Web Devlopement Course</h4>
+                <p class="color_gray">
+                  Learn the art of web design and web development. Join this o
+                  ...
+                </p>
+              </div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 7999</h5>
+                <h3 class="color_black">₹ 3999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 229/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_6_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+          <div class="cart" id="cart_7">
+            <div>
+              <img
+                src="https://assets.interntheory.com/creative/courses/thumbnails/tally-gst-course.png"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div class="border_bottom">
+                <h4 class="color_black">Tally + GST Course</h4>
+                <p class="color_gray">
+                  Sign up for this online tally and gst course and learn how t
+                  ...
+                </p>
+              </div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 7999</h5>
+                <h3 class="color_black">₹ 3999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 229/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_7_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+          <div class="cart" id="cart_8">
+            <div>
+              <img
+                src="https://assets.interntheory.com/creative/courses/thumbnails/android-app-development-kotlin-course.png"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div class="border_bottom">
+                <h4 class="color_black">
+                  Android App Developement Using Kotlin Course
+                </h4>
+                <p class="color_gray">
+                  Learn the art of android app design and web development. Joi
+                  ...
+                </p>
+              </div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 7999</h5>
+                <h3 class="color_black">₹ 3999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 229/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_8_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+        </div>
+        <div class="carts">
+          <div class="cart" id="cart_9">
+            <div>
+              <img
+                src="https://assets.interntheory.com/creative/courses/thumbnails/advanced-excel-course.png"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div class="border_bottom">
+                <h4 class="color_black">Advanced Excel Course</h4>
+                <p class="color_gray">
+                  Master MS Excel. Take the online ms excel course and learn t
+                  ...
+                </p>
+              </div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 5999</h5>
+                <h3 class="color_black">₹ 2999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 172/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_9_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+          <div class="cart" id="cart_10">
+            <div>
+              <img
+                src="https://assets.interntheory.com/creative/courses/thumbnails/r-programming-course.png"
+                alt="image"
+              />
+            </div>
+            <div class="padding">
+              <div class="border_bottom">
+                <h4 class="color_black">R Programmig Course</h4>
+                <p class="color_gray">
+                  learn r Programming online. Sign up for this online r progra..
+                </p>
+              </div>
+              <div class="left_align">
+                <h5 class="color_gray line_through">₹ 5999</h5>
+                <h3 class="color_black">₹ 2999</h3>
+              </div>
+              <div>
+                <a class="left_align color_yellow" href="#"
+                  >EMI Starting at ₹ 172/month
+                  <span class="border_radius color_yellow">?</span>
+                </a>
+              </div>
+            </div>
+            <div class="left_align">
+              <a class="color_green" href="#">KNOW MORE</a>
+              <button class="button" id="cart_10_button">ADD TO CART</button>
+              <!-- <button>CHECKOUT >></button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer_upper">
+          <div class="links">
+            <div>
+              <p>
+                <a
+                  class="material-icons jss290 fab fa-facebook-square"
+                  aria-hidden="true"
+                  href="https://www.facebook.com/interntheory"
+                  target="_blank"
+                  style="color: rgb(255, 255, 255)"
+                ></a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <a
+                  class="material-icons jss290 fab fa-linkedin"
+                  aria-hidden="true"
+                  href="https://www.linkedin.com/company/interntheory"
+                  target="_blank"
+                  style="color: rgb(255, 255, 255)"
+                ></a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <a
+                  class="material-icons fab fa-twitter-square"
+                  aria-hidden="true"
+                  href="https://twitter.com/InternTheory"
+                  target="_blank"
+                  style="color: rgb(255, 255, 255)"
+                ></a>
+              </p>
+            </div>
+            <div>
+              <a
+                class="material-icons jss290 fab fa-instagram jss282"
+                aria-hidden="true"
+                href="https://www.instagram.com/interntheory"
+                target="_blank"
+                style="color: rgb(255, 255, 255)"
+              ></a>
+            </div>
+          </div>
+          <div class="search">
+            <div class="by_place">
+              <div>BY PLACE</div>
+              <div class="hr_line"></div>
+              <div><p>Internship In Mumbai</p></div>
+              <div><p>Internship In Delhi</p></div>
+              <div><p>Internship In Banglore</p></div>
+              <div><p>Internship In Pune</p></div>
+              <div><p>Internship In Hydrabad</p></div>
+            </div>
+            <div class="by_profile">
+              <div>BY PROFILE</div>
+              <div class="hr_line"></div>
+              <div>
+                <p>Marketing Internships</p>
+              </div>
+              <div>
+                <p>Business Developement Internships</p>
+              </div>
+              <div>
+                <p>Content Writing Internships</p>
+              </div>
+              <div>
+                <p>Graphic Designing Internships</p>
+              </div>
+              <div>
+                <p>HR Internships</p>
+              </div>
+              <div>
+                <p>Engineering Internships</p>
+              </div>
+            </div>
+
+            <div class="by_type">
+              <div>BY TYPE</div>
+              <div class="hr_line"></div>
+              <div>
+                <p>Full Time Internships</p>
+              </div>
+              <div>
+                <p>Part Time Internships</p>
+              </div>
+              <div>
+                <p>Work From Home Internships</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_lower">
+          <div class="footer_lower_links">
+            <div>FIND INTERNSHIPS</div>
+            <div>POST INTERNSHIP</div>
+            <div>COURSES</div>
+            <div>TERMS AND CONDITIONS</div>
+            <div>PRIVACY POLICY</div>
+            <div>CONTACT US</div>
+            <div>ABOUT US</div>
+            <div>SITEMAP</div>
+          </div>
+          <div class="hr_line"></div>
+        </div>
+        <div class="copyright">
+          <p>© 2015 - 2021 INTERNTHEORY. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+      <div class="footer_upper">
+        <div class="links">
+          <div>
+            <p>
+              <a
+                class="material-icons jss290 fab fa-facebook-square"
+                aria-hidden="true"
+                href="https://www.facebook.com/interntheory"
+                target="_blank"
+                style="color: rgb(255, 255, 255)"
+              ></a>
+            </p>
+          </div>
+          <div>
+            <p>
+              <a
+                class="material-icons jss290 fab fa-linkedin"
+                aria-hidden="true"
+                href="https://www.linkedin.com/company/interntheory"
+                target="_blank"
+                style="color: rgb(255, 255, 255)"
+              ></a>
+            </p>
+          </div>
+          <div>
+            <p>
+              <a
+                class="material-icons fab fa-twitter-square"
+                aria-hidden="true"
+                href="https://twitter.com/InternTheory"
+                target="_blank"
+                style="color: rgb(255, 255, 255)"
+              ></a>
+            </p>
+          </div>
+          <div>
+            <a
+              class="material-icons jss290 fab fa-instagram jss282"
+              aria-hidden="true"
+              href="https://www.instagram.com/interntheory"
+              target="_blank"
+              style="color: rgb(255, 255, 255)"
+            ></a>
+          </div>
+        </div>
+        <div class="search">
+          <div class="by_place">
+            <div>BY PLACE</div>
+            <div class="hr_line"></div>
+            <div><p>Internship In Mumbai</p></div>
+            <div><p>Internship In Delhi</p></div>
+            <div><p>Internship In Banglore</p></div>
+            <div><p>Internship In Pune</p></div>
+            <div><p>Internship In Hydrabad</p></div>
+          </div>
+          <div class="by_profile">
+            <div>BY PROFILE</div>
+            <div class="hr_line"></div>
+            <div>
+              <p>Marketing Internships</p>
+            </div>
+            <div>
+              <p>Business Developement Internships</p>
+            </div>
+            <div>
+              <p>Content Writing Internships</p>
+            </div>
+            <div>
+              <p>Graphic Designing Internships</p>
+            </div>
+            <div>
+              <p>HR Internships</p>
+            </div>
+            <div>
+              <p>Engineering Internships</p>
+            </div>
+          </div>
+
+          <div class="by_type">
+            <div>BY TYPE</div>
+            <div class="hr_line"></div>
+            <div>
+              <p>Full Time Internships</p>
+            </div>
+            <div>
+              <p>Part Time Internships</p>
+            </div>
+            <div>
+              <p>Work From Home Internships</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_lower">
+        <div class="footer_lower_links">
+          <div>FIND INTERNSHIPS</div>
+          <div>POST INTERNSHIP</div>
+          <div>COURSES</div>
+          <div>TERMS AND CONDITIONS</div>
+          <div>PRIVACY POLICY</div>
+          <div>CONTACT US</div>
+          <div>ABOUT US</div>
+          <div>SITEMAP</div>
+        </div>
+        <div class="hr_line"></div>
+      </div>
+      <div class="copyright">
+        <p>© 2015 - 2021 INTERNTHEORY. ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- ////////////////  CSS Online Courses///////////////////////////////// -->
+
+<script src="online_courses.js"></script>
+
+<!-- ////////////////  CSS Online Courses///////////////////////////////// -->
+
+<script>
+  let state = false;
+  let div_1 = false;
+  let div_2 = false;
+  let div_3 = false;
+  let count = 0;
+  let menu_btn = document.querySelector("#menu_btn");
+  let menu_btn_2 = document.querySelector("#menu_btn_2");
+  let side_bar = document.querySelector("#side_bar");
+  let logo_btn = document.querySelector("#logo_btn");
+  let div_1_1 = document.querySelector("#div_1_1");
+  let div_1_2 = document.querySelector("#div_1_2");
+  let drop_down_1 = document.querySelector("#drop_down_1");
+  let drop_up_1 = document.querySelector("#drop_up_1");
+  let drop_down_2 = document.querySelector("#drop_down_2");
+  let drop_up_2 = document.querySelector("#drop_up_2");
+  let drop_down_3 = document.querySelector("#drop_down_3");
+  let drop_up_3 = document.querySelector("#drop_up_3");
+  menu_btn.addEventListener("click", openMenu);
+  menu_btn_2.addEventListener("click", openMenu);
+  document.getElementById("online_course").onclick = function (e) {
+    if (e.target != side_bar) {
+      side_bar.style.display = "none";
+      logo_btn.style.display = "inline-block";
+      menu_btn.style.display = "inline-block";
+      state = false;
+    }
+  };
+  function openMenu() {
+    state = !state;
+    if (state) {
+      side_bar.style.display = "inline-block";
+      menu_btn.style.display = "none";
+      logo_btn.style.display = "none";
+    } else {
+      side_bar.style.display = "none";
+      logo_btn.style.display = "inline-block";
+      menu_btn.style.display = "inline-block";
+    }
+  }
+  function disappear(i) {
+    if (i == 1) {
+      div_1 = !div_1;
+      if (div_1) {
+        div_1_1.style.display = "flex";
+        div_1_2.style.display = "flex";
+        drop_down_1.style.display = "none";
+        drop_up_1.style.display = "inline";
+        count += 1;
+      } else {
+        count -= 1;
+        drop_down_1.style.display = "inline";
+        drop_up_1.style.display = "none";
+        div_1_1.style.display = "none";
+        div_1_2.style.display = "none";
+      }
+    }
+    if (i == 2) {
+      div_2 = !div_2;
+      if (div_2) {
+        count += 1;
+        div_2_1.style.display = "flex";
+        div_2_2.style.display = "flex";
+        drop_down_2.style.display = "none";
+        drop_up_2.style.display = "inline";
+      } else {
+        count -= 1;
+        div_2_1.style.display = "none";
+        div_2_2.style.display = "none";
+        drop_down_2.style.display = "inline";
+        drop_up_2.style.display = "none";
+      }
+    }
+    if (i == 3) {
+      div_3 = !div_3;
+      if (div_3) {
+        div_3_1.style.display = "flex";
+        count += 1;
+        div_3_2.style.display = "flex";
+        drop_down_3.style.display = "none";
+        drop_up_3.style.display = "inline";
+      } else {
+        count -= 1;
+        div_3_1.style.display = "none";
+        div_3_2.style.display = "none";
+        drop_down_3.style.display = "inline";
+        drop_up_3.style.display = "none";
+      }
+    }
+    if (count < 2) {
+      side_bar.style.overflow = "visible";
+    } else {
+      side_bar.style.overflow = "scroll";
+    }
+  }
+</script>
