@@ -99,6 +99,10 @@ button:hover {
   display: flex;
   align-items: center;
 }
+.visible:hover {
+  background-color: rgba(102, 102, 102, 0.2);
+}
+
 .side_menu_list p {
   padding-left: 17px;
   font-size: 1rem;
@@ -138,6 +142,7 @@ button:hover {
   height: 0.1px;
   width: 100%;
   background: #3c4858;
+margin:10px 0px;
 }
 /* Section CSS */
 
@@ -495,6 +500,73 @@ input {
   height: 25px;
   margin: 5px;
 }
+
+/* ////// FOOTER  /////// */
+.footer {
+  background-color: rgb(69, 101, 120);
+
+  color: rgb(254, 254, 251);
+
+  padding: 2%;
+
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01071em;
+}
+.footer_upper {
+  display: flex;
+  text-decoration: none;
+  width: 80%;
+  margin: auto;
+}
+.links {
+  width: 6%;
+
+  margin-top: 3%;
+}
+.search {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid rgb(153, 51, 73); */
+}
+.search > div {
+  width: 25%;
+}
+.footer_lower {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.footer_lower_links {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  /* border: 1px solid lawngreen; */
+  margin-top: 2%;
+}
+.copyright {
+  text-align: center;
+}
+.hr_line {
+  background-color: rgb(152, 152, 153);
+  height: 1px;
+  width: 100%;
+  margin: 5px;
+}
+@media (max-width: 942px) {
+  .footer_upper {
+    display: none;
+  }
+  .footer_lower {
+    display: none;
+  }
+}
+
+/* //////////FOOTER //////// */
+
 /* Media Queries */
 @media (max-width: 952px) {
   button {
