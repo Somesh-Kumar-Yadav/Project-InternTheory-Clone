@@ -35,6 +35,17 @@ nav div {
   cursor: pointer;
   float: right;
 }
+.total {
+  background: #dd1e2e;
+  color: hsl(0, 0%, 100%);
+  font-size: 10px;
+  padding: 1px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  left: -5px;
+}
 .cart_btn {
   margin-right: 20px;
 }
@@ -119,6 +130,7 @@ button:hover {
   color: #446478;
   height: 24px;
   width: 24px;
+fill: currentColor;
 }
 .side_menu_content {
   display: flex;
@@ -133,6 +145,7 @@ button:hover {
   height: 24px;
   width: 24px;
   margin-right: 15px;
+fill: currentColor;
 }
 .drop_up,
 .hidden {
@@ -143,7 +156,7 @@ button:hover {
   width: 100%;
   background: #3c4858;
 }
-
+/* /////////////////////Container//////////////////////  */
 .online_course {
   background-color: rgb(248, 248, 248);
   max-width: 100%;
@@ -173,8 +186,12 @@ button:hover {
   width: 75%;
 }
 .online_course_lower {
-  width: 80%;
+  width: 85%;
   margin: auto;
+}
+.parent_carts {
+  width: 100%;
+  margin-bottom: 20px;
 }
 .carts {
   display: flex;
@@ -234,6 +251,7 @@ button:hover {
 }
 .color_black {
   color: black;
+  margin-bottom: 5px;
 }
 .color_yellow {
   color: rgb(254, 179, 39);
@@ -263,15 +281,29 @@ button:hover {
 .button {
   background-color: rgb(222, 30, 47);
   border: none;
-  padding: 1px;
+  padding: 8px;
   color: white;
   font-weight: bold;
-  border-radius: 6px;
-  width: 100px;
+  border-radius: 4px;
+  width: 120px;
+  text-align: center;
 }
 .button:hover {
   background-color: rgb(161, 4, 4);
   cursor: pointer;
+}
+
+@media (max-width: 587px) {
+  .carts {
+    flex-direction: column;
+    width: 98%;
+    justify-content: center;
+    margin: auto;
+  }
+  .cart {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /*///////////////////////////////////////////////////// footer//////////////////////////////////////////////////// */
@@ -337,11 +369,18 @@ button:hover {
   .footer_lower {
     display: none;
   }
+  .sign_btn > button {
+    height: 56px;
+    margin-top: 5px;
+  }
 }
 
 /* ############################################### MEDIA QUARY ####################################################### */
 
 @media (max-width: 587px) {
+  .sign_btn {
+    display: none;
+  }
   .carts {
     flex-direction: column;
     width: 98%;

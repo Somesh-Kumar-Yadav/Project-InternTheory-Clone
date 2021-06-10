@@ -187,3 +187,17 @@ function left() {
   sld_2 -= 1;
   slide_show();
 }
+// for total courses in carts
+let total_block = document.getElementById("total");
+let total;
+total = localStorage.getItem("total");
+if (total == null) {
+  total = 0;
+}
+if (total != 0) {
+  total_block.innerHTML = `${total}`;
+  total_block.style.visibility = "visible";
+} else {
+  total_block.style.visibility = "hidden";
+}
+localStorage.setItem("total", total);
