@@ -58,6 +58,17 @@ button:hover {
 .cart_btn:hover {
   background-color: rgba(0, 0, 0, 0.07);
 }
+.total {
+  background: #dd1e2e;
+  color: #fff;
+  font-size: 10px;
+  padding: 1px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  left: -5px;
+}
 .menu_image {
   width: 48px;
   height: 48px;
@@ -117,6 +128,7 @@ button:hover {
 }
 .side_menu_svg {
   color: #446478;
+  fill: currentColor;
   height: 24px;
   width: 24px;
 }
@@ -133,6 +145,7 @@ button:hover {
   height: 24px;
   width: 24px;
   margin-right: 15px;
+  fill: currentColor;
 }
 .drop_up,
 .hidden {
@@ -247,16 +260,59 @@ button:hover {
   text-align: center;
   margin-left: 8%;
 }
-/* .checkout_form .cart_emi span {
-  border: 1px solid rgb(254, 178, 38);
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 80%;
-  position: relative;
-  left: -22%;
-  font-weight: bold;
-} */
+/* Carts CSS */
+.opt_courses {
+  width: 100%;
+}
+.opt_courses_cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  color: #3c4858;
+  border-bottom: 2px dashed #ddd;
+}
+.opt_courses_left {
+  align-items: center;
 
+  display: flex;
+}
+
+.cross {
+  width: 24px;
+  height: 24px;
+  color: red;
+  fill: currentColor;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.opt_courses_title > h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.opt_courses_img {
+  margin-right: 20px;
+}
+.opt_courses_img > img {
+  height: 80px;
+  width: 120px;
+}
+.opt_courses_right {
+  display: flex;
+}
+.opt_courses_right > h2 {
+  font-size: 14px;
+}
+.opt_courses_right > p {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+#promo_price {
+  display: none;
+}
 /* ////////////  CART END //////////////////////// */
 
 /* ////// FOOTER  /////// */
@@ -372,5 +428,22 @@ button:hover {
   .footer {
     position: relative;
     top: 50px;
+  }
+  .opt_courses_title > h3 {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .opt_courses_right > p {
+    font-size: 10px;
+    text-decoration: line-through;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .opt_courses_right > h2 {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  .opt_courses_img {
+    margin-right: 10px;
   }
 }

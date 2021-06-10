@@ -130,7 +130,7 @@ button:hover {
   color: #446478;
   height: 24px;
   width: 24px;
-fill: currentColor;
+  fill: currentColor;
 }
 .side_menu_content {
   display: flex;
@@ -145,7 +145,7 @@ fill: currentColor;
   height: 24px;
   width: 24px;
   margin-right: 15px;
-fill: currentColor;
+  fill: currentColor;
 }
 .drop_up,
 .hidden {

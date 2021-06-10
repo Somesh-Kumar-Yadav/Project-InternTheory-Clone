@@ -280,7 +280,10 @@
         <button>SIGN IN</button>
       </div>
       <div class="cart_btn">
-        <img class="cart_image" src="images/shopping_cart.svg" />
+        <div>
+          <img class="cart_image" src="images/shopping_cart.svg" />
+        </div>
+        <div class="total" id="total">0</div>
       </div>
     </nav>
     <!-- ///////////////////////////////////////////////////////////////////  START  //////////////////////////////////////////////////////////// -->
@@ -288,44 +291,53 @@
       <div class="checkout_cart_main">
         <div class="left">
           <p>Cart</p>
-          <div>
-            <!-- <div> somesh do your part from here </div> -->
-          </div>
-          <div class="cart_empty">
+          <div class="opt_courses" id="opt_courses"></div>
+          <div class="cart_empty" id="cart_empty">
             <p>The cart is empty</p>
-            <button>CHECKOUT OUR COURSES</button>
+            <button onclick="online_course()">CHECKOUT OUR COURSES</button>
           </div>
         </div>
         <div class="vr_line"></div>
         <div class="right">
           <div class="checkout_form">
             <div>
-              <p>Amout</p>
-              <p>₹ 0</p>
+              <p>Amount</p>
+              <p id="amount">₹ 0</p>
             </div>
             <div>
               <p>CGST 9%</p>
-              <p>₹ 0</p>
+              <p id="cgst">₹ 0</p>
             </div>
             <div>
               <p>SGST 9%</p>
-              <p>₹ 0</p>
-            </div>
-            <div class="total">
-              <p>Total</p>
-              <p>₹ 0</p>
+              <p id="igst">₹ 0</p>
             </div>
             <div>
+              <p>Total</p>
+              <p id="total_cont">₹ 0</p>
+            </div>
+            <div id="promo_price">
+              <p>Discounted Total</p>
+              <p id="updated_price"></p>
+            </div>
+            <div id="coupon">
               <input
                 class="apply_coupon"
                 type="text"
                 placeholder="Coupon Code"
               />
             </div>
-            <button class="coupon_btn">GO</button>
+            <button class="coupon_btn" id="go" onclick="promocode()">GO</button>
 
             <!-- ////////////////// checkout button ////////////////////// -->
-            <button type="submit" class="checkout_btn">ENROLL</button>
+            <button
+              type="submit"
+              class="checkout_btn"
+              id="check_btn"
+              onclick="checkout_click()"
+            >
+              ENROLL
+            </button>
             <div class="cart_emi">EMI Starting at 915/month ?</div>
           </div>
         </div>

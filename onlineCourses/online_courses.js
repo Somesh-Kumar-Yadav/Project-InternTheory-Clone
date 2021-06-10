@@ -160,7 +160,7 @@ function checkOut(id) {
     localStorage.setItem("avail_courses", JSON.stringify(avail_courses));
     localStorage.setItem("total", total);
   } else {
-    window.location.href = "cart.html";
+    window.location.href = "../cart/cart.html";
   }
   if (total != 0) {
     total_block.innerHTML = `${total}`;
@@ -177,3 +177,7 @@ if (total != 0) {
 }
 localStorage.setItem("total", total);
 localStorage.setItem("avail_courses", JSON.stringify(avail_courses));
+// Move to cart Page
+function cart_page() {
+  window.location.href = "../cart/cart.html";
+}
