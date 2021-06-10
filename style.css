@@ -38,6 +38,17 @@ nav div {
 .cart_btn {
   margin-right: 20px;
 }
+.total {
+  background: #dd1e2e;
+  color: hsl(0, 0%, 100%);
+  font-size: 10px;
+  padding: 1px;
+  width: 10px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  left: -5px;
+}
 button {
   border: none;
   border-radius: 5px;
@@ -119,6 +130,7 @@ button:hover {
   color: #446478;
   height: 24px;
   width: 24px;
+  fill: currentColor;
 }
 .side_menu_content {
   display: flex;
@@ -133,6 +145,7 @@ button:hover {
   height: 24px;
   width: 24px;
   margin-right: 15px;
+  fill: currentColor;
 }
 .drop_up,
 .hidden {
@@ -142,7 +155,7 @@ button:hover {
   height: 0.1px;
   width: 100%;
   background: #3c4858;
-margin:10px 0px;
+  margin: 10px 0px;
 }
 /* Section CSS */
 
@@ -499,6 +512,7 @@ input {
   width: 24.5px;
   height: 25px;
   margin: 5px;
+  color: white;
 }
 
 /* ////// FOOTER  /////// */
@@ -565,7 +579,7 @@ input {
   }
 }
 
-/* //////////FOOTER END //////// */
+/* //////////FOOTER //////// */
 
 /* Media Queries */
 @media (max-width: 952px) {
