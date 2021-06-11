@@ -92,6 +92,34 @@ function disappear(i) {
     side_bar.style.overflow = "scroll";
   }
 }
+
+// for total courses in carts
+let total_block = document.getElementById("total");
+let total;
+total = localStorage.getItem("total");
+if (total == null) {
+  total = 0;
+}
+if (total != 0) {
+  total_block.innerHTML = `${total}`;
+  total_block.style.visibility = "visible";
+} else {
+  total_block.style.visibility = "hidden";
+}
+localStorage.setItem("total", total);
+//Navigate to online courses page
+function online_courses() {
+  window.location.href = "onlineCourses/online_courses.html";
+}
+//Navigate to contact us page
+function contact_us() {
+  window.location.href = "contact-us/contact_us.html";
+}
+//Navigate to home page
+function home() {
+  window.location.href = "contact-us/contact_us.html";
+}
+//////////////////////////Section -6 part/////////////////////
 const slide = [
   {
     name: "Harshil Bhadra",
@@ -186,22 +214,4 @@ function left() {
   sld -= 1;
   sld_2 -= 1;
   slide_show();
-}
-// for total courses in carts
-let total_block = document.getElementById("total");
-let total;
-total = localStorage.getItem("total");
-if (total == null) {
-  total = 0;
-}
-if (total != 0) {
-  total_block.innerHTML = `${total}`;
-  total_block.style.visibility = "visible";
-} else {
-  total_block.style.visibility = "hidden";
-}
-localStorage.setItem("total", total);
-//Navigate to online courses page
-function online_courses() {
-  window.location.href = "onlineCourses/online_courses.html";
 }

@@ -93,153 +93,174 @@ function disappear(i) {
   }
 }
 
-
-
-
-//////////////////// MADE BY RAMLALA ////////////////////////////////////////////////////// 
+// for total courses in carts
+let total_block = document.getElementById("total");
+let total;
+total = localStorage.getItem("total");
+if (total == null) {
+  total = 0;
+}
+if (total != 0) {
+  total_block.innerHTML = `${total}`;
+  total_block.style.visibility = "visible";
+} else {
+  total_block.style.visibility = "hidden";
+}
+localStorage.setItem("total", total);
+//////////////////// MADE BY RAMLALA //////////////////////////////////////////////////////
 
 function next_step_2(e) {
   e.preventDefault();
   let register_form_step_2 = document.getElementById("step_2_form");
-    let education = register_form_step_2.education.value;
-    let institute = register_form_step_2.institute.value;
-    let degree = register_form_step_2.degree.value;
-    let year = register_form_step_2.year.value;
- 
+  let education = register_form_step_2.education.value;
+  let institute = register_form_step_2.institute.value;
+  let degree = register_form_step_2.degree.value;
+  let year = register_form_step_2.year.value;
 
-
-
-
- 
-  
-if(education === ""){return alert("Please Fill Required* Details")}
-if(institute === ""){return alert("Please Fill Required* Details")}
-if(degree === ""){return alert("Please Fill Required* Details")}
-if(year === ""){return alert("Please Fill Required* Details")}
-
-
-
+  if (education === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (institute === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (degree === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (year === "") {
+    return alert("Please Fill Required* Details");
+  }
 
   let register_obj_step_2 = {
-      education,
-      institute,
-      degree,
-      year
-  }
+    education,
+    institute,
+    degree,
+    year,
+  };
 
   let register_data_step_2;
   register_data_step_2 = localStorage.getItem("register_data_step_2");
 
   if (register_data_step_2 === null) {
     register_data_step_2 = [];
+  } else {
+    register_data_step_2 = JSON.parse(register_data);
   }
-  else {
-    register_data_step_2 = JSON.parse(register_data)
-  }
 
-   
-   register_data_step_2.push(register_obj_step_2)
- window.location.href = "#";
-  localStorage.setItem("register_data_step_2",JSON.stringify(register_data_step_2))
-
-
-  
+  register_data_step_2.push(register_obj_step_2);
+  window.location.href = "#";
+  localStorage.setItem(
+    "register_data_step_2",
+    JSON.stringify(register_data_step_2)
+  );
 }
 
-
-
-
-
 function showSuggitions() {
-
-  let education = ["DOCTRATE", "", "POST GRADUATION", "GRADUATION", "DIPLOMA", "12TH EQUIVALENT", "10TH EQUIVALENT", "Advance Cerificate course", "Certificate Course"]
-  let institute = ["IIT", "NIT", "MNIT", "IIM", "STATE COLLEGE", "PRIVATE COLLEGE"]
-  let degree = ["BE", "BSC", "BCA", "", "BTECH", "Other"]
-  let year = ["First Year", "Second Year", "Third Year","Fouth Year","Fifth Year","Already Completed"]
+  let education = [
+    "DOCTRATE",
+    "",
+    "POST GRADUATION",
+    "GRADUATION",
+    "DIPLOMA",
+    "12TH EQUIVALENT",
+    "10TH EQUIVALENT",
+    "Advance Cerificate course",
+    "Certificate Course",
+  ];
+  let institute = [
+    "IIT",
+    "NIT",
+    "MNIT",
+    "IIM",
+    "STATE COLLEGE",
+    "PRIVATE COLLEGE",
+  ];
+  let degree = ["BE", "BSC", "BCA", "", "BTECH", "Other"];
+  let year = [
+    "First Year",
+    "Second Year",
+    "Third Year",
+    "Fouth Year",
+    "Fifth Year",
+    "Already Completed",
+  ];
   autocomplete(document.getElementById("education"), education);
   autocomplete(document.getElementById("institute"), institute);
   autocomplete(document.getElementById("degree"), degree);
   autocomplete(document.getElementById("year"), year);
 
   function autocomplete(inp, arr) {
- 
     var currentFocus;
- 
+
     inp.addEventListener("input", function (e) {
-      var a, b, i, val = this.value;
-   
+      var a,
+        b,
+        i,
+        val = this.value;
+
       closeAllLists();
-      if (!val) { return false; }
+      if (!val) {
+        return false;
+      }
       currentFocus = -1;
-     
+
       a = document.createElement("DIV");
       a.setAttribute("id", this.id + "autocomplete-list");
       a.setAttribute("class", "autocomplete-items");
-    
+
       this.parentNode.appendChild(a);
-    
+
       for (i = 0; i < arr.length; i++) {
-       
         if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-          
           b = document.createElement("DIV");
-          
+
           b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
           b.innerHTML += arr[i].substr(val.length);
-        
+
           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-          
+
           b.addEventListener("click", function (e) {
-            
             inp.value = this.getElementsByTagName("input")[0].value;
-           
+
             closeAllLists();
           });
           a.appendChild(b);
         }
       }
     });
-  
+
     inp.addEventListener("keydown", function (e) {
       var x = document.getElementById(this.id + "autocomplete-list");
       if (x) x = x.getElementsByTagName("div");
       if (e.keyCode == 40) {
-       
         currentFocus++;
-       
+
         addActive(x);
       } else if (e.keyCode == 38) {
-        
         currentFocus--;
-       
+
         addActive(x);
       } else if (e.keyCode == 13) {
-       
         e.preventDefault();
         if (currentFocus > -1) {
-    
           if (x) x[currentFocus].click();
         }
       }
     });
     function addActive(x) {
-   
       if (!x) return false;
-   
+
       removeActive(x);
       if (currentFocus >= x.length) currentFocus = 0;
-      if (currentFocus < 0) currentFocus = (x.length - 1);
-   
+      if (currentFocus < 0) currentFocus = x.length - 1;
+
       x[currentFocus].classList.add("autocomplete-active");
     }
     function removeActive(x) {
-   
       for (var i = 0; i < x.length; i++) {
         x[i].classList.remove("autocomplete-active");
       }
     }
     function closeAllLists(elmnt) {
-    
       var x = document.getElementsByClassName("autocomplete-items");
       for (var i = 0; i < x.length; i++) {
         if (elmnt != x[i] && elmnt != inp) {
@@ -252,6 +273,5 @@ function showSuggitions() {
       closeAllLists(e.target);
     });
   }
-
 }
-showSuggitions()
+showSuggitions();

@@ -392,3 +392,15 @@ function checkout_click() {
     window.location.href = "../index.html";
   }
 }
+//Navigate to home page
+function home() {
+  window.location.href = "../index.html";
+}
+//Navigate to online courses page
+function online_courses() {
+  window.location.href = "../onlineCourses/online_courses.html";
+}
+//Navigate to contact us page
+function contact_us() {
+  window.location.href = "../contact-us/contact_us.html";
+}
