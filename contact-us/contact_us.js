@@ -108,5 +108,13 @@ if (total != 0) {
 localStorage.setItem("total", total);
 //Navigate to online courses page
 function online_courses() {
-  window.location.href = "onlineCourses/online_courses.html";
+  window.location.href = "../onlineCourses/online_courses.html";
+}
+//Navigate to home page
+function home() {
+  window.location.href = "../index.html";
+}
+//Navigate to online courses page
+function online_courses() {
+  window.location.href = "../onlineCourses/online_courses.html";
 }

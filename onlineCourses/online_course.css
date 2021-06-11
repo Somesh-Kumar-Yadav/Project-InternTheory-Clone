@@ -35,6 +35,9 @@ nav div {
   cursor: pointer;
   float: right;
 }
+.cart_btn {
+  margin-right: 20px;
+}
 .total {
   background: #dd1e2e;
   color: hsl(0, 0%, 100%);
@@ -45,9 +48,6 @@ nav div {
   position: relative;
   text-align: center;
   left: -5px;
-}
-.cart_btn {
-  margin-right: 20px;
 }
 button {
   border: none;
@@ -78,6 +78,15 @@ button:hover {
   height: 28px;
   margin-top: 10px;
   margin-left: 10px;
+}
+.new_left {
+  margin-right: 5px;
+}
+.new_right {
+  margin-left: -5px;
+}
+.new_right > img {
+  border-radius: 50%;
 }
 .logo {
   cursor: pointer;
@@ -110,10 +119,26 @@ button:hover {
   display: flex;
   align-items: center;
 }
+.visible_2 {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+  background: rgb(251, 251, 251);
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  border-top: 1px solid rgb(238, 238, 238);
+}
 .visible:hover {
   background-color: rgba(102, 102, 102, 0.2);
 }
-
+.when_login {
+  display: flex;
+}
+.after_login {
+  display: none;
+}
 .side_menu_list p {
   padding-left: 17px;
   font-size: 1rem;
@@ -132,12 +157,41 @@ button:hover {
   width: 24px;
   fill: currentColor;
 }
+.side_menu_svg_2 {
+  color: #446478;
+  height: 48px;
+  width: 48px;
+  fill: currentColor;
+  border-radius: 50%;
+}
 .side_menu_content {
   display: flex;
   width: 80%;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+}
+.side_menu_content_2 {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+}
+.side_menu_content_2 > h1 {
+  color: #3c4858;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01071em;
+}
+.side_menu_content_2 > p {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
 }
 .drop_down,
 .drop_up {
@@ -155,6 +209,7 @@ button:hover {
   height: 0.1px;
   width: 100%;
   background: #3c4858;
+  margin: 10px 0px;
 }
 /* /////////////////////Container//////////////////////  */
 .online_course {

@@ -1,4 +1,3 @@
-
 /////////////////////////// MADE BY SOMESH /////////////////////////////////////////////////////////////////////
 
 let state = false;
@@ -96,9 +95,22 @@ function disappear(i) {
   }
 }
 
+// for total courses in carts
+let total_block = document.getElementById("total");
+let total;
+total = localStorage.getItem("total");
+if (total == null) {
+  total = 0;
+}
+if (total != 0) {
+  total_block.innerHTML = `${total}`;
+  total_block.style.visibility = "visible";
+} else {
+  total_block.style.visibility = "hidden";
+}
+localStorage.setItem("total", total);
 
-
-//////////////////// MADE BY RAMLALA ////////////////////////////////////////////////////// 
+//////////////////// MADE BY RAMLALA //////////////////////////////////////////////////////
 
 function next(e) {
   e.preventDefault();
@@ -113,29 +125,37 @@ function next(e) {
   let how_find = register_form.find.value;
   let looking = register_form.looking.value;
 
- 
-
-
-
   if (fname === "") {
-    let f_name = document.getElementById("fname")
-  // f_name.style.borderBottom = "1px solid red";
-  
-    
-    return alert("Please Fill Required* Details")
+    let f_name = document.getElementById("fname");
+    // f_name.style.borderBottom = "1px solid red";
+
+    return alert("Please Fill Required* Details");
   }
- 
-  
-if(lname === ""){return alert("Please Fill Required* Details")}
-if(email === ""){return alert("Please Fill Required* Details")}
-if(password === ""){return alert("Please Fill Required* Details")}
-if(mobile === ""){return alert("Please Fill Required* Details")}
-if(city === ""){return alert("Please Fill Required* Details")}
-if(preference === ""){return alert("Please Fill Required* Details")}
-if(how_find === ""){return alert("Please Fill Required* Details")}
-if(looking === ""){return alert("Please Fill Required* Details")}
 
-
+  if (lname === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (email === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (password === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (mobile === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (city === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (preference === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (how_find === "") {
+    return alert("Please Fill Required* Details");
+  }
+  if (looking === "") {
+    return alert("Please Fill Required* Details");
+  }
 
   let register_obj = {
     fname,
@@ -146,145 +166,154 @@ if(looking === ""){return alert("Please Fill Required* Details")}
     city,
     preference,
     how_find,
-    looking
-  }
+    looking,
+  };
 
   let register_data;
   register_data = localStorage.getItem("register_data");
 
   if (register_data === null) {
     register_data = [];
+  } else {
+    register_data = JSON.parse(register_data);
   }
-  else {
-    register_data = JSON.parse(register_data)
-  }
 
-  window.location.href = "step_2.html"
-  register_data.push(register_obj)
-  
+  window.location.href = "step_2.html";
+  register_data.push(register_obj);
 
-  localStorage.setItem("register_data",JSON.stringify(register_data))
-
-
-  
+  localStorage.setItem("register_data", JSON.stringify(register_data));
 }
-
 
 function showRemaining() {
   let full_name = document.getElementById("fname");
- 
-  full_name.addEventListener("focus", increase_by)
-  
-  let email_name = document.getElementById("email")
-  email_name.addEventListener("focus", increase_by)
-  
-  let password_name = document.getElementById("password")
-  password_name.addEventListener("focus", increase_by)
-  
+
+  full_name.addEventListener("focus", increase_by);
+
+  let email_name = document.getElementById("email");
+  email_name.addEventListener("focus", increase_by);
+
+  let password_name = document.getElementById("password");
+  password_name.addEventListener("focus", increase_by);
+
   let increase = 0;
   function increase_by() {
     increase++;
     if (increase == 3) {
-      let disp = document.getElementById("hidden")
+      let disp = document.getElementById("hidden");
       disp.style.display = "block";
     }
     // console.log(increase);
-
   }
 }
-showRemaining()
-
+showRemaining();
 
 function showSuggitions() {
-
-  let cities = ["Mumbai", "Navi-Mumbai", "Banglore", "Haidrabaad", "Delhi", "Bhopal", "Jaipur", "Gudgav", "Ahemadabaad"]
-  let preferences = ["Acturial Science", "Admin", "Animation", "Branding", "consulting", "Engineering"]
-  let find_us = ["From A Friend", "Google Search", "Google Ads", "Social Media", "Yahoo Search", "Other"]
-  let looking_for = ["Internships", "Jobs", "Boths"]
+  let cities = [
+    "Mumbai",
+    "Navi-Mumbai",
+    "Banglore",
+    "Haidrabaad",
+    "Delhi",
+    "Bhopal",
+    "Jaipur",
+    "Gudgav",
+    "Ahemadabaad",
+  ];
+  let preferences = [
+    "Acturial Science",
+    "Admin",
+    "Animation",
+    "Branding",
+    "consulting",
+    "Engineering",
+  ];
+  let find_us = [
+    "From A Friend",
+    "Google Search",
+    "Google Ads",
+    "Social Media",
+    "Yahoo Search",
+    "Other",
+  ];
+  let looking_for = ["Internships", "Jobs", "Boths"];
   autocomplete(document.getElementById("city"), cities);
   autocomplete(document.getElementById("preference"), preferences);
   autocomplete(document.getElementById("find"), find_us);
   autocomplete(document.getElementById("looking"), looking_for);
 
   function autocomplete(inp, arr) {
- 
     var currentFocus;
- 
+
     inp.addEventListener("input", function (e) {
-      var a, b, i, val = this.value;
-   
+      var a,
+        b,
+        i,
+        val = this.value;
+
       closeAllLists();
-      if (!val) { return false; }
+      if (!val) {
+        return false;
+      }
       currentFocus = -1;
-     
+
       a = document.createElement("DIV");
       a.setAttribute("id", this.id + "autocomplete-list");
       a.setAttribute("class", "autocomplete-items");
-    
+
       this.parentNode.appendChild(a);
-    
+
       for (i = 0; i < arr.length; i++) {
-       
         if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-          
           b = document.createElement("DIV");
-          
+
           b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
           b.innerHTML += arr[i].substr(val.length);
-        
+
           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-          
+
           b.addEventListener("click", function (e) {
-            
             inp.value = this.getElementsByTagName("input")[0].value;
-           
+
             closeAllLists();
           });
           a.appendChild(b);
         }
       }
     });
-  
+
     inp.addEventListener("keydown", function (e) {
       var x = document.getElementById(this.id + "autocomplete-list");
       if (x) x = x.getElementsByTagName("div");
       if (e.keyCode == 40) {
-       
         currentFocus++;
-       
+
         addActive(x);
       } else if (e.keyCode == 38) {
-        
         currentFocus--;
-       
+
         addActive(x);
       } else if (e.keyCode == 13) {
-       
         e.preventDefault();
         if (currentFocus > -1) {
-    
           if (x) x[currentFocus].click();
         }
       }
     });
     function addActive(x) {
-   
       if (!x) return false;
-   
+
       removeActive(x);
       if (currentFocus >= x.length) currentFocus = 0;
-      if (currentFocus < 0) currentFocus = (x.length - 1);
-   
+      if (currentFocus < 0) currentFocus = x.length - 1;
+
       x[currentFocus].classList.add("autocomplete-active");
     }
     function removeActive(x) {
-   
       for (var i = 0; i < x.length; i++) {
         x[i].classList.remove("autocomplete-active");
       }
     }
     function closeAllLists(elmnt) {
-    
       var x = document.getElementsByClassName("autocomplete-items");
       for (var i = 0; i < x.length; i++) {
         if (elmnt != x[i] && elmnt != inp) {
@@ -297,34 +326,5 @@ function showSuggitions() {
       closeAllLists(e.target);
     });
   }
-
 }
-showSuggitions()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+showSuggitions();
