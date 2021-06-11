@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internships and onlinecourses for students | Intern Theory</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="side_menu" id="side_bar">
+        <div class="menu_btn" id="menu_btn_2">
+          <img class="menu_image" src="images/menu.png" />
+        </div>
+        <div class="logo_btn">
+          <img class="logo" src="images/logo.png" />
+        </div>
+        <div class="side_menu_list">
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Home</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path
+                  d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"
+                ></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Internships</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Jobs</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M14 10H2v2h12v-2zm0-4H2v2h12V6zm4 8v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM2 16h8v-2H2v2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Post Internship</p>
+            </div>
+          </div>
+          <div class="visible" onclick="disappear(1)">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Courses</p>
+              <svg
+                class="drop_down"
+                id="drop_down_1"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+              <svg
+                class="drop_up"
+                id="drop_up_1"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="div_1_1" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Online Courses</p>
+            </div>
+          </div>
+          <div id="div_1_2" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Classroom Training</p>
+            </div>
+          </div>
+          <div class="visible">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Contact Us</p>
+            </div>
+          </div>
+          <div class="line_break"></div>
+          <div class="visible" onclick="disappear(2)">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Register</p>
+              <svg
+                class="drop_down"
+                id="drop_down_2"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+              <svg
+                class="drop_up"
+                id="drop_up_2"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="div_2_1" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Company</p>
+            </div>
+          </div>
+          <div id="div_2_2" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Student</p>
+            </div>
+          </div>
+          <div class="visible" onclick="disappear(3)">
+            <div class="side_menu_svg_cont">
+              <svg
+                class="side_menu_svg"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M14 6v15H3v-2h2V3h9v1h5v15h2v2h-4V6h-3zm-4 5v2h2v-2h-2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="side_menu_content">
+              <p>Login</p>
+              <svg
+                class="drop_down"
+                id="drop_down_3"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+              <svg
+                class="drop_up"
+                id="drop_up_3"
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                role="presentation"
+              >
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="div_3_1" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Company</p>
+            </div>
+          </div>
+          <div id="div_3_2" class="hidden visible">
+            <div class="side_menu_svg_cont"></div>
+            <div class="side_menu_content">
+              <p>Student</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu_btn" id="menu_btn">
+        <img class="menu_image" src="images/menu.png" />
+      </div>
+      <div class="logo_btn" id="logo_btn">
+        <img class="logo" src="images/logo.png" />
+      </div>
+      <div class="sign_btn">
+        <button>SIGN IN</button>
+      </div>
+      <div class="cart_btn">
+        <img class="cart_image" src="images/shopping_cart.svg" />
+      </div>
+    </nav>
+    <!-- ///////////////////////////////////////////////////////////////////  START//////////////////////////////////////////////////////////// -->
+
+    <div class="register" id="register">
+      <div class="register_main">
+        <p class="heading">Register Candidate</p>
+        <p class="para">Already have an account? <a href="#">Sign in</a></p>
+        <div class="background_red">
+          <p>
+            If you are a company looking to hire interns, please register as a
+            company by clicking <a href="#">here.</a>
+          </p>
+        </div>
+        <div class="login_with" style="background-color: rgb(67, 102, 178)">
+          <div>
+            <img
+              src="https://www.interntheory.com/assets/iconsLogos/facebook-circular-logo.svg"
+              alt="Facebook"
+            />
+          </div>
+          <div>SIGIN WITH FACEBOOK</div>
+        </div>
+        <div class="login_with" style="background-color: rgb(8, 125, 220)">
+          <div>
+            <img
+              src="https://www.interntheory.com/assets/iconsLogos/googlelogo.svg"
+              alt="Logo of Google"
+            />
+          </div>
+          <div>SIGIN WITH GOOGLE</div>
+        </div>
+        <div class="text_center">OR</div>
+
+        <form id="register_form" autocomplete="off">
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              placeholder="First Name*"
+            />
+          <input type="text" name="lname" id="lname" placeholder="Last Name*" />
+          <input type="email" name="email" id="email" placeholder="Email*" />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password*"
+          />
+          <div id="hidden">
+          <input
+            type="text"
+            name="mobile"
+            id="mobile"
+            placeholder="Mobile Number*"
+          />
+         <div>
+          <input type="text" name="city" id="city" placeholder="Select City*" />
+
+         </div>
+          
+         <div>
+          <input
+            type="text"
+            name="preference"
+            id="preference"
+            placeholder="Preference Select one or more*"
+          />
+         </div>
+         <div>
+            <input
+            type="text"
+            name="find"
+            id="find"
+            placeholder="How did you find us?*"
+          />
+         </div>
+         <div>
+          <input
+            type="text"
+            name="looking"
+            id="looking"
+            placeholder="What are you looking for?*"
+          />
+
+         </div>
+         
+          <input
+            type="text"
+            name="affilation"
+            id="affilation"
+            placeholder="Affiliate Code (if any)*"
+          />
+
+          </div>
+          <button id="next_btn" onclick="next(event)">NEXT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////////// END  //////////////////////////////////////////////////////////// -->
+
+    <!-- /////////////////////////////////////// FOOTER START ////////////////////////////// -->
+
+    <div class="footer">
+      <div class="footer_upper">
+        <div class="links">
+          <div>
+            <p>
+              <a
+                class="material-icons jss290 fab fa-facebook-square"
+                aria-hidden="true"
+                href="https://www.facebook.com/interntheory"
+                target="_blank"
+                style="color: rgb(255, 255, 255)"
+              ></a>
+            </p>
+          </div>
+          <div>
+            <p>
+              <a
+                class="material-icons jss290 fab fa-linkedin"
+                aria-hidden="true"
+                href="https://www.linkedin.com/company/interntheory"
+                target="_blank"
+                style="color: rgb(255, 255, 255)"
+              ></a>
+            </p>
+          </div>
+          <div>
+            <p>
+              <a
+                class="material-icons fab fa-twitter-square"
+                aria-hidden="true"
+                href="https://twitter.com/InternTheory"
+                target="_blank"
+                style="color: rgb(255, 255, 255)"
+              ></a>
+            </p>
+          </div>
+          <div>
+            <a
+              class="material-icons jss290 fab fa-instagram jss282"
+              aria-hidden="true"
+              href="https://www.instagram.com/interntheory"
+              target="_blank"
+              style="color: rgb(255, 255, 255)"
+            ></a>
+          </div>
+        </div>
+        <div class="search">
+          <div class="by_place">
+            <div>BY PLACE</div>
+            <div class="hr_line"></div>
+            <div><p>Internship In Mumbai</p></div>
+            <div><p>Internship In Delhi</p></div>
+            <div><p>Internship In Banglore</p></div>
+            <div><p>Internship In Pune</p></div>
+            <div><p>Internship In Hydrabad</p></div>
+          </div>
+          <div class="by_profile">
+            <div>BY PROFILE</div>
+            <div class="hr_line"></div>
+            <div>
+              <p>Marketing Internships</p>
+            </div>
+            <div>
+              <p>Business Developement Internships</p>
+            </div>
+            <div>
+              <p>Content Writing Internships</p>
+            </div>
+            <div>
+              <p>Graphic Designing Internships</p>
+            </div>
+            <div>
+              <p>HR Internships</p>
+            </div>
+            <div>
+              <p>Engineering Internships</p>
+            </div>
+          </div>
+
+          <div class="by_type">
+            <div>BY TYPE</div>
+            <div class="hr_line"></div>
+            <div>
+              <p>Full Time Internships</p>
+            </div>
+            <div>
+              <p>Part Time Internships</p>
+            </div>
+            <div>
+              <p>Work From Home Internships</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_lower">
+        <div class="footer_lower_links">
+          <div>FIND INTERNSHIPS</div>
+          <div>POST INTERNSHIP</div>
+          <div>COURSES</div>
+          <div>TERMS AND CONDITIONS</div>
+          <div>PRIVACY POLICY</div>
+          <div>CONTACT US</div>
+          <div>ABOUT US</div>
+          <div>SITEMAP</div>
+        </div>
+        <div class="hr_line"></div>
+      </div>
+      <div class="copyright">
+        <p>© 2015 - 2021 INTERNTHEORY. ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+    <!-- /////////////////////////////////////// END ////////////////////////////// -->
+  </body>
+
+  <script src="register.js"></script>
+  
+</html>
