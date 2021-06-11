@@ -201,3 +201,7 @@ if (total != 0) {
   total_block.style.visibility = "hidden";
 }
 localStorage.setItem("total", total);
+//Navigate to online courses page
+function online_courses() {
+  window.location.href = "onlineCourses/online_courses.html";
+}
