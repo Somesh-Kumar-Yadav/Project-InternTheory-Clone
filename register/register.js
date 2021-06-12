@@ -109,6 +109,62 @@ if (total != 0) {
   total_block.style.visibility = "hidden";
 }
 localStorage.setItem("total", total);
+//Navigate to online courses page-------------------------------------------->
+function online_courses() {
+  window.location.href = "../onlineCourses/online_courses.html";
+}
+//Navigate to contact us page
+function contact_us() {
+  window.location.href = "../contact-us/contact_us.html";
+}
+//Navigate to home page
+function home() {
+  window.location.href = "../index.html";
+}
+//Navigate to register page
+function register() {
+  window.location.href = "register.html";
+}
+//Navigate to logIn page
+function logIn() {
+  window.location.href = "../logIn/student_login.html";
+}
+//Navigate to cart page
+function cart() {
+  window.location.href = "../cart/cart.html";
+}
+//Navigate to logout
+function logout() {
+  let user = JSON.parse(localStorage.getItem("user"));
+  user = [];
+  localStorage.setItem("user", JSON.stringify(user));
+  window.location.href = "../index.html";
+}
+//for login---------------------------------------------------------
+user = localStorage.getItem("user");
+if (user == null) {
+  user = [];
+} else {
+  user = JSON.parse(user);
+}
+localStorage.setItem("user", JSON.stringify(user));
+let when_login = document.getElementsByClassName("when_login");
+let after_login = document.getElementsByClassName("after_login");
+if (user.length != 0) {
+  for (let i = 0; i < when_login.length; i++) {
+    when_login[i].style.display = "flex";
+  }
+  for (let i = 0; i < after_login.length; i++) {
+    after_login[i].style.display = "none";
+  }
+} else {
+  for (let i = 0; i < after_login.length; i++) {
+    after_login[i].style.display = "flex";
+  }
+  for (let i = 0; i < when_login.length; i++) {
+    when_login[i].style.display = "none";
+  }
+}
 
 //////////////////// MADE BY RAMLALA //////////////////////////////////////////////////////
 
@@ -177,11 +233,18 @@ function next(e) {
   } else {
     register_data = JSON.parse(register_data);
   }
-
-  window.location.href = "step_2.html";
+  let user;
+  user = localStorage.getItem("user");
+  if (user === null) {
+    user = [];
+  } else {
+    user = JSON.parse(user);
+  }
+  user = [register_obj];
+  localStorage.setItem("user", JSON.stringify(user));
   register_data.push(register_obj);
-
   localStorage.setItem("register_data", JSON.stringify(register_data));
+  window.location.href = "step_2.html";
 }
 
 function showRemaining() {

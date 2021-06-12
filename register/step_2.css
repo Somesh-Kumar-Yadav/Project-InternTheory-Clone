@@ -134,10 +134,10 @@ button:hover {
   background-color: rgba(102, 102, 102, 0.2);
 }
 .when_login {
-  display: flex;
+  display: none;
 }
 .after_login {
-  display: none;
+  display: flex;
 }
 .side_menu_list p {
   padding-left: 17px;

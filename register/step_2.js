@@ -147,11 +147,29 @@ function next_step_2(e) {
   }
 
   register_data_step_2.push(register_obj_step_2);
-  window.location.href = "../index.html";
   localStorage.setItem(
     "register_data_step_2",
     JSON.stringify(register_data_step_2)
   );
+  let user = JSON.parse(localStorage.getItem("user"));
+  let when_login = document.getElementsByClassName("when_login");
+  let after_login = document.getElementsByClassName("after_login");
+  if (user == []) {
+    for (let i = 0; i < when_login.length; i++) {
+      when_login[i].style.display = "flex";
+    }
+    for (let i = 0; i < after_login.length; i++) {
+      after_login[i].style.display = "none";
+    }
+  } else {
+    for (let i = 0; i < after_login.length; i++) {
+      after_login[i].style.display = "flex";
+    }
+    for (let i = 0; i < when_login.length; i++) {
+      when_login[i].style.display = "none";
+    }
+  }
+  window.location.href = "../index.html";
 }
 
 function showSuggitions() {
