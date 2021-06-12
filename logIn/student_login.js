@@ -1,5 +1,3 @@
-
-
 let state = false;
 let div_1 = false;
 let div_2 = false;
@@ -122,61 +120,108 @@ function home() {
   window.location.href = "contact-us/contact_us.html";
 }
 
-
 function create_account() {
-    window.location.href = "../register/register.html"
+  window.location.href = "../register/register.html";
 }
-
-
-
-
-
-
 
 function sendData() {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
-     
-   
 
-    
-  if (email === "") { return alert("Please Fill Required* Input") }
-  if (password === "") { return alert("Please Fill Required* Input") }
-    
+  if (email === "") {
+    return alert("Please Fill Required* Input");
+  }
+  if (password === "") {
+    return alert("Please Fill Required* Input");
+  }
+
   let value = false;
 
-  let stored_data = JSON.parse(localStorage.getItem("register_data"))
-  
+  let stored_data = JSON.parse(localStorage.getItem("register_data"));
+
   if (stored_data !== null) {
-  
     for (let i = 0; i < stored_data.length; i++) {
-      if ((stored_data[i].email === email || stored_data[i].mobile === email) && stored_data[i].password === password) {
+      if (
+        (stored_data[i].email === email || stored_data[i].mobile === email) &&
+        stored_data[i].password === password
+      ) {
         value = true;
-        let temp = i;
+        let user = JSON.parse(localStorage.getItem("user"));
+        user = stored_data[i];
+        localStorage.setItem("user", JSON.stringify(user));
         break;
       }
     }
 
     if (value) {
-      window.location.href = "../index.html"
-      
-    }
-    else {
-      alert("Invalid credentials")
+      window.location.href = "../index.html";
+    } else {
+      alert("Invalid credentials");
     }
 
     console.log(stored_data);
+  } else {
+    alert("You have to Register First");
   }
-  else {
-  alert("You have to Register First")
 }
-
-}
-
 
 function yet_to_add() {
-  alert("Sorry this feature will be added soon")
+  alert("Sorry this feature will be added soon");
 }
 
-
-
+//Navigate to online courses page-------------------------------------------->
+function online_courses() {
+  window.location.href = "../onlineCourses/online_courses.html";
+}
+//Navigate to contact us page
+function contact_us() {
+  window.location.href = "../contact-us/contact_us.html";
+}
+//Navigate to home page
+function home() {
+  window.location.href = "../index.html";
+}
+//Navigate to register page
+function register() {
+  window.location.href = "../register/register.html";
+}
+//Navigate to logIn page
+function logIn() {
+  window.location.href = "student_login.html";
+}
+//Navigate to cart page
+function cart() {
+  window.location.href = "../cart/cart.html";
+}
+//Navigate to logout
+function logout() {
+  let user = JSON.parse(localStorage.getItem("user"));
+  user = [];
+  localStorage.setItem("user", JSON.stringify(user));
+  window.location.href = "../index.html";
+}
+//for login---------------------------------------------------------
+user = localStorage.getItem("user");
+if (user == null) {
+  user = [];
+} else {
+  user = JSON.parse(user);
+}
+localStorage.setItem("user", JSON.stringify(user));
+let when_login = document.getElementsByClassName("when_login");
+let after_login = document.getElementsByClassName("after_login");
+if (user.length != 0) {
+  for (let i = 0; i < when_login.length; i++) {
+    when_login[i].style.display = "flex";
+  }
+  for (let i = 0; i < after_login.length; i++) {
+    after_login[i].style.display = "none";
+  }
+} else {
+  for (let i = 0; i < after_login.length; i++) {
+    after_login[i].style.display = "flex";
+  }
+  for (let i = 0; i < when_login.length; i++) {
+    when_login[i].style.display = "none";
+  }
+}

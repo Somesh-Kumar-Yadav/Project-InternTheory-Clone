@@ -121,5 +121,5 @@ function home() {
 }
 
 function yet_to_add() {
-  alert("Sorry this feature will be added soon")
+  alert("Sorry this feature will be added soon");
 }
