@@ -143,11 +143,11 @@ function next_step_2(e) {
   if (register_data_step_2 === null) {
     register_data_step_2 = [];
   } else {
-    register_data_step_2 = JSON.parse(register_data);
+    register_data_step_2 = JSON.parse(register_data_step_2);
   }
 
   register_data_step_2.push(register_obj_step_2);
-  window.location.href = "#";
+  window.location.href = "../index.html";
   localStorage.setItem(
     "register_data_step_2",
     JSON.stringify(register_data_step_2)
