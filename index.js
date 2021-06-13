@@ -689,3 +689,356 @@ To know more about our services or work, please visit www.gyanpro.com
 ];
 
 localStorage.setItem("intership_obj", JSON.stringify(intership_obj));
+///////////////////////////////////////Job Objects.-------------------------------------------->
+const jobObj = [
+  {
+    post: "Account Assistant",
+    company: "Serene Ventures Private Limited",
+    preference: "Finance",
+    location: "Mumbai",
+    Stipend: "Salary: 20000 per month",
+    time_left: "3 weeks left",
+    image:
+      "https://assets.interntheory.com/uploads/company/logos/299a85028b5217bfb58834ec55c523b40c221136.jpg",
+    facebook:
+      "http://www.facebook.com/sharer.php?u=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    twitter:
+      "https://twitter.com/share?text=Apply%20for%20Account%20Assistant&amp;url=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    google:
+      "https://plus.google.com/share?url=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    whatsapp:
+      "https://api.whatsapp.com/send?text=Hey%2C%0D%0AI%20came%20across%20this%20awesome%20opportunity%20that%20might%20interest%20you%21%20Check%20it%20out%20here%3A%20www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    openings: "1",
+    start: "5th Jun 2021",
+    deadline: "5th Jul 2021",
+    intern_description: `Manage and oversee the daily operations of the accounting department.
+Manage account receivables and payable.
+Ensuring zero outstanding fees in coordination with the operations team.
+Cash receipts management.
+Bank reconciliation.
+Establish and enforce proper accounting methods and policies.
+Provide recommendations to leadership teams
+Day to Day entry of purchase, sales, bank, etc. in Tally software 
+Industry Experience Required `,
+    company_description: `
+    If you were to visualise our brand name, you’d be able to define the style that our brand stands for. An intriguing juxtaposition of styles that bring together the vivid and flamboyant with the classic and sublime. Born of a dearth of statement pieces in India, our brand strives to bring you collections of clothing and jewelry that are unique, uber stylish and unconventional. Our dream is to build a haven  that explores a universe of fashion where colors know no bounds, art forms that have rarely been seen before and a grade of quality that India is still quite unfamiliar with. 
+    `,
+    address:
+      "80, A-Wing, Ground floor, Virwani Industrial Estate, Western Express Highway, Goregaon (East), mumbai, 400063.",
+  },
+  {
+    post: "Junior Accountant",
+    company: "Serene Ventures Private Limited",
+    preference: "Finance",
+    location: "Mumbai",
+    Stipend: "Salary: 15000 per month",
+    time_left: "3 weeks left",
+    image:
+      "https://assets.interntheory.com/uploads/company/logos/299a85028b5217bfb58834ec55c523b40c221136.jpg",
+    facebook:
+      "http://www.facebook.com/sharer.php?u=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    twitter:
+      "https://twitter.com/share?text=Apply%20for%20Account%20Assistant&amp;url=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    google:
+      "https://plus.google.com/share?url=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    whatsapp:
+      "https://api.whatsapp.com/send?text=Hey%2C%0D%0AI%20came%20across%20this%20awesome%20opportunity%20that%20might%20interest%20you%21%20Check%20it%20out%20here%3A%20www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    openings: "1",
+    start: "5th Jun 2021",
+    deadline: "5th Jul 2021",
+    intern_description: `
+    Day to day general filing in Tally 
+Accounts-related document filing
+Knowledge of bank-related work such as depositing cheques etc.
+Cash receipts management.
+Bank reconciliation.`,
+    company_description: `
+    If you were to visualise our brand name, you’d be able to define the style that our brand stands for. An intriguing juxtaposition of styles that bring together the vivid and flamboyant with the classic and sublime. Born of a dearth of statement pieces in India, our brand strives to bring you collections of clothing and jewelry that are unique, uber stylish and unconventional. Our dream is to build a haven  that explores a universe of fashion where colors know no bounds, art forms that have rarely been seen before and a grade of quality that India is still quite unfamiliar with. 
+    `,
+    address:
+      "80, A-Wing, Ground floor, Virwani Industrial Estate, Western Express Highway, Goregaon (East), mumbai, 400063.",
+  },
+  {
+    post: "Inventory Management",
+    company: "Serene Ventures Private Limited",
+    preference: "Finance",
+    location: "Mumbai",
+    Stipend: "Salary: 15000 per month",
+    time_left: "3 weeks left",
+    image:
+      "https://assets.interntheory.com/uploads/company/logos/299a85028b5217bfb58834ec55c523b40c221136.jpg",
+    facebook:
+      "http://www.facebook.com/sharer.php?u=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    twitter:
+      "https://twitter.com/share?text=Apply%20for%20Account%20Assistant&amp;url=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    google:
+      "https://plus.google.com/share?url=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    whatsapp:
+      "https://api.whatsapp.com/send?text=Hey%2C%0D%0AI%20came%20across%20this%20awesome%20opportunity%20that%20might%20interest%20you%21%20Check%20it%20out%20here%3A%20www.interntheory.com/internship/finance-internship-at-serene-ventures-private-limited-u73b2",
+    openings: "1",
+    start: "5th Jun 2021",
+    deadline: "5th Jul 2021",
+    intern_description: `Experienced in women’s apparels inventory management.
+Storing & counting all clothes and accessories.
+Packing for the product for which order has come, receiving import or goods.
+Checking of the clothes and its defects etc.`,
+    company_description: `
+    If you were to visualise our brand name, you’d be able to define the style that our brand stands for. An intriguing juxtaposition of styles that bring together the vivid and flamboyant with the classic and sublime. Born of a dearth of statement pieces in India, our brand strives to bring you collections of clothing and jewelry that are unique, uber stylish and unconventional. Our dream is to build a haven  that explores a universe of fashion where colors know no bounds, art forms that have rarely been seen before and a grade of quality that India is still quite unfamiliar with. 
+    `,
+    address:
+      "80, A-Wing, Ground floor, Virwani Industrial Estate, Western Express Highway, Goregaon (East), mumbai, 400063.",
+  },
+  {
+    post: "Customer Support Executive",
+    company: "Shades of Spring",
+    preference: "Customer Relationship Management",
+    location: "Bangalore",
+    Stipend: "Salary: 15000 per month",
+    time_left: "3 weeks left",
+    image:
+      "https://assets.interntheory.com/uploads/company/logos/0321f06a408a53237b5615e89db5f31de458fad7.jpg",
+    facebook:
+      "http://www.facebook.com/sharer.php?u=www.interntheory.com/internship/customer-relationship-management-internship-at-shades-of-spring-xfsix",
+    twitter:
+      "https://twitter.com/share?text=Apply%20for%20Customer%20Support%20Executive&amp;url=www.interntheory.com/internship/customer-relationship-management-internship-at-shades-of-spring-xfsix",
+    google:
+      "https://plus.google.com/share?url=www.interntheory.com/internship/customer-relationship-management-internship-at-shades-of-spring-xfsix",
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=www.interntheory.com/internship/customer-relationship-management-internship-at-shades-of-spring-xfsix",
+    whatsapp:
+      "https://api.whatsapp.com/send?text=Hey%2C%0D%0AI%20came%20across%20this%20awesome%20opportunity%20that%20might%20interest%20you%21%20Check%20it%20out%20here%3A%20www.interntheory.com/internship/customer-relationship-management-internship-at-shades-of-spring-xfsix",
+    openings: "2",
+    start: "2nd Jun 2021",
+    deadline: "2nd Jul 2021",
+    intern_description: `Selected candidate's day-to-day responsibilities include:
+
+Ensure that our customers remain delighted with our product and service and that our customer retention and repeat purchase rates stay high and continue to grow
+2. Work with a talented team as well as individually, via email, phone, live chat, and social media
+3. Play a vital role in feeding back what the customers are saying to all areas of the business including operations, tech, brand & marketing
+4. Take responsibility for some operational processes e.g. financial recording and order processing
+You will be part of the go-to team for our customers to get in touch, for sharing and celebrating their joys and supporting and rectifying any problems they have.`,
+    company_description: `Shades of Spring is a flower subscription service that delivers a surprise box of flowers like sunflowers, gerberas, lilies and orchids to your doorstep. 
+    `,
+    address:
+      "NO-151, I B MAIN, opp. to LAKSHMI MEDICALS, Koramangala 8th Block, Koramangala, Bengaluru, Karnataka 560095, bangalore, 560095.",
+  },
+  {
+    post: "Content Writer",
+    company: "Arjava Advisors Pvt Ltd",
+    preference: "Content Writing",
+    location: "Kolkata",
+    Stipend: "Salary: 15000 - 25000 per month",
+    time_left: "2 weeks left",
+    image:
+      "https://assets.interntheory.com/uploads/company/logos/6599b0ae5b21a19db5f39dde2fbe2688589eea57.jpg",
+    facebook:
+      "http://www.facebook.com/sharer.php?u=www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    twitter:
+      "https://twitter.com/share?text=Apply%20for%20Content%20Writer&amp;url=www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    google:
+      "https://plus.google.com/share?url=www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    whatsapp:
+      "https://api.whatsapp.com/send?text=Hey%2C%0D%0AI%20came%20across%20this%20awesome%20opportunity%20that%20might%20interest%20you%21%20Check%20it%20out%20here%3A%20www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    openings: "1",
+    start: "29th May 2021",
+    deadline: "28th Jun 2021",
+    intern_description: `1. Create content marketing campaigns to drive leads and subscribers
+2. Regularly produce various content types, including email, social media posts and blogs
+3. Actively manage and promote our blog, and pitch articles to relevant third-party platforms
+4. Edit content produced by other members of the team
+5. Collaborate with other departments to create innovative content ideas
+6. Create quirky content for Instagram, Facebook posts.`,
+    company_description: `we have two other companies under the parent company. eWards and Social Neeti.
+
+We are a cloud-powered customer experience management system that helps you manage your business interactions with customers, both current and potential. The system works with all your customer-facing touch-points: organizing, automating, and synchronizing them so that you can service all your existing customers and target potential customers.
+
+we are a digital marketing agency which not only ideates to enhance your brand image in the market but also plans various unique campaigns over all the platforms.
+
+
+
+    `,
+    address:
+      "1, Shakespeare Sarani, 6C, 6th Floor, Theatre AC Market, Kolkata, West Bengal 700071, kolkata, 700071.",
+  },
+  {
+    post: "Digital Marketing",
+    company: "redcherry.io",
+    preference: "Digital Marketing",
+    location: "Mumbai",
+    Stipend: "Salary: 20000 - 25000 per month",
+    time_left: "2 weeks left",
+    image:
+      "https://assets.interntheory.com/uploads/company/logos/0b657a86400cacd933053f3fc4e7cd3731fe6c26.jpg",
+    facebook:
+      "http://www.facebook.com/sharer.php?u=www.interntheory.com/internship/digital-marketing-internship-at-redcherryio-iogcm",
+    twitter:
+      "https://twitter.com/share?text=Apply%20for%20Digital%20Marketing&amp;url=www.interntheory.com/internship/digital-marketing-internship-at-redcherryio-iogcm",
+    google:
+      "https://plus.google.com/share?url=www.interntheory.com/internship/digital-marketing-internship-at-redcherryio-iogcm",
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=www.interntheory.com/internship/digital-marketing-internship-at-redcherryio-iogcm",
+    whatsapp:
+      "https://api.whatsapp.com/send?text=Hey%2C%0D%0AI%20came%20across%20this%20awesome%20opportunity%20that%20might%20interest%20you%21%20Check%20it%20out%20here%3A%20www.interntheory.com/internship/digital-marketing-internship-at-redcherryio-iogcm",
+    openings: "1",
+    start: "27th May 2021",
+    deadline: "26th Jun 2021",
+    company_description: `A cloud-based IoT platform that combines all smart functionality all into one distributed system. Redcherry being a technology leader in energy management solutions. Our solutions help industries, commercial sectors to have better insights into your energy consumption.`,
+    intern_description: `Social Media
+- Schedule posts on various social media platforms
+- Do a keyword and hashtag research for engaging the right set of audiences.
+- Distribute posts in various groups for higher reach.
+- Keep an eye out for requirements or someone asking for advice on AV | Productivity | Tech
+Management
+- Keep an eye out for CIO | CXO | CTO accounts on LinkedIn
+- Discover new groups for MSME | Tech | Corporate Tech | Productivity
+- Create Weekly/Monthly/ Quarterly Social Reports
+Content and Strategy
+- Plan and run ads on various digital platforms
+- Brainstorm with the team to create effective visuals
+- Create case studies as per the data presented
+- Format and proofread content to be published.
+- Create engaging video case studies from scratch
+    `,
+    address:
+      "16th Floor, D wing, Trade World, Kamala Mills Compound,, Senapati Bapat Marg, Lower Parel, mumbai, 400013.",
+  },
+  {
+    post: "Business Development Associate",
+    company: "Arjava Advisors Pvt Ltd",
+    preference: "Business Development",
+    location: "Kolkata",
+    Stipend: "Salary: 15000 - 25000 per month",
+    time_left: "2 weeks left",
+    image:
+      "https://assets.interntheory.com/uploads/company/logos/6599b0ae5b21a19db5f39dde2fbe2688589eea57.jpg",
+    facebook:
+      "http://www.facebook.com/sharer.php?u=www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    twitter:
+      "https://twitter.com/share?text=Apply%20for%20Content%20Writer&amp;url=www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    google:
+      "https://plus.google.com/share?url=www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    whatsapp:
+      "https://api.whatsapp.com/send?text=Hey%2C%0D%0AI%20came%20across%20this%20awesome%20opportunity%20that%20might%20interest%20you%21%20Check%20it%20out%20here%3A%20www.interntheory.com/internship/content-writing-internship-at-arjava-advisors-pvt-ltd-fhkej",
+    openings: "1",
+    start: "26th May 2021",
+    deadline: "25th Jun 2021",
+    intern_description: `1. Identify potential clients in the target market and gain an in-depth understanding of
+the client&#39;s needs.
+2. Build and nourish strong relationships with existing and potential clients
+3. Conduct productive business development meetings
+4. Client acquisition
+5. Formulating market plans in alignment with the company platform to maximize client
+management
+6. Knowledge of digital marketing(preferred)`,
+    company_description: `we have two other companies under the parent company. eWards and Social Neeti.
+
+We are a cloud-powered customer experience management system that helps you manage your business interactions with customers, both current and potential. The system works with all your customer-facing touch-points: organizing, automating, and synchronizing them so that you can service all your existing customers and target potential customers.
+
+we are a digital marketing agency which not only ideates to enhance your brand image in the market but also plans various unique campaigns over all the platforms.
+
+
+
+    `,
+    address:
+      "1, Shakespeare Sarani, 6C, 6th Floor, Theatre AC Market, Kolkata, West Bengal 700071, kolkata, 700071.",
+  },
+  {
+    post: "Sales Manager",
+    company: "Zell Education",
+    preference: "Education And Training",
+    location: "Mumbai",
+    Stipend: "Salary: 65000 - 90000 per month",
+    time_left: "2 weeks left",
+    image:
+      "https://assets.interntheory.com/uploads/company/companylogos/e6d22059b45e45d9ccca527c74ef73954726f21e/a5f67648b11d6f06617857c7a43393f82b82ad9dcom.png",
+    facebook:
+      "http://www.facebook.com/sharer.php?u=www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    twitter:
+      "https://twitter.com/share?text=Apply%20for%20Sales%20Manager&amp;url=www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    google:
+      "https://plus.google.com/share?url=www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    whatsapp:
+      "https://api.whatsapp.com/send?text=Hey%2C%0D%0AI%20came%20across%20this%20awesome%20opportunity%20that%20might%20interest%20you%21%20Check%20it%20out%20here%3A%20www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    openings: "1",
+    start: "28th May 2021",
+    deadline: "25th Jun 2021",
+    intern_description: `Strategize to ensure and implement a robust sales pipeline
+Measure daily, weekly, monthly performance trends of each team member and take corrective actions to match the organization's expectations
+Develop and work on analytics driven sales dashboard(s) which will help keep track of the current performance and also help understand the future sales pipeline
+Conduct daily team hurdles to brief and motivate the team on the team and individual targets
+Own up the overall training and quality of the sales teams . Provide training interventions, feedbacks in coordination with the Product team
+Monitor self-performance at all times while also contributing to the team performance, keeping track of factors like conversion factor, Average revenue generated per lead, average revenue per sale, etc
+Analyze and share active feedback about the customer behavior, market demands and competition to the marketing team
+Give prompt reports on crucial issues and suggest solutions.
+Strategize to ensure and implement a robust sales pipeline
+Measure daily, weekly, monthly performance trends of each team member and take corrective actions to match the organization's expectations.
+`,
+    company_description: `
+    Zell is the fastest growing education company in Mumbai, providing training for international financial certifications such as ACCA, CFA, etc., having trained over 3,000 students. Our presence is spreading across India, with Pune and Delhi now under our our purview. Zell is also expanding into ed-tech, with improving live online training using virtual reality (VR) and artificial intelligence (AI).
+    `,
+    address:
+      "Suman House, Ground Floor, Morvi Cross Lane, Chowpatty, mumbai, 400007.",
+  },
+  {
+    post: "digital marketing",
+    company: "Zell Education",
+    preference: "Education And Training",
+    location: "Mumbai",
+    Stipend: "Salary: 65000 - 90000 per month",
+    time_left: "4 days left",
+    image:
+      "https://assets.interntheory.com/uploads/company/companylogos/e6d22059b45e45d9ccca527c74ef73954726f21e/a5f67648b11d6f06617857c7a43393f82b82ad9dcom.png",
+    facebook:
+      "http://www.facebook.com/sharer.php?u=www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    twitter:
+      "https://twitter.com/share?text=Apply%20for%20Sales%20Manager&amp;url=www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    google:
+      "https://plus.google.com/share?url=www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    linkedin:
+      "https://www.linkedin.com/sharing/share-offsite/?url=www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    whatsapp:
+      "https://api.whatsapp.com/send?text=Hey%2C%0D%0AI%20came%20across%20this%20awesome%20opportunity%20that%20might%20interest%20you%21%20Check%20it%20out%20here%3A%20www.interntheory.com/internship/education-and-training-internship-at-zell-education-khkrc",
+    openings: "1",
+    start: "18th May 2021",
+    deadline: "17th Jun 2021",
+    intern_description: `Plan and execute all digital marketing, including SEO/SEM, marketing database, email, social media and display advertising campaigns
+
+• Design, build and maintain our social media presence
+
+• Measure and report performance of all digital marketing campaigns, and assess against goals (ROI and KPIs)
+
+• Identify trends and insights, and optimize spend and performance based on the insights
+
+• Brainstorm new and creative growth strategies
+
+• Plan, execute, and measure experiments and conversion tests
+
+• Collaborate with internal teams to create landing pages and optimize user experience
+
+• Utilize strong analytical ability to evaluate end-to-end customer experience across multiple channels and customer touch points
+
+• Instrument conversion points and optimize user funnels
+
+• Collaborate with agencies and other vendor partners
+
+• Evaluate emerging technologies. Provide thought leadership and perspective for adoption where appropriate`,
+    company_description: `
+    Zell is the fastest growing education company in Mumbai, providing training for international financial certifications such as ACCA, CFA, etc., having trained over 3,000 students. Our presence is spreading across India, with Pune and Delhi now under our our purview. Zell is also expanding into ed-tech, with improving live online training using virtual reality (VR) and artificial intelligence (AI).
+    `,
+    address:
+      "Suman House, Ground Floor, Morvi Cross Lane, Chowpatty, mumbai, 400007.",
+  },
+];
+localStorage.setItem("job_obj", JSON.stringify(jobObj));
