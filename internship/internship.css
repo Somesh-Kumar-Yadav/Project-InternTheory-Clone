@@ -134,12 +134,12 @@ button:hover {
 .visible:hover {
   background-color: rgba(102, 102, 102, 0.2);
 }
-.when_login {
+/* .when_login {
   display: flex;
 }
 .after_login {
   display: none;
-}
+} */
 .side_menu_list p {
   padding-left: 17px;
   font-size: 1rem;

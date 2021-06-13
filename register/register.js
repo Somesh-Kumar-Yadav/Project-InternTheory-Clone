@@ -133,6 +133,10 @@ function logIn() {
 function cart() {
   window.location.href = "../cart/cart.html";
 }
+//Navigate to internship page
+function intern_ship() {
+  window.location.href = "../internship/internship.html";
+}
 //Navigate to logout
 function logout() {
   let user = JSON.parse(localStorage.getItem("user"));
@@ -165,7 +169,13 @@ if (user.length != 0) {
     when_login[i].style.display = "none";
   }
 }
-
+let full_name = document.getElementById("full_name");
+let mobile_no = document.getElementById("mobile_no");
+let user_active = JSON.parse(localStorage.getItem("user"));
+if (user_active.length != 0) {
+  full_name.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
+  mobile_no.innerHTML = `${user_active[0].mobile}`;
+}
 //////////////////// MADE BY RAMLALA //////////////////////////////////////////////////////
 
 function next(e) {
