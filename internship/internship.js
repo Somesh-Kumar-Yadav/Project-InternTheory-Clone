@@ -107,57 +107,33 @@ if (total != 0) {
   total_block.style.visibility = "hidden";
 }
 localStorage.setItem("total", total);
-//Navigate to online courses page
-function online_courses() {
-  window.location.href = "onlineCourses/online_courses.html";
-}
-//Navigate to contact us page
-function contact_us() {
-  window.location.href = "contact-us/contact_us.html";
-}
-//Navigate to home page
-function home() {
-  window.location.href = "contact-us/contact_us.html";
-}
-
-
 
 icons_count = [0];
 function show_icons(id) {
-    let icons = document.getElementById(id);
-    let index = Number(id);
-    if (icons_count[index] % 2 == 0) {
-        icons.style.display = "flex";
-    }
-    else {
-        icons.style.display = "none"; 
-    }
-    icons_count[index]++;
+  let icons = document.getElementById(id);
+  let index = Number(id);
+  if (icons_count[index] % 2 == 0) {
+    icons.style.display = "flex";
+  } else {
+    icons.style.display = "none";
+  }
+  icons_count[index]++;
 }
 
+let intership_obj = JSON.parse(localStorage.getItem("intership_obj"));
 
-
-let intership_obj  =JSON.parse(localStorage.getItem("intership_obj"))
-
-
-for (let i = 0; i < intership_obj.length; i++){
-    icons_count.push(0);
+for (let i = 0; i < intership_obj.length; i++) {
+  icons_count.push(0);
 }
 
-
-
-
-let content_div = document.getElementById("intern_cart")
-
-
-
+let content_div = document.getElementById("intern_cart");
 
 function show_content() {
-   console.log(intership_obj);
-    for (let i = 0; i < intership_obj.length; i++) {
-        let create_cart = document.createElement("div");
-        create_cart.setAttribute("class","internship_content")
-        create_cart.innerHTML = `
+  console.log(intership_obj);
+  for (let i = 0; i < intership_obj.length; i++) {
+    let create_cart = document.createElement("div");
+    create_cart.setAttribute("class", "internship_content");
+    create_cart.innerHTML = `
           <div class="internship_content_left">
             <div class="internship_content_img_div">
               <img
@@ -178,7 +154,7 @@ function show_content() {
             <div>
               <p>${intership_obj[i].time_left}</p>
             </div>
-            <div onclick="show_icons(${i+1})">
+            <div onclick="show_icons(${i + 1})">
               <img
                 class="share_icon_img"
                 class="onclick_show"
@@ -186,7 +162,7 @@ function show_content() {
                 alt="Share Image"
               />
             </div>
-            <div class="icons" id="${i+1}">
+            <div class="icons" id="${i + 1}">
               <div>
                 <a
                   class="jss154 jss148 jss1391"
@@ -306,19 +282,80 @@ function show_content() {
               </a>
             </div>
           </div>
-        `
-        content_div.append(create_cart);
-        console.log(i);
-    }
+        `;
+    content_div.append(create_cart);
+    console.log(i);
+  }
 }
-show_content()
-
-
-
-
-
+show_content();
 
 function go_to_online_course() {
-  
-    window.location.href ="../onlineCourses/online_courses.html"
+  window.location.href = "../onlineCourses/online_courses.html";
+}
+//for login---------------------------------------------------------
+user = localStorage.getItem("user");
+if (user == null) {
+  user = [];
+} else {
+  user = JSON.parse(user);
+}
+// localStorage.setItem("user", JSON.stringify(user));
+let when_login = document.getElementsByClassName("when_login");
+let after_login = document.getElementsByClassName("after_login");
+if (user.length != 0) {
+  for (let i = 0; i < when_login.length; i++) {
+    when_login[i].style.display = "flex";
+  }
+  for (let i = 0; i < after_login.length; i++) {
+    after_login[i].style.display = "none";
+  }
+} else {
+  for (let i = 0; i < after_login.length; i++) {
+    after_login[i].style.display = "flex";
+  }
+  for (let i = 0; i < when_login.length; i++) {
+    when_login[i].style.display = "none";
+  }
+}
+let full_name = document.getElementById("full_name");
+let mobile_no = document.getElementById("mobile_no");
+let user_active = JSON.parse(localStorage.getItem("user"));
+if (user_active.length != 0) {
+  full_name.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
+  mobile_no.innerHTML = `${user_active[0].mobile}`;
+}
+//Navigate to online courses page-------------------------------------------->
+function online_courses() {
+  window.location.href = "../onlineCourses/online_courses.html";
+}
+//Navigate to contact us page
+function contact_us() {
+  window.location.href = "../contact-us/contact_us.html";
+}
+//Navigate to home page
+function home() {
+  window.location.href = "../index.html";
+}
+//Navigate to register page
+function register() {
+  window.location.href = "../register/register.html";
+}
+//Navigate to logIn page
+function logIn() {
+  window.location.href = "../logIn/student_login.html";
+}
+//Navigate to cart page
+function cart() {
+  window.location.href = "../cart/cart.html";
+}
+//Navigate to internship page
+function intern_ship() {
+  window.location.href = "internship.html";
+}
+//Navigate to logout
+function logout() {
+  let user = JSON.parse(localStorage.getItem("user"));
+  user = [];
+  localStorage.setItem("user", JSON.stringify(user));
+  window.location.href = "../index.html";
 }
