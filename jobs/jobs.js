@@ -356,9 +356,14 @@ function intern_ship() {
 function jobs() {
   window.location.href = "jobs.html";
 }
+
 //Navigate to dash_board page
 function dash_board() {
   window.location.href = "../dashboard/profile.html";
+}
+//Navigate to transactions page
+function transcations() {
+  window.location.href = "../transcations/transcations.html";
 }
 //Navigate to logout
 function logout() {

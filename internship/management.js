@@ -17,7 +17,7 @@ let drop_down_3 = document.querySelector("#drop_down_3");
 let drop_up_3 = document.querySelector("#drop_up_3");
 menu_btn.addEventListener("click", openMenu);
 menu_btn_2.addEventListener("click", openMenu);
-document.getElementById("main_box").onclick = function (e) {
+document.getElementById("internship").onclick = function (e) {
   if (e.target != side_bar) {
     side_bar.style.display = "none";
     logo_btn.style.display = "inline-block";
@@ -107,84 +107,19 @@ if (total != 0) {
   total_block.style.visibility = "hidden";
 }
 localStorage.setItem("total", total);
-//Navigate to online courses page-------------------------------------------->
-function online_courses() {
-  window.location.href = "../onlineCourses/online_courses.html";
-}
-//Navigate to contact us page
-function contact_us() {
-  window.location.href = "../contact-us/contact_us.html";
-}
-//Navigate to home page
-function home() {
-  window.location.href = "../index.html";
-}
-//Navigate to register page
-function register() {
-  window.location.href = "../register/register.html";
-}
-//Navigate to jobs page
-function jobs() {
-  window.location.href = "../jobs/jobs.html";
-}
-//Navigate to transactions page
-function transcations() {
-  window.location.href = "../transcations/transcations.html";
-}
-//Navigate to logIn page
-function logIn() {
-  window.location.href = "../logIn/student_login.html";
-}
-//Navigate to cart page
-function cart() {
-  window.location.href = "../cart/cart.html";
-}
-//Navigate to internship page
-function intern_ship() {
-  window.location.href = "../internship/internship.html";
-}
-//Navigate to logout
-function logout() {
-  let user = JSON.parse(localStorage.getItem("user"));
-  user = [];
-  localStorage.setItem("user", JSON.stringify(user));
-  window.location.href = "../index.html";
-}
-//for login---------------------------------------------------------
-user = localStorage.getItem("user");
-if (user == null) {
-  user = [];
-} else {
-  user = JSON.parse(user);
-}
-localStorage.setItem("user", JSON.stringify(user));
-let when_login = document.getElementsByClassName("when_login");
-let after_login = document.getElementsByClassName("after_login");
-if (user.length != 0) {
-  for (let i = 0; i < when_login.length; i++) {
-    when_login[i].style.display = "flex";
+
+icons_count = [0];
+function show_icons(id) {
+  let icons = document.getElementById(id);
+  let index = Number(id);
+  if (icons_count[index] % 2 == 0) {
+    icons.style.display = "flex";
+  } else {
+    icons.style.display = "none";
   }
-  for (let i = 0; i < after_login.length; i++) {
-    after_login[i].style.display = "none";
-  }
-} else {
-  for (let i = 0; i < after_login.length; i++) {
-    after_login[i].style.display = "flex";
-  }
-  for (let i = 0; i < when_login.length; i++) {
-    when_login[i].style.display = "none";
-  }
+  icons_count[index]++;
 }
-let full_name = document.getElementById("full_name");
-let full_name_1 = document.getElementById("full_name_1");
-let mobile_no = document.getElementById("mobile_no");
-let mobile_no_1 = document.getElementById("mobile_no_1");
-let e_mail_1 = document.getElementById("e_mail_1");
-let user_active = JSON.parse(localStorage.getItem("user"));
-if (user_active.length != 0) {
-  full_name.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
-  full_name_1.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
-  mobile_no.innerHTML = `${user_active[0].mobile}`;
-  mobile_no_1.innerHTML = `${user_active[0].mobile}`;
-  e_mail_1.innerHTML = `${user_active[0].email}`;
-}
+
+
+
+

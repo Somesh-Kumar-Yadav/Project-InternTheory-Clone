@@ -289,6 +289,7 @@ function show_content() {
 }
 show_content();
 
+
 function go_to_online_course() {
   window.location.href = "../onlineCourses/online_courses.html";
 }
@@ -352,6 +353,18 @@ function cart() {
 function intern_ship() {
   window.location.href = "internship.html";
 }
+//Navigate to jobs page
+function jobs() {
+  window.location.href = "../jobs/jobs.html";
+}
+//Navigate to transactions page
+function transcations() {
+  window.location.href = "../transcations/transcations.html";
+}
+//Navigate to dash_board page
+function dash_board() {
+  window.location.href = "../dashboard/profile.html";
+}
 //Navigate to logout
 function logout() {
   let user = JSON.parse(localStorage.getItem("user"));
@@ -359,3 +372,250 @@ function logout() {
   localStorage.setItem("user", JSON.stringify(user));
   window.location.href = "../index.html";
 }
+let search_form = document.getElementById("search_form")
+let cities = search_form.search_cities.value;
+
+
+
+
+
+
+function showSuggitions() {
+
+  let cities = [
+     "Ahmedabad",
+     "Delhi",
+    "Bangalore",
+    "Pune",
+    "Gurugram",
+    "Jalandhar",
+    "Nagpur",
+    "Aurangabaad",
+    "Indore",
+    "Bhopal",
+    "Agra",
+    "Haidrabaad",
+    "Mumbai",
+    "Valsad",
+    "New Delhi",
+    "Jaipur",
+    "Kota",
+    "Faridabaad",
+    "Jalgaav",
+    "Chennai",
+    "Kolkata",
+  
+  ];
+  let types = [
+    "Full Time",
+    "Part Time",
+    "Work From Home"
+  ]
+  let preferance = [
+    "Advertising",
+    "Branding",
+    "Content Writing",
+    "Digital Marketing",
+    "Journalism",
+    "Logistics",
+    "Marketings",
+    "Operations",
+    "Others",
+    "Photography",
+    "Sales",
+    "Social Media",
+    "Software Development",
+  
+  ]
+  autocomplete(document.getElementById("search_cities"), cities);
+  autocomplete(document.getElementById("search_types"), types);
+  autocomplete(document.getElementById("search_preference"), preferance);
+  function autocomplete(inp, arr) {
+    var currentFocus;
+
+    inp.addEventListener("input", function (e) {
+      var a,
+        b,
+        i,
+        val = this.value;
+
+      closeAllLists();
+      if (!val) {
+        return false;
+      }
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function (e) {
+            inp.value = this.getElementsByTagName("input")[0].value;
+          
+
+            set_items_localstorage(inp.value)
+            closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+    });
+
+    inp.addEventListener("keydown", function (e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+
+        addActive(x);
+      } else if (e.keyCode == 38) {
+        currentFocus--;
+
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+    });
+    function addActive(x) {
+      if (!x) return false;
+
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = x.length - 1;
+
+      x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+      }
+    }
+    function closeAllLists(elmnt) {
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+
+    document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+    });
+  }
+}
+showSuggitions();
+
+function refresh() {
+  localStorage.removeItem("search_items")
+  
+}
+
+
+function set_items_localstorage(set) {
+  
+  let obj = {
+    item: set,
+  }
+  let arr;
+
+  
+  arr = localStorage.getItem("search_items")
+  if (arr === null) {
+    arr = [];
+  }
+  else {
+    arr = JSON.parse(arr)
+  }
+  arr.push(obj)
+  localStorage.setItem("search_items", JSON.stringify(arr) )
+  console.log(arr);
+}
+// For cities
+
+var  c_count = 0;
+var  t_count = 0;
+ var p_count = 0;
+  function show_cities_items() {
+    let abc = document.getElementById("cities")
+    if (c_count % 2 == 0) {
+      abc.style.display = "block"
+     
+    }
+    else {
+      abc.style.display = "none"
+    
+    }
+    c_count++;
+   
+  }
+
+
+  function show_none_cities() {
+    let abc = document.getElementById("cities")
+    abc.style.display = "none"
+  }
+
+// For Types 
+ 
+  function show_types_items() {
+    let abc = document.getElementById("types")
+    if (t_count % 2 == 0) {
+      abc.style.display = "block"
+    
+    }
+    else {
+      abc.style.display = "none"
+    
+    }
+  
+    t_count++;
+  
+  }
+
+
+  function show_types_none() {
+    let abc = document.getElementById("types")
+    abc.style.display = "none"
+  }
+
+
+
+
+
+//For  Preference 
+
+  
+  function show_p_items() {
+    let abc = document.getElementById("preference")
+    if (p_count % 2 == 0) {
+      abc.style.display = "block"
+      abc.style.zIndex = -1;
+    }
+    else {
+      abc.style.display = "none"
+    
+    }
+  
+    p_count++;
+  }
+
+
+  function show_p_none() {
+    let abc = document.getElementById("preference")
+    abc.style.display = "none"
+  }
