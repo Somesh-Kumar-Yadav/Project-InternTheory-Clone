@@ -25,8 +25,8 @@
               />
             </div>
             <div class="side_menu_content_2">
-              <h1>Somesh Kumar Yadav</h1>
-              <p>+91-6354136407</p>
+              <h1 id="full_name"></h1>
+              <p id="mobile_no"></p>
             </div>
           </div>
           <div class="visible after_login" onclick="home()">
@@ -46,7 +46,7 @@
               <p>Home</p>
             </div>
           </div>
-          <div class="visible when_login">
+          <div class="visible when_login" onclick="dash_board()">
             <div class="side_menu_svg_cont">
               <svg
                 class="side_menu_svg"
@@ -84,7 +84,7 @@
               <p>Profile</p>
             </div>
           </div>
-          <div class="visible">
+          <div class="visible" onclick="intern_ship()">
             <div class="side_menu_svg_cont">
               <svg
                 class="side_menu_svg"
@@ -103,7 +103,7 @@
               <p>Internships</p>
             </div>
           </div>
-          <div class="visible">
+          <div class="visible" onclick="jobs()">
             <div class="side_menu_svg_cont">
               <svg
                 class="side_menu_svg"
@@ -194,7 +194,7 @@
               <p>Classroom Training</p>
             </div>
           </div>
-          <div class="visible when_login">
+          <div class="visible when_login" onclick="transcations()">
             <div class="side_menu_svg_cont">
               <svg
                 class="side_menu_svg"
@@ -291,13 +291,13 @@
               </svg>
             </div>
           </div>
-          <div id="div_2_1" class="hidden visible">
+          <div id="div_2_1" class="hidden visible" onclick="register()">
             <div class="side_menu_svg_cont"></div>
             <div class="side_menu_content">
               <p>Company</p>
             </div>
           </div>
-          <div id="div_2_2" class="hidden visible">
+          <div id="div_2_2" class="hidden visible" onclick="register()">
             <div class="side_menu_svg_cont"></div>
             <div class="side_menu_content">
               <p>Student</p>
@@ -344,13 +344,13 @@
               </svg>
             </div>
           </div>
-          <div id="div_3_1" class="hidden visible">
+          <div id="div_3_1" class="hidden visible" onclick="logIn()">
             <div class="side_menu_svg_cont"></div>
             <div class="side_menu_content">
               <p>Company</p>
             </div>
           </div>
-          <div id="div_3_2" class="hidden visible">
+          <div id="div_3_2" class="hidden visible" onclick="logIn()">
             <div class="side_menu_svg_cont"></div>
             <div class="side_menu_content">
               <p>Student</p>
@@ -375,7 +375,7 @@
               <p>Change Password</p>
             </div>
           </div>
-          <div class="visible when_login">
+          <div class="visible when_login" onclick="logout()">
             <div class="side_menu_svg_cont">
               <svg
                 class="side_menu_svg"
@@ -403,7 +403,7 @@
         <img class="logo" src="images/logo.png" />
       </div>
       <div class="sign_btn after_login">
-        <button>SIGN IN</button>
+        <button onclick="logIn()">SIGN IN</button>
       </div>
 
       <div class="cart_btn when_login new_right">
@@ -412,7 +412,7 @@
           src="https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
         />
       </div>
-      <div class="cart_btn">
+      <div class="cart_btn" onclick="cart()">
         <div>
           <img class="cart_image" src="images/shopping_cart.svg" />
         </div>

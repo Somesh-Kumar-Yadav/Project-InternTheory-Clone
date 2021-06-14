@@ -374,7 +374,7 @@ button:hover {
   transform: translate(0, -50%);
   text-align: center;
   width: 40px;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .carousel-control.prev {
@@ -548,7 +548,7 @@ button:hover {
   transform: translate(0, -50%);
   text-align: center;
   width: 40px;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .uni_carousel-control.prev {

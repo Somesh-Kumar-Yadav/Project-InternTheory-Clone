@@ -416,6 +416,18 @@ function logIn() {
 function cart() {
   window.location.href = "cart.html";
 }
+//Navigate to jobs page
+function jobs() {
+  window.location.href = "../jobs/jobs.html";
+}
+//Navigate to dash_board page
+function dash_board() {
+  window.location.href = "../dashboard/profile.html";
+}
+//Navigate to transactions page
+function transcations() {
+  window.location.href = "../transcations/transcations.html";
+}
 //Navigate to internship page
 function intern_ship() {
   window.location.href = "../internship/internship.html";

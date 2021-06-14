@@ -293,3 +293,50 @@ function showSuggitions() {
   }
 }
 showSuggitions();
+//Navigate to online courses page-------------------------------------------->
+function online_courses() {
+  window.location.href = "../onlineCourses/online_courses.html";
+}
+//Navigate to contact us page
+function contact_us() {
+  window.location.href = "../contact-us/contact_us.html";
+}
+//Navigate to home page
+function home() {
+  window.location.href = "../index.html";
+}
+//Navigate to register page
+function register() {
+  window.location.href = "register.html";
+}
+//Navigate to logIn page
+function logIn() {
+  window.location.href = "../logIn/student_login.html";
+}
+//Navigate to cart page
+function cart() {
+  window.location.href = "../cart/cart.html";
+}
+//Navigate to internship page
+function intern_ship() {
+  window.location.href = "../internship/internship.html";
+}
+//Navigate to jobs page
+function jobs() {
+  window.location.href = "../jobs/jobs.html";
+}
+//Navigate to dash_board page
+function dash_board() {
+  window.location.href = "../dashboard/profile.html";
+}
+//Navigate to transactions page
+function transcations() {
+  window.location.href = "../transcations/transcations.html";
+}
+//Navigate to logout
+function logout() {
+  let user = JSON.parse(localStorage.getItem("user"));
+  user = [];
+  localStorage.setItem("user", JSON.stringify(user));
+  window.location.href = "../index.html";
+}
