@@ -25,9 +25,9 @@
     <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
 
     <title>Internships In India | Summer Internships | Intern Theory</title>
-    <link rel="stylesheet" type="text/css" href="internship.css" />
+    <link rel="stylesheet" type="text/css" href="management.css" />
   </head>
-  <body onload="refresh()">
+  <body>
     <nav>
       <div class="side_menu" id="side_bar">
         <div class="menu_btn" id="menu_btn_2">
@@ -66,7 +66,7 @@
               <p>Home</p>
             </div>
           </div>
-          <div class="visible when_login" onclick="dash_board()">
+          <div class="visible when_login">
             <div class="side_menu_svg_cont">
               <svg
                 class="side_menu_svg"
@@ -123,7 +123,7 @@
               <p>Internships</p>
             </div>
           </div>
-          <div class="visible" onclick="jobs()">
+          <div class="visible">
             <div class="side_menu_svg_cont">
               <svg
                 class="side_menu_svg"
@@ -214,7 +214,7 @@
               <p>Classroom Training</p>
             </div>
           </div>
-          <div class="visible when_login" onclick="transcations()">
+          <div class="visible when_login">
             <div class="side_menu_svg_cont">
               <svg
                 class="side_menu_svg"
@@ -452,115 +452,7 @@
         </svg>
       </div>
     </nav>
-    <!-- ///////////////////// SEarch BOX //////////////////////////////////////////////////// -->
-
-    <div class="search_box">
-      <form id="search_form" autocomplete="off">
-        <div class="search_box_1">
-          <div
-            class="cities autocomplete"
-            onclick="show_cities_items()"
-            onkeypress="show_none_cities()"
-          >
-            <input type="text" placeholder="Cities..." id="search_cities" />
-            <svg
-              height="20"
-              width="20"
-              viewBox="0 0 20 20"
-              aria-hidden="true"
-              focusable="false"
-              class="down_svg"
-            >
-              <path
-                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-              ></path>
-            </svg>
-            <div class="show" id="cities">
-              <p>Ahemdabaad</p>
-              <p>Banglore</p>
-              <p>Chennai</p>
-              <p>Delhi</p>
-              <p>Jaipure</p>
-              <p>Kolkata</p>
-              <p>Luckhnow</p>
-              <p>Mumbai</p>
-              <p>Pune</p>
-              <p>Surat</p>
-            </div>
-          </div>
-          <div
-            class="types autocomplete"
-            onclick="show_types_items()"
-            onkeypress="show_types_none()"
-          >
-            <input type="text" placeholder="Types..." id="search_types" />
-
-            <svg
-              height="20"
-              width="20"
-              viewBox="0 0 20 20"
-              aria-hidden="true"
-              focusable="false"
-              class="down_svg"
-            >
-              <path
-                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-              ></path>
-            </svg>
-            <div class="show" id="types">
-              <p>Full Time</p>
-              <p>Part Time</p>
-              <p>Work from Home</p>
-            </div>
-          </div>
-          <div
-            class="preferences autocomplete"
-            onclick="show_p_items()"
-            onkeypress="show_p_none()"
-          >
-            <input
-              type="text"
-              placeholder="Preferences..."
-              id="search_preference"
-            />
-            <svg
-              height="20"
-              width="20"
-              viewBox="0 0 20 20"
-              aria-hidden="true"
-              focusable="false"
-              class="down_svg"
-            >
-              <path
-                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-              ></path>
-            </svg>
-            <div class="show" id="preference">
-              <p>Advertising</p>
-              <p>Branding</p>
-              <p>Content Writing</p>
-              <p>Digital Marketing</p>
-              <p>Journalism</p>
-              <p>Logistics</p>
-              <p>Marketings</p>
-              <p>Operations</p>
-              <p>Others</p>
-            </div>
-          </div>
-        </div>
-        <div class="or">
-          <h2>OR</h2>
-        </div>
-        <div class="search_box_2">
-          <div class="search_box_btn">
-            <input type="text" placeholder="Search..." id="search" />
-            <button onclick="search_1(event)">SEARCH</button>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <!-- ///////////////////////////////////////////////////////////////////  START//////////////////////////////////////////////////////////// -->
+    <!-- ///////////////////// INTERNSHIP//////////////////////////////////////////////////// -->
 
     <div class="internship" id="internship">
       <div class="internship_left">
@@ -571,7 +463,7 @@
         />
       </div>
       <div class="internship_right" id="intern_cart">
-        <h3 class="color_gray">All Internships</h3>
+        <!-- <h3 class="color_gray">All Internships</h3> -->
         <div class="internship_content">
           <div class="internship_content_left">
             <div class="internship_content_img_div">
@@ -581,15 +473,15 @@
               />
             </div>
             <div class="internship_content_middle">
-              <p class="header">Develop Your Skillset</p>
-              <p>Online Skill Development Programs</p>
-              <p class="color_gray">Taught by Industry Expert Internship</p>
-              <p class="color_gray">Certified Courses</p>
-              <p class="color_gray">Guaranteed Internship Opportunities</p>
-              <h3 class="color_g">Learn Industry-Demanded Skills</h3>
+              <p class="header">SAP Executive</p>
+              <p>CYBERCITY BUILDERS & DEVELOPERS PVT LTD</p>
+              <p class="color_gray">Full Time Internship</p>
+              <p class="color_gray">
+                Internship Category: Management Information System
+              </p>
             </div>
           </div>
-          <div class="internship_content_right">
+          <!-- <div class="internship_content_right">
             <div>
               <p>4-6 weeks</p>
             </div>
@@ -720,6 +612,53 @@
                 >UPGRADE SKILLS
               </a>
             </div>
+          </div> -->
+        </div>
+        <div class="informations">
+          <div>
+            <p>Openings: <span class="bold">1</span></p>
+            <p>Duration: <span class="bold">6 months</span></p>
+            <p>Start Date: <span class="bold">22nd May 2021</span></p>
+            <p>Application Deadline: <span class="bold">21st Jun 2021</span></p>
+            <p>Stipend: <span class="bold">5000 - 10000 per month</span></p>
+          </div>
+          <div>
+            <p class="bold margin">Internship Description:</p>
+            <p class="margin">
+              Selected intern's day-to-day responsibilities include:
+            </p>
+            <p>1. Creating requests & orders in SAP</p>
+            <p>2. Assigning of documents to the Budgeted BOQ</p>
+            <p>3. Following-up with the SCM, planning & QS departments</p>
+            <p>4. Monitoring Project activities w.r.t the daily transactions</p>
+            <p class="margin">5. Supporting End Users</p>
+          </div>
+          <div class="border_bottom"></div>
+          <div>
+            <p class="bold margin">Perks</p>
+            <p>Certificate of Internship, Letter of Recommendation</p>
+          </div>
+          <div>
+            <p class="bold margin">Company Description</p>
+            <p>
+              Cybercity Builders and Developers Pvt Ltd is one of the most
+              trusted realty brands in Hyderabad. All our projects be it Rainbow
+              Vistas or Marina Skies, urban landmarks or lakeside high-rises, we
+              have lived up our promise of improving your living and working
+              spaces.
+            </p>
+          </div>
+          <div class="image">
+            <p class="bold margin">Location</p>
+            <img
+              src="data:image/png;base64,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"
+              alt="image"
+            />
+            <p>KAVURI HILLS, MADHAPUR, hyderabad, 500033.</p>
+          </div>
+          <div class="buttons">
+            <button>APPLY</button>
+            <a href="../internship/internship.html">BACK TO INTERNSHIP</a>
           </div>
         </div>
       </div>
@@ -839,5 +778,5 @@
     </div>
     <!-- /////////////////////////////////////// END ////////////////////////////// -->
   </body>
-  <script src="internship.js"></script>
+  <script src="management.js"></script>
 </html>
