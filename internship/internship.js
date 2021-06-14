@@ -383,7 +383,7 @@ let cities = search_form.search_cities.value;
 function showSuggitions() {
 
   let cities = [
-     "Ahemdabad",
+     "Ahmedabad",
      "Delhi",
     "Bangalore",
     "Pune",
