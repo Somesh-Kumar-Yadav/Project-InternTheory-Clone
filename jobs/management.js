@@ -124,30 +124,25 @@ function show_icons(id) {
 let intern_post = document.getElementById("intern_post");
 let intern_img = document.getElementById("intern_img");
 let intern_company = document.getElementById("intern_company");
-let intern_type = document.getElementById("intern_type");
 let intern_category = document.getElementById("intern_category");
 let intern_openings = document.getElementById("intern_openings");
-let intern_durations = document.getElementById("intern_durations");
 let intern_start_date = document.getElementById("intern_start_date");
 let intern_deadline = document.getElementById("intern_deadline");
-let intern_perks = document.getElementById("intern_perks");
 let intern_company_descp = document.getElementById("intern_company_descp");
 let intern_stipends = document.getElementById("intern_stipend");
 let intern_location = document.getElementById("intern_location");
 let intern_res = document.getElementById("responsibility");
 let apply_view = localStorage.getItem("view_apply");
-let intern_objects = JSON.parse(localStorage.getItem("internship_objects"));
+let intern_objects = JSON.parse(localStorage.getItem("job_obj"));
 let apply_page_view = intern_objects[apply_view];
 console.log(apply_page_view);
 intern_post.innerHTML = `${apply_page_view.post}`;
 intern_company.innerHTML = `${apply_page_view.company}`;
-intern_type.innerHTML = `${apply_page_view.type}`;
+intern_category.innerHTML = `${apply_page_view.preference}`;
 intern_img.src = apply_page_view.image;
 intern_openings.innerHTML = `${apply_page_view.openings}`;
-intern_durations.innerHTML = `${apply_page_view.duration}`;
 intern_deadline.innerHTML = `${apply_page_view.deadline}`;
 intern_stipends.innerHTML = `${apply_page_view.Stipend}`;
-intern_perks.innerHTML = `${apply_page_view.perks}`;
 intern_company_descp.innerHTML = `${apply_page_view.company_description}`;
 intern_location.innerHTML = `${apply_page_view.address}`;
 intern_start_date.innerHTML = `${apply_page_view.start}`;
@@ -190,7 +185,7 @@ function cart() {
 }
 //Navigate to internship page
 function intern_ship() {
-  window.location.href = "internship.html";
+  window.location.href = "../internship/internship.html";
 }
 //Navigate to logout
 function logout() {

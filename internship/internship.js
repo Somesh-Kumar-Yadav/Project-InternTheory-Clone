@@ -273,13 +273,11 @@ function show_content() {
                 ></a>
               </div>
             </div>
-            <div>
-              <a
+            <div onclick="apply_page(${i})">
+              <p
                 class="upgrade_skill"
-                href="../onlineCourses/online_courses.html"
-                target="blank"
                 >VIEW AND APPLY
-              </a>
+              </p>
             </div>
           </div>
         `;
@@ -288,7 +286,6 @@ function show_content() {
   }
 }
 show_content();
-
 
 function go_to_online_course() {
   window.location.href = "../onlineCourses/online_courses.html";
@@ -372,19 +369,13 @@ function logout() {
   localStorage.setItem("user", JSON.stringify(user));
   window.location.href = "../index.html";
 }
-let search_form = document.getElementById("search_form")
+let search_form = document.getElementById("search_form");
 let cities = search_form.search_cities.value;
 
-
-
-
-
-
 function showSuggitions() {
-
   let cities = [
-     "Ahmedabad",
-     "Delhi",
+    "Ahmedabad",
+    "Delhi",
     "Bangalore",
     "Pune",
     "Gurugram",
@@ -404,13 +395,8 @@ function showSuggitions() {
     "Jalgaav",
     "Chennai",
     "Kolkata",
-  
   ];
-  let types = [
-    "Full Time",
-    "Part Time",
-    "Work From Home"
-  ]
+  let types = ["Full Time", "Part Time", "Work From Home"];
   let preferance = [
     "Advertising",
     "Branding",
@@ -425,8 +411,7 @@ function showSuggitions() {
     "Sales",
     "Social Media",
     "Software Development",
-  
-  ]
+  ];
   autocomplete(document.getElementById("search_cities"), cities);
   autocomplete(document.getElementById("search_types"), types);
   autocomplete(document.getElementById("search_preference"), preferance);
@@ -462,9 +447,8 @@ function showSuggitions() {
 
           b.addEventListener("click", function (e) {
             inp.value = this.getElementsByTagName("input")[0].value;
-          
 
-            set_items_localstorage(inp.value)
+            set_items_localstorage(inp.value);
             closeAllLists();
           });
           a.appendChild(b);
@@ -521,101 +505,92 @@ function showSuggitions() {
 showSuggitions();
 
 function refresh() {
-  localStorage.removeItem("search_items")
-  
+  localStorage.removeItem("search_items");
 }
 
-
 function set_items_localstorage(set) {
-  
   let obj = {
     item: set,
-  }
+  };
   let arr;
 
-  
-  arr = localStorage.getItem("search_items")
+  arr = localStorage.getItem("search_items");
   if (arr === null) {
     arr = [];
+  } else {
+    arr = JSON.parse(arr);
   }
-  else {
-    arr = JSON.parse(arr)
-  }
-  arr.push(obj)
-  localStorage.setItem("search_items", JSON.stringify(arr) )
+  arr.push(obj);
+  localStorage.setItem("search_items", JSON.stringify(arr));
   console.log(arr);
 }
 // For cities
 
-var  c_count = 0;
-var  t_count = 0;
- var p_count = 0;
-  function show_cities_items() {
-    let abc = document.getElementById("cities")
-    if (c_count % 2 == 0) {
-      abc.style.display = "block"
-     
-    }
-    else {
-      abc.style.display = "none"
-    
-    }
-    c_count++;
-   
+var c_count = 0;
+var t_count = 0;
+var p_count = 0;
+function show_cities_items() {
+  let abc = document.getElementById("cities");
+  if (c_count % 2 == 0) {
+    abc.style.display = "block";
+  } else {
+    abc.style.display = "none";
+  }
+  c_count++;
+}
+
+function show_none_cities() {
+  let abc = document.getElementById("cities");
+  abc.style.display = "none";
+}
+
+// For Types
+
+function show_types_items() {
+  let abc = document.getElementById("types");
+  if (t_count % 2 == 0) {
+    abc.style.display = "block";
+  } else {
+    abc.style.display = "none";
   }
 
+  t_count++;
+}
 
-  function show_none_cities() {
-    let abc = document.getElementById("cities")
-    abc.style.display = "none"
+function show_types_none() {
+  let abc = document.getElementById("types");
+  abc.style.display = "none";
+}
+
+//For  Preference
+
+function show_p_items() {
+  let abc = document.getElementById("preference");
+  if (p_count % 2 == 0) {
+    abc.style.display = "block";
+    abc.style.zIndex = -1;
+  } else {
+    abc.style.display = "none";
   }
 
-// For Types 
- 
-  function show_types_items() {
-    let abc = document.getElementById("types")
-    if (t_count % 2 == 0) {
-      abc.style.display = "block"
-    
-    }
-    else {
-      abc.style.display = "none"
-    
-    }
-  
-    t_count++;
-  
+  p_count++;
+}
+
+function show_p_none() {
+  let abc = document.getElementById("preference");
+  abc.style.display = "none";
+}
+///apply page function
+/////////apply page json
+
+function apply_page(id) {
+  let apply_page = localStorage.getItem("view_apply");
+  if (apply_page == null) {
+    apply_page = id;
+  } else {
+    apply_page = id;
   }
 
-
-  function show_types_none() {
-    let abc = document.getElementById("types")
-    abc.style.display = "none"
-  }
-
-
-
-
-
-//For  Preference 
-
-  
-  function show_p_items() {
-    let abc = document.getElementById("preference")
-    if (p_count % 2 == 0) {
-      abc.style.display = "block"
-      abc.style.zIndex = -1;
-    }
-    else {
-      abc.style.display = "none"
-    
-    }
-  
-    p_count++;
-  }
-
-
-  function show_p_none() {
-    let abc = document.getElementById("preference")
-    abc.style.display = "none"
-  }
+  localStorage.setItem("view_apply", apply_page);
+  window.location.href = "management.html";
+}

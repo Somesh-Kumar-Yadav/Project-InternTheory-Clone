@@ -273,13 +273,12 @@ function show_content() {
                 ></a>
               </div>
             </div>
-            <div>
-              <a
+            <div onclick="apply_page(${i})">
+              <p
                 class="upgrade_skill"
-                href="../onlineCourses/online_courses.html"
-                target="blank"
+                
                 >VIEW AND APPLY
-              </a>
+              </p>
             </div>
           </div>
         `;
@@ -371,4 +370,17 @@ function logout() {
   user = [];
   localStorage.setItem("user", JSON.stringify(user));
   window.location.href = "../index.html";
+}
+
+///to apply page
+function apply_page(id) {
+  let apply_page = localStorage.getItem("view_apply");
+  if (apply_page == null) {
+    apply_page = id;
+  } else {
+    apply_page = id;
+  }
+
+  localStorage.setItem("view_apply", apply_page);
+  window.location.href = "management.html";
 }
