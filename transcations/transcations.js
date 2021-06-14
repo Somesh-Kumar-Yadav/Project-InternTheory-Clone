@@ -119,6 +119,18 @@ function contact_us() {
 function home() {
   window.location.href = "../index.html";
 }
+//Navigate to jobs page
+function jobs() {
+  window.location.href = "../jobs/jobs.html";
+}
+//Navigate to dash_board page
+function dash_board() {
+  window.location.href = "../dashboard/profile.html";
+}
+//Navigate to transactions page
+function transcations() {
+  window.location.href = "transcations.html";
+}
 //Navigate to register page
 function register() {
   window.location.href = "../register/register.html";

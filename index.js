@@ -115,9 +115,21 @@ function online_courses() {
 function contact_us() {
   window.location.href = "contact-us/contact_us.html";
 }
+//Navigate to jobs page
+function jobs() {
+  window.location.href = "jobs/jobs.html";
+}
+//Navigate to transactions page
+function transcations() {
+  window.location.href = "transcations/transcations.html";
+}
 //Navigate to home page
 function home() {
   window.location.href = "index.html";
+}
+//Navigate to dash_board page
+function dash_board() {
+  window.location.href = "dashboard/profile.html";
 }
 //Navigate to register page
 function register() {

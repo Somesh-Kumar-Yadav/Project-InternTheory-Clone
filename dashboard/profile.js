@@ -123,6 +123,14 @@ function home() {
 function register() {
   window.location.href = "../register/register.html";
 }
+//Navigate to jobs page
+function jobs() {
+  window.location.href = "../jobs/jobs.html";
+}
+//Navigate to transactions page
+function transcations() {
+  window.location.href = "../transcations/transcations.html";
+}
 //Navigate to logIn page
 function logIn() {
   window.location.href = "../logIn/student_login.html";
