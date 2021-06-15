@@ -120,7 +120,7 @@ function show_icons(id) {
   icons_count[index]++;
 }
 
-let intership_obj = JSON.parse(localStorage.getItem("intership_obj"));
+let intership_obj = JSON.parse(localStorage.getItem("internship_obj"));
 
 for (let i = 0; i < intership_obj.length; i++) {
   icons_count.push(0);
