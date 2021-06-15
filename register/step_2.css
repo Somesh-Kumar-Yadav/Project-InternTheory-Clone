@@ -379,7 +379,10 @@ button:hover {
   .register_step_2 > .step_2_main {
     min-width: 100%;
   }
-
+  .new_left {
+    display: none;
+    visibility: hidden;
+  }
   /* /////////////////////////////FOOTER ////////////////////// */
 
   .footer_upper {

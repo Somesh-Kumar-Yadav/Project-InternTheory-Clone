@@ -380,16 +380,57 @@ function promocode() {
 }
 function checkout_click() {
   if (document.getElementById("check_btn").innerText == "CHECKOUT") {
-    alert("Thank you for choosing us");
-    let avail_courses = JSON.parse(localStorage.getItem("avail_courses"));
+    // alert("Thank you for choosing us");
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, "0");
+    let mm = String(today.getMonth() + 1).padStart(2, "0");
+    let yyyy = today.getFullYear();
+
+    today = mm + "/" + dd + "/" + yyyy;
+    let d = new Date();
+    let hours = String(d.getHours()).padStart(2, "0");
+    let min = String(d.getMinutes()).padStart(2, "0");
+    d = hours + ":" + min;
+    let register_data = JSON.parse(localStorage.getItem("register_data"));
+    let user = JSON.parse(localStorage.getItem("user"));
+    let trans_amount = amount.innerHTML;
+    let trans_igst = igst.innerHTML;
+    let trans_cgst = cgst.innerHTML;
+    let trans_total_cont = total_cont.innerHTML;
+    let discounted_price = updated_price.innerHTML;
     let total = localStorage.getItem("total");
+    let transcation = {
+      total: total,
+      amount: trans_amount,
+      igst: trans_igst,
+      cgst: trans_cgst,
+      total_cont: trans_total_cont,
+      discounted_price: discounted_price,
+      date: today,
+      time: d,
+    };
+    user[0].transcations.push(transcation);
+    for (let i = 0; i < register_data.length; i++) {
+      if (
+        register_data[i].fname == user[0].fname &&
+        register_data[i].email == user[0].email &&
+        register_data[i].lname == user[0].lname &&
+        register_data[i].password == user[0].password
+      ) {
+        register_data[i].transcations.push(transcation);
+        break;
+      }
+    }
+    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("register_data", JSON.stringify(register_data));
+    let avail_courses = JSON.parse(localStorage.getItem("avail_courses"));
     total = 0;
     for (let i = 0; i < avail_courses.length; i++) {
       avail_courses[i].btn_option = "ADD TO CART";
     }
     localStorage.setItem("avail_courses", JSON.stringify(avail_courses));
     localStorage.setItem("total", total);
-    window.location.href = "../index.html";
+    window.location.href = "../transcations/transcations.html";
   }
 }
 //Navigate to online courses page-------------------------------------------->

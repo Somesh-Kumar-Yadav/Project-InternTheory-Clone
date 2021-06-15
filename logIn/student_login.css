@@ -431,6 +431,10 @@ button:hover {
   .footer_upper {
     display: none;
   }
+  .new_left {
+    display: none;
+    visibility: hidden;
+  }
   .footer_lower {
     display: none;
   }

@@ -245,6 +245,7 @@ function next(e) {
     preference,
     how_find,
     looking,
+    transcations: [],
   };
 
   let register_data;

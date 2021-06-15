@@ -504,6 +504,10 @@ button:hover {
     width: 80%;
     margin: auto;
   }
+  .new_left {
+    display: none;
+    visibility: hidden;
+  }
 
   /* /////////////////////////////FOOTER ////////////////////// */
 

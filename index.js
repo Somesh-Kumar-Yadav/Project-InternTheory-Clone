@@ -700,7 +700,7 @@ To know more about our services or work, please visit www.gyanpro.com
   },
 ];
 
-localStorage.setItem("intership_obj", JSON.stringify(intership_obj));
+localStorage.setItem("internship_obj", JSON.stringify(intership_obj));
 ///////////////////////////////////////Job Objects.-------------------------------------------->
 const jobObj = [
   {

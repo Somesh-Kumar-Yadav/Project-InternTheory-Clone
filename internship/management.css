@@ -594,6 +594,10 @@ input {
     padding-bottom: 5%;
     overflow: hidden;
   }
+  .new_left {
+    display: none;
+    visibility: hidden;
+  }
 }
 @media (max-width: 552px) {
   .internship .internship_left {

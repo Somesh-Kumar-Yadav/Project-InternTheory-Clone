@@ -430,14 +430,18 @@ button:hover {
 /* //////////FOOTER END //////// */
 /* Media Queries */
 @media (max-width: 952px) {
+  .new_left {
+    display: none;
+    visibility: hidden;
+  }
   .sign_btn button {
     height: 56px;
     margin-top: 5px;
   }
-  .search_box {
+  .search_box,
+  .new_right {
     display: none;
   }
-
   /* //////////////////// CART /////////////// */
   .checkout_cart_main {
     width: 100%;

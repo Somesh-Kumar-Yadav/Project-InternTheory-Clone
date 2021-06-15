@@ -711,8 +711,9 @@ input {
     height: 56px;
     margin-top: 0px;
   }
-  .new_right {
+  .new_left {
     display: none;
+    visibility: hidden;
   }
   .section_1 p {
     width: 80%;

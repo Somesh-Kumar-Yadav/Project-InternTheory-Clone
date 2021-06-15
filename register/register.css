@@ -394,6 +394,10 @@ button:hover {
     height: 56px;
     margin-top: 5px;
   }
+  .new_left {
+    display: none;
+    visibility: hidden;
+  }
   .search_box {
     display: none;
   }

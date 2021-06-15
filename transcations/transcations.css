@@ -382,8 +382,9 @@ button:hover {
     height: 56px;
     margin-top: 0px;
   }
-  .new_right {
+  .new_left {
     display: none;
+    visibility: hidden;
   }
   #center {
     display: block;

@@ -359,6 +359,9 @@ button:hover {
     width: 100%;
     justify-content: center;
   }
+  .new_right {
+    display: none;
+  }
 }
 
 /*///////////////////////////////////////////////////// footer//////////////////////////////////////////////////// */
@@ -436,6 +439,9 @@ button:hover {
   .sign_btn {
     display: none;
   }
+  .new_right {
+    display: none;
+  }
   .carts {
     flex-direction: column;
     width: 98%;
@@ -453,6 +459,10 @@ button:hover {
     justify-content: center;
     margin: auto;
     flex-wrap: wrap;
+  }
+  .new_left {
+    display: none;
+    visibility: hidden;
   }
   .cart {
     width: 38vw;
