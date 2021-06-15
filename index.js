@@ -287,6 +287,7 @@ function left() {
 
 let intership_obj = [
   {
+    status: "none",
     post: "SAP Executive",
     company: "CYBERCITY BUILDERS & DEVELOPERS PVT LTD",
     type: "Full Time Internship",
@@ -325,6 +326,7 @@ let intership_obj = [
     address: "KAVURI HILLS, MADHAPUR, hyderabad, 500033.",
   },
   {
+    status: "none",
     post: "Jr Sales Engineer",
     company: "Allwave AV",
     type: "Full Time Internship",
@@ -361,6 +363,7 @@ We scale our technical products and services to any need and develop solutions f
       "16th Floor, D wing, Trade World, Kamala Mills Compound, Lower Parel,, mumbai, 400013.",
   },
   {
+    status: "none",
     post: "Business Development",
     company: "Intern Theory",
     type: "Work From Home Internship",
@@ -411,6 +414,7 @@ Apply while you can. See you Aboard ;)
     address: "Work from Home",
   },
   {
+    status: "none",
     post: "SEO Interns SEARCH ENGINE OPTIMIZATION",
     company: "INCREMENTORS",
     type: "Full Time Internship",
@@ -453,6 +457,7 @@ Fresher Can Apply
     address: "Delhi",
   },
   {
+    status: "none",
     post: "Blog writer intern",
     company: "Oddy Labs",
     type: "Full Time Internship",
@@ -494,6 +499,7 @@ Fresher Can Apply
       "Oddy Labs, 4th Floor, Vasista Bhavan, GoStartX Co-working, opp. Syala Kitchen restaurant, near DLF Cyber City, Gachibowli, Hyderabad, Telangana 500032, hyderabad, 500032.",
   },
   {
+    status: "none",
     post: "Content Writer",
     company: "Natural Coders",
     type: "Work From Home Internship",
@@ -535,6 +541,7 @@ We also Provide Training in various field like Digital Marketing, Search Engine 
     address: "Chandigarh",
   },
   {
+    status: "none",
     post: "Graphic Designer",
     company: "Natural Coders",
     type: "Work From Home Internship",
@@ -576,6 +583,7 @@ We also Provide Training in various field like Digital Marketing, Search Engine 
     address: "Chandigarh",
   },
   {
+    status: "none",
     post: "Graphic Designing for Social Media Marketing",
     company: "Cloud Clothing",
     type: "Work From Home Internship",
@@ -622,6 +630,7 @@ Compensation:
     address: "Kolkata",
   },
   {
+    status: "none",
     post: "Sports Journalist",
     company: "Arsedevils",
     type: "Work From Home Internship",
@@ -664,6 +673,7 @@ We are looking for passionate and high quality writers to join our growing team 
     address: "Ahmedabad",
   },
   {
+    status: "none",
     post: "Science Curator",
     company: "GYANPRO Educational Innovation",
     type: "Part Time Internship",
@@ -704,6 +714,7 @@ localStorage.setItem("internship_obj", JSON.stringify(intership_obj));
 ///////////////////////////////////////Job Objects.-------------------------------------------->
 const jobObj = [
   {
+    status: "none",
     post: "Account Assistant",
     company: "Serene Ventures Private Limited",
     preference: "Finance",
@@ -741,6 +752,7 @@ Industry Experience Required `,
       "80, A-Wing, Ground floor, Virwani Industrial Estate, Western Express Highway, Goregaon (East), mumbai, 400063.",
   },
   {
+    status: "none",
     post: "Junior Accountant",
     company: "Serene Ventures Private Limited",
     preference: "Finance",
@@ -775,6 +787,7 @@ Bank reconciliation.`,
       "80, A-Wing, Ground floor, Virwani Industrial Estate, Western Express Highway, Goregaon (East), mumbai, 400063.",
   },
   {
+    status: "none",
     post: "Inventory Management",
     company: "Serene Ventures Private Limited",
     preference: "Finance",
@@ -807,6 +820,7 @@ Checking of the clothes and its defects etc.`,
       "80, A-Wing, Ground floor, Virwani Industrial Estate, Western Express Highway, Goregaon (East), mumbai, 400063.",
   },
   {
+    status: "none",
     post: "Customer Support Executive",
     company: "Shades of Spring",
     preference: "Customer Relationship Management",
@@ -841,6 +855,7 @@ You will be part of the go-to team for our customers to get in touch, for sharin
       "NO-151, I B MAIN, opp. to LAKSHMI MEDICALS, Koramangala 8th Block, Koramangala, Bengaluru, Karnataka 560095, bangalore, 560095.",
   },
   {
+    status: "none",
     post: "Content Writer",
     company: "Arjava Advisors Pvt Ltd",
     preference: "Content Writing",
@@ -881,6 +896,7 @@ we are a digital marketing agency which not only ideates to enhance your brand i
       "1, Shakespeare Sarani, 6C, 6th Floor, Theatre AC Market, Kolkata, West Bengal 700071, kolkata, 700071.",
   },
   {
+    status: "none",
     post: "Digital Marketing",
     company: "redcherry.io",
     preference: "Digital Marketing",
@@ -923,6 +939,7 @@ Content and Strategy
       "16th Floor, D wing, Trade World, Kamala Mills Compound,, Senapati Bapat Marg, Lower Parel, mumbai, 400013.",
   },
   {
+    status: "none",
     post: "Business Development Associate",
     company: "Arjava Advisors Pvt Ltd",
     preference: "Business Development",
@@ -965,6 +982,7 @@ we are a digital marketing agency which not only ideates to enhance your brand i
       "1, Shakespeare Sarani, 6C, 6th Floor, Theatre AC Market, Kolkata, West Bengal 700071, kolkata, 700071.",
   },
   {
+    status: "none",
     post: "Sales Manager",
     company: "Zell Education",
     preference: "Education And Training",
@@ -1004,6 +1022,7 @@ Measure daily, weekly, monthly performance trends of each team member and take c
       "Suman House, Ground Floor, Morvi Cross Lane, Chowpatty, mumbai, 400007.",
   },
   {
+    status: "none",
     post: "digital marketing",
     company: "Zell Education",
     preference: "Education And Training",
@@ -1054,3 +1073,15 @@ Measure daily, weekly, monthly performance trends of each team member and take c
   },
 ];
 localStorage.setItem("job_obj", JSON.stringify(jobObj));
+// /profile photo
+let profile_img = document.getElementsByClassName("profile_img");
+if (
+  user[0].url !=
+  "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
+) {
+  for (let i = 0; i < profile_img.length; i++) {
+    let file_name = user[0].url;
+    file_name = file_name.slice(12, file_name.length);
+    profile_img[i].src = "images/" + file_name;
+  }
+}

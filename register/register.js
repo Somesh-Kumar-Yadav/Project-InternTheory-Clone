@@ -246,6 +246,7 @@ function next(e) {
     how_find,
     looking,
     transcations: [],
+    url: "https://assets.interntheory.com/creative/default-images/girlProfile.jpg",
   };
 
   let register_data;

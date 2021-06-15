@@ -186,49 +186,55 @@ if (user_active.length != 0) {
   mobile_no.innerHTML = `${user_active[0].mobile}`;
 }
 
-
 // for contact us -------------------------------------
 
 function contact(e) {
   e.preventDefault();
-    var database = document.getElementById("Contact_us");
-    var email = database.email.value;
-    var Mobile = database.Mobile.value;
-    var message = database.message.value;
-    var subject = database.subject.value;
+  var database = document.getElementById("Contact_us");
+  var email = database.email.value;
+  var Mobile = database.Mobile.value;
+  var message = database.message.value;
+  var subject = database.subject.value;
 
-  
-    let data = {
-          email:email,
-           Mobile:Mobile,
-           message:message,
-           subject:subject
-  
- }
+  let data = {
+    email: email,
+    Mobile: Mobile,
+    message: message,
+    subject: subject,
+  };
 
-         
-  if (email.length==0 || Mobile.length<9 || message.length==0 || subject.length==0)
-  {
+  if (
+    email.length == 0 ||
+    Mobile.length < 9 ||
+    message.length == 0 ||
+    subject.length == 0
+  ) {
     alert("Put all Credentials");
-  }
-  else
-  {
+  } else {
     let arr;
 
-            arr = localStorage.getItem("contact_us");
+    arr = localStorage.getItem("contact_us");
 
-            if (arr == null) {
-                arr = [];
-            } else {
-                arr = JSON.parse(localStorage.getItem("contact_us"));
-            }
-            arr.push(data);
-            localStorage.setItem("contact_us", JSON.stringify(arr));
+    if (arr == null) {
+      arr = [];
+    } else {
+      arr = JSON.parse(localStorage.getItem("contact_us"));
+    }
+    arr.push(data);
+    localStorage.setItem("contact_us", JSON.stringify(arr));
 
-          
-       
-
-            alert("signup sucessfully");
+    alert("signup sucessfully");
   }
-          
+}
+// /profile photo
+let profile_img = document.getElementsByClassName("profile_img");
+if (
+  user[0].url !=
+  "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
+) {
+  for (let i = 0; i < profile_img.length; i++) {
+    let file_name = user[0].url;
+    file_name = file_name.slice(12, file_name.length);
+    profile_img[i].src = "images/" + file_name;
+  }
 }

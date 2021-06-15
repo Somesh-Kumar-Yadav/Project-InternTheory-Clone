@@ -385,13 +385,10 @@ function checkout_click() {
     let avail_course = JSON.parse(localStorage.getItem("avail_courses"));
     for (let i = 0; i < avail_course.length; i++) {
       if (avail_course[i].btn_option == "CHECKOUT >>") {
-
         course_name += avail_course[i].title + " , ";
-
       }
     }
     course_name = course_name.slice(0, course_name.length - 2);
-
 
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, "0");
@@ -443,9 +440,8 @@ function checkout_click() {
     localStorage.setItem("avail_courses", JSON.stringify(avail_courses));
     localStorage.setItem("total", total);
     window.location.href = "checkout_cart.html";
-  }
-  else {
-    window.location.href = "../onlineCourses/online_courses.html"
+  } else {
+    window.location.href = "../onlineCourses/online_courses.html";
   }
 }
 //Navigate to online courses page-------------------------------------------->
@@ -526,4 +522,16 @@ let user_active = JSON.parse(localStorage.getItem("user"));
 if (user_active.length != 0) {
   full_name.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
   mobile_no.innerHTML = `${user_active[0].mobile}`;
+}
+// /profile photo
+let profile_img = document.getElementsByClassName("profile_img");
+if (
+  user[0].url !=
+  "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
+) {
+  for (let i = 0; i < profile_img.length; i++) {
+    let file_name = user[0].url;
+    file_name = file_name.slice(12, file_name.length);
+    profile_img[i].src = "images/" + file_name;
+  }
 }
