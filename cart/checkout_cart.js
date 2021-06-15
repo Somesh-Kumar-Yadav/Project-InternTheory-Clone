@@ -186,3 +186,28 @@ if (user_active.length != 0) {
   full_name.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
   mobile_no.innerHTML = `${user_active[0].mobile}`;
 }
+
+////////////////////////////changes in content
+let index_ = user[0].transcations.length - 1;
+console.log(user[0].transcations);
+console.log(index_);
+let course_name = document.getElementById("course_name");
+let date = document.getElementById("date");
+let time = document.getElementById("time");
+let amount = document.getElementById("amount");
+let igst = document.getElementById("igst");
+let cgst = document.getElementById("cgst");
+let total_ = document.getElementById("total_");
+let dis_total = document.getElementById("dis_total");
+course_name.innerHTML = `Courses Name: ${user[0].transcations[index_].course_name}`;
+date.innerHTML = `Date: ${user[0].transcations[index_].date}`;
+time.innerHTML = `Time: ${user[0].transcations[index_].time}`;
+amount.innerHTML = `Amount: ${user[0].transcations[index_].amount}`;
+igst.innerHTML = `IGST: ${user[0].transcations[index_].igst}`;
+cgst.innerHTML = `CGST: ${user[0].transcations[index_].cgst}`;
+total_.innerHTML = `Total: ${user[0].transcations[index_].total_cont}`;
+if (user[0].transcations[index_].discounted_price != "") {
+  dis_total.innerHTML = `Discounted Total: ${user[0].transcations[index_].discounted_price}`;
+} else {
+  dis_total.innerHTML = `Discounted Total: ${user[0].transcations[index_].total_cont}`;
+}
