@@ -417,6 +417,7 @@ input {
   background-color: #b1b5b9a1;
   border-radius: 50%;
   padding: 1%;
+  cursor: pointer;
 }
 .internship_content .icons {
   display: none;
@@ -435,6 +436,7 @@ input {
 }
 .upgrade_skill:hover {
   background-color: rgba(128, 160, 250, 0.24);
+  cursor: pointer;
 }
 .internship_right .color_gray {
   color: rgb(36, 35, 35);

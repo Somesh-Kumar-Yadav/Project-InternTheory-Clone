@@ -454,6 +454,15 @@
     </nav>
     <!-- ///////////////////// INTERNSHIP//////////////////////////////////////////////////// -->
 
+    <div class="pop" id="pop_up">
+      <p>Your application has been submitted for this Course successfully.</p>
+      <p onclick="pop_none()">
+        <img
+          src="https://png.pngtree.com/png-vector/20190501/ourmid/pngtree-vector-cross-icon-png-image_1016083.jpg"
+          alt="icon"
+        />
+      </p>
+    </div>
     <div class="internship" id="internship">
       <div class="internship_left">
         <img
@@ -662,7 +671,7 @@
             </p>
           </div>
           <div class="buttons">
-            <button>APPLY</button>
+            <button onclick="show_pop()" id="apply_btn">APPLY</button>
             <a href="jobs.html">BACK TO JOBS</a>
           </div>
         </div>

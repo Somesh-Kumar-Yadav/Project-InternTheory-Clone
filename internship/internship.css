@@ -501,6 +501,7 @@ input {
 }
 .upgrade_skill:hover {
   background-color: rgba(128, 160, 250, 0.24);
+  cursor: pointer;
 }
 .internship_right .color_gray {
   color: rgb(36, 35, 35);

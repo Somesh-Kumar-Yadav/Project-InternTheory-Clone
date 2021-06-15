@@ -226,3 +226,13 @@ if (user_active.length != 0) {
   full_name.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
   mobile_no.innerHTML = `${user_active[0].mobile}`;
 }
+function pop_none() {
+  let pop_up = document.getElementById("pop_up");
+  pop_up.style.display = "none";
+}
+function show_pop() {
+  let pop_up = document.getElementById("pop_up");
+  let btn = document.getElementById("apply_btn");
+  pop_up.style.display = "block";
+  btn.style.display = "none";
+}

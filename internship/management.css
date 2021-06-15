@@ -297,6 +297,39 @@ input {
 
 /* ///////////////////////////////// INTERNSHIPS //////////////////////////////// */
 
+.pop {
+  width: 600px;
+  background-color: rgb(4, 247, 16);
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  padding: 1%;
+  border: 1px dashed red;
+  border-radius: 5px 15px;
+  display: none;
+  transition: ease 0.5s;
+  float: right;
+  transform: translateX(-5%);
+  font-weight: bold;
+  position: sticky;
+  top: 80px;
+  right: -10px;
+  color: black;
+  z-index: 10;
+}
+.pop img {
+  width: 15px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  top: -35px;
+  right: -280px;
+}
+.pop img:hover {
+  cursor: pointer;
+  background-color: tomato;
+}
+
 .internship {
   background-color: rgb(249, 248, 249);
   position: relative;
