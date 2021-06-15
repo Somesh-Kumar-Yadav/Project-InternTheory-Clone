@@ -15,7 +15,6 @@ nav {
   height: 66px;
   width: 100%;
   position: fixed;
-  top: 0;
   z-index: 1;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
@@ -212,150 +211,102 @@ button:hover {
   background: #3c4858;
   margin: 10px 0px;
 }
-/* /////////////////////////////////content starts here.////////////// */
-#main_box {
-  width: 100vw;
-  height: 60vh;
+.checkout {
+  background-color: rgba(247, 247, 247, 0.781);
+  padding: 2%;
+  border-radius: 5px;
   position: relative;
-  top: 70px;
+  top: 66px;
   box-sizing: border-box;
-  overflow: scroll;
 }
-
-#center {
-  width: 80%;
-  height: 100%;
-  margin: auto;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  flex-flow: row wrap;
-}
-
-#left_box {
-  width: 23%;
-  height: 90%;
+.checkout_cart {
+  width: 70%;
+  padding: 1%;
   background-color: white;
-  box-shadow: 2px 2px 2px 2px rgba(158, 153, 153, 0.308);
+  margin: auto;
+  box-shadow: 2px 2px 2px 2px rgba(255, 120, 120, 0.178);
+  border-radius: 5px;
+}
+
+.thankyou > div {
+  width: 100%;
+  text-align: center;
+}
+
+.thankyou > div img {
+  width: 10%;
+  box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.692);
+  border-radius: 50%;
+}
+.thankyou > div p {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  color: rgb(222, 31, 46);
+  font-weight: 700;
+  margin: 3%;
+}
+.checkout_cart .summary {
+  margin: auto;
+  padding: 1%;
+  background-color: rgba(243, 242, 242, 0.205);
+}
+
+.summary_cart {
+  display: flex;
+  justify-content: space-between;
+  border: 1px dashed rgb(245, 108, 108);
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.summary_cart > div {
+  width: 48%;
+  font-size: 20px;
+  text-align: left;
+  padding: 1%;
+}
+.summary_cart > div p {
+  line-height: 3rem;
+}
+.summary_p {
+  margin: 3%;
+}
+.summary_p > p {
+  background-color: rgb(222, 31, 46);
+  color: white;
+  width: 20%;
+  margin: auto;
+  padding: 2%;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 1%;
+}
+.checkout_button {
+  text-align: right;
   margin: 1%;
 }
-
-.content_box {
-  width: 90%;
-  height: 90%;
-  margin: 5% auto;
-  justify-content: center;
-  display: flex;
-  flex-flow: column wrap;
-}
-
-#img {
-  width: 100%;
-  height: 40%;
-  justify-content: center;
-  display: flex;
-}
-
-#img > img {
-  width: 43%;
-  height: 92%;
-}
-#box1 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-#box1 > button {
-  width: 6.5rem;
-  margin-left: 10px;
-  height: 32px;
-  margin-top: 5%;
+.checkout_button > button {
+  background-color: rgb(222, 31, 46);
+  width: 120px;
   color: white;
-  background-color: RGB(8, 124, 221);
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.02857em;
-  text-transform: uppercase;
+  font-weight: bold;
   border-radius: 5px;
+  padding: 1%;
   border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+.checkout_button > button:hover {
+  background-color: rgb(240, 0, 20);
 }
 
-#left_box p {
-  color: #999;
-  font-size: 14px;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
-  letter-spacing: 0.00938em;
-  padding-top: 5%;
-  margin-bottom: 6px;
-}
-
-.box {
-  padding: 5px auto;
-  width: 100%;
-  height: 14%;
-  display: flex;
-  justify-content: center;
-}
-#right_box {
-  width: 71%;
- margin: 1% 1% 1% 2%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 2px 2px 2px 2px #6b696946;
-}
-#right_box > p {
-  font-size: 36px;
-}
-#right_box > button {
-  color: white;
-  width: 200px;
-  border: none;
-  background: RGB(8, 124, 221);
-}
-
-/* //////transcation  cart/ */
-.transcation_cart {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
- 
-  color: #3c4858;
-  border-bottom: 2px dashed #ddd;
-  
-}
-.left_cont {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 60%;
-  padding: 2%;
-}
-.right_cont {
-  display: flex;
-  margin-right: 10px;
-  flex-direction: column;
-  justify-content: center;
-  width: 40%;
-  padding: 2%;
-}
-.total_courses {
-  display: flex;
-}
-.date_time {
-  display: flex;
-}
-
-/* ////// FOOTER  /////// */
 .footer {
   background-color: rgb(69, 101, 120);
-
+  position: relative;
+  top: 66px;
   color: rgb(254, 254, 251);
-  margin-top: 70px;
+
   padding: 2%;
 
   font-size: 0.875rem;
@@ -405,16 +356,25 @@ button:hover {
   width: 100%;
   margin: 5px;
 }
-
-/* Media Queries */
 @media (max-width: 942px) {
-  .footer_upper,
-  .footer {
+  .footer_upper {
     display: none;
   }
   .footer_lower {
     display: none;
   }
+}
+
+/* //////////FOOTER //////// */
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .search_box {
+    display: none;
+  }
+}
+@media (max-width: 952px) {
   button {
     height: 56px;
     margin-top: 0px;
@@ -423,35 +383,11 @@ button:hover {
     display: none;
     visibility: hidden;
   }
-  #center {
-    display: block;
+  .summary_cart {
+    flex-direction: column;
+    width: 100%;
   }
-  #left_box {
-    width: 60%;
-    margin-left: 20%;
-  }
-  #right_box {
-    margin: 0.5%;
-    width: 98%;
-  }
-  #right_box > p {
-    font-size: 24px;
-  }
-  #right_box > button {
-    height: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .footer {
-    position: relative;
-    margin-top: 200px;
-  }
-}
-@media (max-width: 600px) {
-  button {
-    display: none;
-  }
-  .side_menu {
-    width: 75vw;
+  .summary_cart > div {
+    width: 100%;
   }
 }

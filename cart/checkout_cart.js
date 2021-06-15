@@ -17,7 +17,7 @@ let drop_down_3 = document.querySelector("#drop_down_3");
 let drop_up_3 = document.querySelector("#drop_up_3");
 menu_btn.addEventListener("click", openMenu);
 menu_btn_2.addEventListener("click", openMenu);
-document.getElementById("main_box").onclick = function (e) {
+document.getElementById("checkout").onclick = function (e) {
   if (e.target != side_bar) {
     side_bar.style.display = "none";
     logo_btn.style.display = "inline-block";
@@ -115,21 +115,21 @@ function online_courses() {
 function contact_us() {
   window.location.href = "../contact-us/contact_us.html";
 }
-//Navigate to home page
-function home() {
-  window.location.href = "../index.html";
-}
 //Navigate to jobs page
 function jobs() {
   window.location.href = "../jobs/jobs.html";
 }
+//Navigate to transactions page
+function transcations() {
+  window.location.href = "../transcations/transcations.html";
+}
+//Navigate to home page
+function home() {
+  window.location.href = "../index.html";
+}
 //Navigate to dash_board page
 function dash_board() {
   window.location.href = "../dashboard/profile.html";
-}
-//Navigate to transactions page
-function transcations() {
-  window.location.href = "transcations.html";
 }
 //Navigate to register page
 function register() {
@@ -141,7 +141,7 @@ function logIn() {
 }
 //Navigate to cart page
 function cart() {
-  window.location.href = "../cart/cart.html";
+  window.location.href = "cart.html";
 }
 //Navigate to internship page
 function intern_ship() {
@@ -180,57 +180,9 @@ if (user.length != 0) {
   }
 }
 let full_name = document.getElementById("full_name");
-let full_name_1 = document.getElementById("full_name_1");
 let mobile_no = document.getElementById("mobile_no");
-let mobile_no_1 = document.getElementById("mobile_no_1");
-let e_mail_1 = document.getElementById("e_mail_1");
 let user_active = JSON.parse(localStorage.getItem("user"));
 if (user_active.length != 0) {
   full_name.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
-  full_name_1.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
   mobile_no.innerHTML = `${user_active[0].mobile}`;
-  mobile_no_1.innerHTML = `${user_active[0].mobile}`;
-  e_mail_1.innerHTML = `${user_active[0].email}`;
-}
-//transcations
-let right_box = document.getElementById("right_box");
-if (user[0].transcations.length != 0) {
-  right_box.innerHTML = ``;
-  for (let i = 0; i < user[0].transcations.length; i++) {
-    let trans_cart = document.createElement("div");
-    let discount_price = user[0].transcations[i].discounted_price;
-    if (discount_price == "") {
-      discount_price = user[0].transcations[i].total_cont;
-    }
-    trans_cart.setAttribute("class", "transcation_cart");
-    trans_cart.innerHTML = `<div class="left_cont">
-  <div class="total_courses">
-          <p>Courses Name: ${user[0].transcations[i].course_name}</p>
-          </div>
-
-          <div class="date_time">
-          <p>Date: ${user[0].transcations[i].date} Time:${user[0].transcations[i].time}</p>
-        </div>
-        </div>
-      <div class="right_cont">
-      <div class="prices">
-          <div class="transcation_amount">
-          <p>Amount: ${user[0].transcations[i].amount}</p>
-          </div>
-          <div class="transcation_igst">
-          <p>igst: ${user[0].transcations[i].igst}</p>
-          </div>
-          <div class="transcation_cgst">
-          <p>cgst: ${user[0].transcations[i].cgst}</p>
-          </div>
-          <div class="transcation_total">
-            <p>Total: ${user[0].transcations[i].total_cont}</p>
-            </div>
-            <div class="transcation_discount">
-            <p>Discounted total: ${discount_price}</p>
-            </div>
-            </div>
-            </div>`;
-    right_box.append(trans_cart);
-  }
 }

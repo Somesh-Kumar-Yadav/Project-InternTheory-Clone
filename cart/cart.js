@@ -381,6 +381,18 @@ function promocode() {
 function checkout_click() {
   if (document.getElementById("check_btn").innerText == "CHECKOUT") {
     // alert("Thank you for choosing us");
+    let course_name = "";
+    let avail_course = JSON.parse(localStorage.getItem("avail_courses"));
+    for (let i = 0; i < avail_course.length; i++) {
+      if (avail_course[i].btn_option == "CHECKOUT >>") {
+
+        course_name += avail_course[i].title + " , ";
+
+      }
+    }
+    course_name = course_name.slice(0, course_name.length - 2);
+
+
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, "0");
     let mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -400,7 +412,7 @@ function checkout_click() {
     let discounted_price = updated_price.innerHTML;
     let total = localStorage.getItem("total");
     let transcation = {
-      total: total,
+      course_name: course_name,
       amount: trans_amount,
       igst: trans_igst,
       cgst: trans_cgst,
@@ -430,7 +442,10 @@ function checkout_click() {
     }
     localStorage.setItem("avail_courses", JSON.stringify(avail_courses));
     localStorage.setItem("total", total);
-    window.location.href = "../transcations/transcations.html";
+    window.location.href = "checkout_cart.html";
+  }
+  else {
+    window.location.href = "../onlineCourses/online_courses.html"
   }
 }
 //Navigate to online courses page-------------------------------------------->

@@ -4,8 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Internships and onlinecourses for students | Intern Theory</title>
-    <link rel="stylesheet" href="cart.css" />
+
+    <link
+      async=""
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      async=""
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      async=""
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap");
+    </style>
+    <title>Checkout_cart | Intern Theory</title>
+    <link rel="stylesheet" href="checkout_cart.css" />
   </head>
   <body>
     <nav>
@@ -432,68 +454,42 @@
         </svg>
       </div>
     </nav>
-    <!-- ///////////////////////////////////////////////////////////////////  START  //////////////////////////////////////////////////////////// -->
-    <div class="checkout_cart" id="checkout_cart">
-      <div class="checkout_cart_main">
-        <div class="left">
-          <p>Cart</p>
-          <div class="opt_courses" id="opt_courses"></div>
-          <div class="cart_empty" id="cart_empty">
-            <p>The cart is empty</p>
-            <button onclick="online_courses()">CHECKOUT OUR COURSES</button>
+    <div class="checkout" id="checkout">
+      <div class="checkout_cart">
+        <div class="thankyou">
+          <div>
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/unigrid-phantom-finance-vol-1/60/014_028_shopping_cart_shop_basket_buy_check_out_checkout_store_ecommerce_6-512.png"
+              alt="Icon"
+            />
+          </div>
+          <div>
+            <p>Thank You For Choosing Us :)</p>
           </div>
         </div>
-        <div class="vr_line"></div>
-        <div class="right">
-          <div class="checkout_form">
+        <div class="summary">
+          <div class="summary_p"><p>ORDER DETAIL</p></div>
+          <div class="summary_cart">
             <div>
-              <p>Amount</p>
-              <p id="amount">₹ 0</p>
-            </div>
-            <div>
-              <p>CGST 9%</p>
-              <p id="cgst">₹ 0</p>
+              <p>Courses Name: Beat to Somesh</p>
+              <p>Date : 12/5/2021</p>
+              <p>Time : 12:05</p>
             </div>
             <div>
-              <p>SGST 9%</p>
-              <p id="igst">₹ 0</p>
+              <p>Amount : 120000</p>
+              <p>IGST :12000</p>
+              <p>CGST :747487</p>
+              <p>Total :94893</p>
+              <p>Discounted Total :979387389</p>
             </div>
-            <div>
-              <p>Total</p>
-              <p id="total_cont">₹ 0</p>
-            </div>
-            <div id="promo_price">
-              <p>Discounted Total</p>
-              <p id="updated_price"></p>
-            </div>
-            <div id="coupon">
-              <input
-                class="apply_coupon"
-                type="text"
-                placeholder="Coupon Code"
-              />
-            </div>
-            <button class="coupon_btn" id="go" onclick="promocode()">GO</button>
-
-            <!-- ////////////////// checkout button ////////////////////// -->
-            <button
-              type="submit"
-              class="checkout_btn"
-              id="check_btn"
-              onclick="checkout_click()"
-            >
-              ENROLL
-            </button>
-            <div class="cart_emi">EMI Starting at 915/month ?</div>
+          </div>
+          <div class="checkout_button">
+            <button onclick="home()">HOME</button>
+            <button onclick="logout()">LOG OUT</button>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- ///////////////////////////////////////////////////////////////////  END  //////////////////////////////////////////////////////////// -->
-
-    <!-- /////////////////////////////////////// FOOTER START ////////////////////////////// -->
-
     <div class="footer">
       <div class="footer_upper">
         <div class="links">
@@ -605,8 +601,6 @@
         <p>© 2015 - 2021 INTERNTHEORY. ALL RIGHTS RESERVED.</p>
       </div>
     </div>
-    <!-- /////////////////////////////////////// END ////////////////////////////// -->
   </body>
-
-  <script src="cart.js"></script>
+  <script src="checkout_cart.js"></script>
 </html>
