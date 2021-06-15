@@ -185,3 +185,50 @@ if (user_active.length != 0) {
   full_name.innerText = `${user_active[0].fname} ${user_active[0].lname}`;
   mobile_no.innerHTML = `${user_active[0].mobile}`;
 }
+
+
+// for contact us -------------------------------------
+
+function contact(e) {
+  e.preventDefault();
+    var database = document.getElementById("Contact_us");
+    var email = database.email.value;
+    var Mobile = database.Mobile.value;
+    var message = database.message.value;
+    var subject = database.subject.value;
+
+  
+    let data = {
+          email:email,
+           Mobile:Mobile,
+           message:message,
+           subject:subject
+  
+ }
+
+         
+  if (email.length==0 || Mobile.length<9 || message.length==0 || subject.length==0)
+  {
+    alert("Put all Credentials");
+  }
+  else
+  {
+    let arr;
+
+            arr = localStorage.getItem("contact_us");
+
+            if (arr == null) {
+                arr = [];
+            } else {
+                arr = JSON.parse(localStorage.getItem("contact_us"));
+            }
+            arr.push(data);
+            localStorage.setItem("contact_us", JSON.stringify(arr));
+
+          
+       
+
+            alert("signup sucessfully");
+  }
+          
+}
