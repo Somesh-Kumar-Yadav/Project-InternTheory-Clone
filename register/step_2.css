@@ -224,8 +224,6 @@ button:hover {
 
 .register_step_2 > .step_2_main {
   max-width: 45%;
-  /* min-width: 45%; */
-
   box-shadow: 5px 10px 5px 5px #8888885b;
   background: white;
   padding: 2%;
@@ -275,17 +273,14 @@ button:hover {
 }
 
 .autocomplete-items {
-  /* position: absolute; */
+  position: absolute;
   border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
   z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  /* top: 50%; */
-
-  width: 50%;
+  width: 18%;
   text-align: center;
-  margin-left: 50%;
+  margin-left: 16%;
 }
 .autocomplete-items div {
   padding: 10px;
@@ -294,11 +289,9 @@ button:hover {
   border-bottom: 1px solid #d4d4d4;
 }
 .autocomplete-items div:hover {
-  /*when hovering an item:*/
   background-color: #e9e9e9;
 }
 .autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
@@ -336,7 +329,6 @@ button:hover {
   width: 95%;
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid rgb(153, 51, 73); */
 }
 .search > div {
   width: 25%;
@@ -350,7 +342,6 @@ button:hover {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  /* border: 1px solid lawngreen; */
   margin-top: 2%;
 }
 .copyright {
@@ -382,6 +373,10 @@ button:hover {
   .new_left {
     display: none;
     visibility: hidden;
+  }
+  .autocomplete-items {
+    width: 40%;
+    margin-left: 38%;
   }
   /* /////////////////////////////FOOTER ////////////////////// */
 

@@ -216,7 +216,7 @@ button:hover {
 
 .register {
   width: 100%;
-
+  /* position: relative; */
   background-image: url(https://assets.interntheory.com/creative/Web-Banner.jpg);
   padding: 1%;
   position: relative;
@@ -300,15 +300,15 @@ button:hover {
 /* ?////////////////////////////// */
 
 .autocomplete-items {
-  /* position: absolute; */
+  position: absolute;
   border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
   z-index: 99;
   /*position the autocomplete items to be the same width as the container:*/
   /* top: 50%; */
-
-  width: 50%;
+  width: 20%;
+  left: 31%;
 }
 .autocomplete-items div {
   padding: 10px;
@@ -403,6 +403,9 @@ button:hover {
   }
   .register > .register_main {
     min-width: 100%;
+  }
+  .autocomplete-items {
+    left: 6%;
   }
 
   /* /////////////////////////////FOOTER ////////////////////// */
