@@ -125,22 +125,56 @@ let intership_obj = JSON.parse(localStorage.getItem("internship_obj"));
 for (let i = 0; i < intership_obj.length; i++) {
   icons_count.push(0);
 }
+///intialising the search
+let search_intern = localStorage.getItem("search_intern");
 
-let content_div = document.getElementById("intern_cart");
-
+search_intern = JSON.parse(search_intern);
+console.log(search_intern);
+// / search
+let search_cities_ = document.getElementById("search_cities");
+let search_types_ = document.getElementById("search_types");
+let search_preferences_ = document.getElementById("search_preference");
+search_cities_.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    addSearch();
+  }
+});
+search_types_.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    addSearch();
+  }
+});
+search_preferences_.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    addSearch();
+  }
+});
+let content_div = document.getElementById("intern_add");
 function show_content() {
-  console.log(intership_obj);
+  let searh = JSON.parse(localStorage.getItem("search_intern"));
+  console.log(searh);
+  let city = searh[0].cities.toLowerCase();
+  let type = searh[0].type.toLowerCase();
+  let per = searh[0].preference.toLowerCase();
+  content_div.innerHTML = "";
   for (let i = 0; i < intership_obj.length; i++) {
-    let create_cart = document.createElement("div");
-    create_cart.setAttribute("class", "internship_content");
-    create_cart.innerHTML = `
+    let city_ = intership_obj[i].location.toLowerCase();
+    let type_ = intership_obj[i].type.toLowerCase();
+    let per_ = intership_obj[i].preference.toLowerCase();
+    if (city_.includes(city) && type_.includes(type) && per_.includes(per)) {
+      let create_cart = document.createElement("div");
+      create_cart.setAttribute("class", "internship_content");
+      create_cart.innerHTML = `
           <div class="internship_content_left">
-            <div class="internship_content_img_div">
+          <div class="internship_content_img_div">
               <img
                 src= "${intership_obj[i].image}"
                 alt="images"
               />
-            </div>
+              </div>
             <div class="internship_content_middle">
               <p class="header">${intership_obj[i].post}</p>
               <p>${intership_obj[i].company} </p>
@@ -148,23 +182,23 @@ function show_content() {
               <p class="color_gray">${intership_obj[i].preference}</p>
               <p class="color_gray">${intership_obj[i].location}</p>
               <h3 class="color_g">${intership_obj[i].Stipend}</h3>
-            </div>
+              </div>
           </div>
           <div class="internship_content_right">
-            <div>
+          <div>
               <p>${intership_obj[i].time_left}</p>
-            </div>
+              </div>
             <div onclick="show_icons(${i + 1})">
-              <img
+            <img
                 class="share_icon_img"
                 class="onclick_show"
                 src="https://cdn4.iconfinder.com/data/icons/sports-technology-and-people/1000/2-35-512.png"
                 alt="Share Image"
               />
-            </div>
+              </div>
             <div class="icons" id="${i + 1}">
               <div>
-                <a
+              <a
                   class="jss154 jss148 jss1391"
                   tabindex="0"
                   role="button"
@@ -173,39 +207,39 @@ function show_content() {
                   ><span class="jss153"
                     ><span
                       class="
-                        material-icons
+                      material-icons
                         jss244
                         jss1392
                         fab
                         fa-facebook-square
                       "
                       aria-hidden="true"
-                    ></span></span
-                  ><span class="jss237"></span
-                ></a>
-              </div>
-              <div>
-                <a
-                  class="jss154 jss148 jss1391"
-                  tabindex="0"
-                  role="button"
-                  href="${intership_obj[i].twitter}"
-                  target="_blank"
-                  ><span class="jss153"
-                    ><span
+                      ></span></span
+                      ><span class="jss237"></span
+                      ></a>
+                      </div>
+                      <div>
+                      <a
+                      class="jss154 jss148 jss1391"
+                      tabindex="0"
+                      role="button"
+                      href="${intership_obj[i].twitter}"
+                      target="_blank"
+                      ><span class="jss153"
+                      ><span
                       class="
-                        material-icons
-                        jss244
-                        jss245
-                        jss1393
-                        fab
-                        fa-twitter-square
+                      material-icons
+                      jss244
+                      jss245
+                      jss1393
+                      fab
+                      fa-twitter-square
                       "
                       aria-hidden="true"
                     ></span></span
                   ><span class="jss237"></span
                 ></a>
-              </div>
+                </div>
               <div>
                 <a
                   class="jss154 jss148 jss1391"
@@ -227,16 +261,16 @@ function show_content() {
                     ></span></span
                   ><span class="jss237"></span
                 ></a>
-              </div>
+                </div>
               <div>
                 <a
-                  class="jss154 jss148 jss1391"
+                class="jss154 jss148 jss1391"
                   tabindex="0"
                   role="button"
                   href="${intership_obj[i].linkedin}"
                   target="_blank"
                   ><span class="jss153"
-                    ><span
+                  ><span
                       class="
                         material-icons
                         jss244
@@ -246,8 +280,8 @@ function show_content() {
                         fa-linkedin
                       "
                       aria-hidden="true"
-                    ></span></span
-                  ><span class="jss237"></span
+                      ></span></span
+                      ><span class="jss237"></span
                 ></a>
               </div>
               <div>
@@ -269,20 +303,21 @@ function show_content() {
                       "
                       aria-hidden="true"
                     ></span></span
-                  ><span class="jss237"></span
+                    ><span class="jss237"></span
                 ></a>
-              </div>
+                </div>
             </div>
             <div onclick="apply_page(${i})">
-              <p
+            <p
                 class="upgrade_skill"
                 >VIEW AND APPLY
               </p>
             </div>
-          </div>
+            </div>
         `;
-    content_div.append(create_cart);
-    console.log(i);
+      content_div.append(create_cart);
+      //console.log(i);
+    }
   }
 }
 show_content();
@@ -385,7 +420,7 @@ function showSuggitions() {
     "Indore",
     "Bhopal",
     "Agra",
-    "Haidrabaad",
+    "Hyderabad",
     "Mumbai",
     "Valsad",
     "New Delhi",
@@ -393,7 +428,7 @@ function showSuggitions() {
     "Kota",
     "Faridabaad",
     "Jalgaav",
-    "Chennai",
+    "Chandigarh",
     "Kolkata",
   ];
   let types = ["Full Time", "Part Time", "Work From Home"];
@@ -595,14 +630,188 @@ function apply_page(id) {
   window.location.href = "management.html";
 }
 // /profile photo
-let profile_img = document.getElementsByClassName("profile_img");
-if (
-  user[0].url !=
-  "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
-) {
-  for (let i = 0; i < profile_img.length; i++) {
-    let file_name = user[0].url;
-    file_name = file_name.slice(12, file_name.length);
-    profile_img[i].src = "images/" + file_name;
+if (user.length != 0) {
+  let profile_img = document.getElementsByClassName("profile_img");
+  if (
+    user[0].url !=
+    "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
+  ) {
+    for (let i = 0; i < profile_img.length; i++) {
+      let file_name = user[0].url;
+      file_name = file_name.slice(12, file_name.length);
+      profile_img[i].src = "images/" + file_name;
+    }
   }
+}
+
+function addSearch() {
+  search_intern[0].cities = search_cities_.value;
+  search_intern[0].type = search_types_.value;
+  search_intern[0].preference = search_preferences_.value;
+  let city = search_intern[0].cities.toLowerCase();
+  let type = search_intern[0].type.toLowerCase();
+  let per = search_intern[0].preference.toLowerCase();
+  console.log(city);
+  console.log(search_intern);
+  content_div.innerHTML = "";
+  for (let i = 0; i < intership_obj.length; i++) {
+    let city_ = intership_obj[i].location.toLowerCase();
+    let type_ = intership_obj[i].type.toLowerCase();
+    let per_ = intership_obj[i].preference.toLowerCase();
+    if (city_.includes(city) && type_.includes(type) && per_.includes(per)) {
+      let create_cart = document.createElement("div");
+      create_cart.setAttribute("class", "internship_content");
+      create_cart.innerHTML = `
+          <div class="internship_content_left">
+          <div class="internship_content_img_div">
+              <img
+                src= "${intership_obj[i].image}"
+                alt="images"
+              />
+              </div>
+            <div class="internship_content_middle">
+              <p class="header">${intership_obj[i].post}</p>
+              <p>${intership_obj[i].company} </p>
+              <p class="color_gray">${intership_obj[i].type}</p>
+              <p class="color_gray">${intership_obj[i].preference}</p>
+              <p class="color_gray">${intership_obj[i].location}</p>
+              <h3 class="color_g">${intership_obj[i].Stipend}</h3>
+              </div>
+          </div>
+          <div class="internship_content_right">
+          <div>
+              <p>${intership_obj[i].time_left}</p>
+              </div>
+            <div onclick="show_icons(${i + 1})">
+            <img
+                class="share_icon_img"
+                class="onclick_show"
+                src="https://cdn4.iconfinder.com/data/icons/sports-technology-and-people/1000/2-35-512.png"
+                alt="Share Image"
+              />
+              </div>
+            <div class="icons" id="${i + 1}">
+              <div>
+              <a
+                  class="jss154 jss148 jss1391"
+                  tabindex="0"
+                  role="button"
+                  href="${intership_obj[i].facebook}"
+                  target="_blank"
+                  ><span class="jss153"
+                    ><span
+                      class="
+                      material-icons
+                        jss244
+                        jss1392
+                        fab
+                        fa-facebook-square
+                      "
+                      aria-hidden="true"
+                      ></span></span
+                      ><span class="jss237"></span
+                      ></a>
+                      </div>
+                      <div>
+                      <a
+                      class="jss154 jss148 jss1391"
+                      tabindex="0"
+                      role="button"
+                      href="${intership_obj[i].twitter}"
+                      target="_blank"
+                      ><span class="jss153"
+                      ><span
+                      class="
+                      material-icons
+                      jss244
+                      jss245
+                      jss1393
+                      fab
+                      fa-twitter-square
+                      "
+                      aria-hidden="true"
+                    ></span></span
+                  ><span class="jss237"></span
+                ></a>
+                </div>
+              <div>
+                <a
+                  class="jss154 jss148 jss1391"
+                  tabindex="0"
+                  role="button"
+                  href="${intership_obj[i].google}"
+                  target="_blank"
+                  ><span class="jss153"
+                    ><span
+                      class="
+                        material-icons
+                        jss244
+                        jss246
+                        jss1394
+                        fab
+                        fa-google-plus-square
+                      "
+                      aria-hidden="true"
+                    ></span></span
+                  ><span class="jss237"></span
+                ></a>
+                </div>
+              <div>
+                <a
+                class="jss154 jss148 jss1391"
+                  tabindex="0"
+                  role="button"
+                  href="${intership_obj[i].linkedin}"
+                  target="_blank"
+                  ><span class="jss153"
+                  ><span
+                      class="
+                        material-icons
+                        jss244
+                        jss246
+                        jss1396
+                        fab
+                        fa-linkedin
+                      "
+                      aria-hidden="true"
+                      ></span></span
+                      ><span class="jss237"></span
+                ></a>
+              </div>
+              <div>
+                <a
+                  class="jss154 jss148 jss1391"
+                  tabindex="0"
+                  role="button"
+                  href="${intership_obj[i].whatsapp}"
+                  target="_blank"
+                  ><span class="jss153"
+                    ><span
+                      class="
+                        material-icons
+                        jss244
+                        jss247
+                        jss1395
+                        fab
+                        fa-whatsapp-square
+                      "
+                      aria-hidden="true"
+                    ></span></span
+                    ><span class="jss237"></span
+                ></a>
+                </div>
+            </div>
+            <div onclick="apply_page(${i})">
+            <p
+                class="upgrade_skill"
+                >VIEW AND APPLY
+              </p>
+            </div>
+            </div>
+        `;
+      content_div.append(create_cart);
+      //console.log(i);
+    }
+  }
+  localStorage.setItem("search_intern", JSON.stringify(search_intern));
 }

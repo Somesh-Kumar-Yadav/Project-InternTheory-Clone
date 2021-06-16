@@ -472,7 +472,11 @@
             <form>
               <div class="search_box_1">
                 <div class="cities">
-                  <input type="text" placeholder="Cities..." />
+                  <input
+                    type="text"
+                    placeholder="Cities..."
+                    id="search_cities"
+                  />
                   <svg
                     height="20"
                     width="20"
@@ -487,7 +491,7 @@
                   </svg>
                 </div>
                 <div class="types">
-                  <input type="text" placeholder="Types..." />
+                  <input type="text" placeholder="Types..." id="search_types" />
 
                   <svg
                     height="20"
@@ -503,7 +507,11 @@
                   </svg>
                 </div>
                 <div class="preferences">
-                  <input type="text" placeholder="Preferences..." />
+                  <input
+                    type="text"
+                    placeholder="Preferences..."
+                    id="search_preference"
+                  />
                   <svg
                     height="20"
                     width="20"
@@ -523,8 +531,8 @@
               </div>
               <div class="search_box_2">
                 <div class="search_box_btn">
-                  <input type="text" placeholder="Search..." />
-                  <button>SEARCH</button>
+                  <input id="post" type="text" placeholder="Search..." />
+                  <button onclick="srch()">SEARCH</button>
                 </div>
               </div>
             </form>

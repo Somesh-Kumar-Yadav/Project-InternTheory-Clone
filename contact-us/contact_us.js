@@ -227,14 +227,16 @@ function contact(e) {
   }
 }
 // /profile photo
-let profile_img = document.getElementsByClassName("profile_img");
-if (
-  user[0].url !=
-  "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
-) {
-  for (let i = 0; i < profile_img.length; i++) {
-    let file_name = user[0].url;
-    file_name = file_name.slice(12, file_name.length);
-    profile_img[i].src = "images/" + file_name;
+if (user.length != 0) {
+  let profile_img = document.getElementsByClassName("profile_img");
+  if (
+    user[0].url !=
+    "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
+  ) {
+    for (let i = 0; i < profile_img.length; i++) {
+      let file_name = user[0].url;
+      file_name = file_name.slice(12, file_name.length);
+      profile_img[i].src = "images/" + file_name;
+    }
   }
 }

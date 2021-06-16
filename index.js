@@ -1074,14 +1074,60 @@ Measure daily, weekly, monthly performance trends of each team member and take c
 ];
 localStorage.setItem("job_obj", JSON.stringify(jobObj));
 // /profile photo
-let profile_img = document.getElementsByClassName("profile_img");
-if (
-  user[0].url !=
-  "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
-) {
-  for (let i = 0; i < profile_img.length; i++) {
-    let file_name = user[0].url;
-    file_name = file_name.slice(12, file_name.length);
-    profile_img[i].src = "images/" + file_name;
+if (user.length != 0) {
+  let profile_img = document.getElementsByClassName("profile_img");
+  if (
+    user[0].url !=
+    "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
+  ) {
+    for (let i = 0; i < profile_img.length; i++) {
+      let file_name = user[0].url;
+      file_name = file_name.slice(12, file_name.length);
+      profile_img[i].src = "images/" + file_name;
+    }
   }
 }
+
+///intialising the search
+let search_intern = localStorage.getItem("search_intern");
+if (search_intern == null) {
+  search_intern = [
+    {
+      cities: "",
+      preference: "",
+      type: "",
+    },
+  ];
+} else {
+  search_intern = JSON.parse(search_intern);
+}
+// / search
+let search_cities_ = document.getElementById("search_cities");
+let search_types_ = document.getElementById("search_types");
+let search_preferences_ = document.getElementById("search_preference");
+search_cities_.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    addSearch();
+  }
+});
+search_types_.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    addSearch();
+  }
+});
+search_preferences_.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    addSearch();
+  }
+});
+function addSearch() {
+  search_intern[0].cities = search_cities_.value;
+  search_intern[0].type = search_types_.value;
+  search_intern[0].preference = search_preferences_.value;
+  localStorage.setItem("search_intern", JSON.stringify(search_intern));
+  window.location.href = "internship/internship.html";
+}
+localStorage.setItem("search_intern", JSON.stringify(search_intern));
