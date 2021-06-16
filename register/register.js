@@ -246,6 +246,8 @@ function next(e) {
     how_find,
     looking,
     transcations: [],
+    internship: {},
+    jobs: {},
     url: "https://assets.interntheory.com/creative/default-images/girlProfile.jpg",
   };
 

@@ -231,6 +231,24 @@ function pop_none() {
   pop_up.style.display = "none";
 }
 function show_pop() {
+  let use = JSON.parse(localStorage.getItem("user"));
+  let register_dat = JSON.parse(localStorage.getItem("register_data"));
+  let idx;
+  for (let i = 0; i < register_dat.length; i++) {
+    if (
+      register_dat[i].email == use[0].email &&
+      register_dat[i].lname == use[0].lname &&
+      register_dat[i].password == use[0].password &&
+      register_dat[i].fname == use[0].fname
+    ) {
+      idx = i;
+      break;
+    }
+  }
+  use[0].jobs[apply_view] = 1;
+  register_dat[idx].jobs[apply_view] = 1;
+  localStorage.setItem("user", JSON.stringify(use));
+  localStorage.setItem("register_data", JSON.stringify(register_dat));
   let pop_up = document.getElementById("pop_up");
   let btn = document.getElementById("apply_btn");
   pop_up.style.display = "block";

@@ -666,6 +666,7 @@ function addSearch() {
   search_intern[0].cities = search_cities_.value;
   search_intern[0].type = search_types_.value;
   search_intern[0].preference = search_preferences_.value;
+  search_intern[0].post = "";
 
   let city = search_intern[0].cities.toLowerCase();
   let type = search_intern[0].type.toLowerCase();
