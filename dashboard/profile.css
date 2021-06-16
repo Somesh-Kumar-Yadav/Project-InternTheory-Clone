@@ -262,6 +262,8 @@ button:hover {
 #img > img {
   width: 43%;
   height: 92%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(110, 109, 109, 0.178);
 }
 #box1 {
   display: flex;
@@ -269,8 +271,14 @@ button:hover {
   flex-direction: column;
   align-items: center;
 }
+#box1 > #select_img {
+  width: 37%;
+  margin-top: 5%;
+  cursor: pointer;
+  border: none;
+}
 #box1 > button {
-  width: 6.5rem;
+  width: 7.5rem;
   margin-left: 10px;
   height: 32px;
   margin-top: 5%;
@@ -280,8 +288,9 @@ button:hover {
   font-weight: 500;
   letter-spacing: 0.02857em;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 4px;
   border: none;
+  box-shadow: 2px 2px 2px 2px rgba(148, 147, 147, 0.185);
 }
 
 #left_box p {

@@ -469,9 +469,9 @@
             </p>
           </div>
           <div class="search_box">
-            <form>
+            <form id="search_form" autocomplete="off">
               <div class="search_box_1">
-                <div class="cities">
+                <div class="cities autocomplete">
                   <input
                     type="text"
                     placeholder="Cities..."
@@ -489,8 +489,21 @@
                       d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
                     ></path>
                   </svg>
+                  <div class="show" id="cities">
+                    <p>Ahmedabad</p>
+                    <p>Bangalore</p>
+                    <p>Chennai</p>
+                    <p>Delhi</p>
+                    <p>Jaipur</p>
+                    <p>Kolkata</p>
+                    <p>Lucknow</p>
+                    <p>Mumbai</p>
+                    <p>Pune</p>
+                    <p>Hyderabad</p>
+                    <p>Chandigarh</p>
+                  </div>
                 </div>
-                <div class="types">
+                <div class="types autocomplete">
                   <input type="text" placeholder="Types..." id="search_types" />
 
                   <svg
@@ -505,8 +518,13 @@
                       d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
                     ></path>
                   </svg>
+                  <div class="show" id="types">
+                    <p>Full Time</p>
+                    <p>Part Time</p>
+                    <p>Work from Home</p>
+                  </div>
                 </div>
-                <div class="preferences">
+                <div class="preferences autocomplete">
                   <input
                     type="text"
                     placeholder="Preferences..."
@@ -524,6 +542,17 @@
                       d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
                     ></path>
                   </svg>
+                  <div class="show" id="preference">
+                    <p>Advertising</p>
+                    <p>Branding</p>
+                    <p>Content Writing</p>
+                    <p>Digital Marketing</p>
+                    <p>Journalism</p>
+                    <p>Logistics</p>
+                    <p>Marketings</p>
+                    <p>Operations</p>
+                    <p>Others</p>
+                  </div>
                 </div>
               </div>
               <div class="or">
@@ -531,8 +560,8 @@
               </div>
               <div class="search_box_2">
                 <div class="search_box_btn">
-                  <input id="post" type="text" placeholder="Search..." />
-                  <button onclick="srch()">SEARCH</button>
+                  <input type="text" placeholder="Search..." id="search" />
+                  <button onclick="search_1(event)">SEARCH</button>
                 </div>
               </div>
             </form>

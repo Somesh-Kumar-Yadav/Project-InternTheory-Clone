@@ -1088,6 +1088,9 @@ if (user.length != 0) {
   }
 }
 
+
+
+
 ///intialising the search
 let search_intern = localStorage.getItem("search_intern");
 if (search_intern == null) {
@@ -1108,6 +1111,7 @@ let search_preferences_ = document.getElementById("search_preference");
 search_cities_.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
+    console.log(search_cities_)
     addSearch();
   }
 });
@@ -1131,3 +1135,184 @@ function addSearch() {
   window.location.href = "internship/internship.html";
 }
 localStorage.setItem("search_intern", JSON.stringify(search_intern));
+
+let search_form = document.getElementById("search_form");
+let cities = search_form.search_cities.value;
+
+function showSuggitions() {
+  let cities = [
+    "Ahmedabad",
+    "Delhi",
+    "Bangalore",
+    "Pune",
+    "Gurugram",
+    "Jalandhar",
+    "Nagpur",
+    "Aurangabaad",
+    "Indore",
+    "Bhopal",
+    "Agra",
+    "Hyderabad",
+    "Mumbai",
+    "Valsad",
+    "New Delhi",
+    "Jaipur",
+    "Kota",
+    "Faridabaad",
+    "Jalgaav",
+    "Chandigarh",
+    "Kolkata",
+  ];
+  let types = ["Full Time", "Part Time", "Work From Home"];
+  let preferance = [
+    "Advertising",
+    "Branding",
+    "Content Writing",
+    "Digital Marketing",
+    "Journalism",
+    "Logistics",
+    "Marketings",
+    "Operations",
+    "Others",
+    "Photography",
+    "Sales",
+    "Social Media",
+    "Software Development",
+  ];
+  autocomplete(document.getElementById("search_cities"), cities);
+  autocomplete(document.getElementById("search_types"), types);
+  autocomplete(document.getElementById("search_preference"), preferance);
+  function autocomplete(inp, arr) {
+    var currentFocus;
+
+    inp.addEventListener("input", function (e) {
+      var a,
+        b,
+        i,
+        val = this.value;
+
+      closeAllLists();
+      if (!val) {
+        return false;
+      }
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function (e) {
+            inp.value = this.getElementsByTagName("input")[0].value;
+
+            set_items_localstorage(inp.value);
+            closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+    });
+
+    inp.addEventListener("keydown", function (e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+
+        addActive(x);
+      } else if (e.keyCode == 38) {
+        currentFocus--;
+
+        addActive(x);
+      } 
+    });
+    function addActive(x) {
+      if (!x) return false;
+
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = x.length - 1;
+
+      x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+      }
+    }
+    function closeAllLists(elmnt) {
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+
+    document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+    });
+  }
+}
+showSuggitions();
+
+function refresh() {
+  localStorage.removeItem("search_items");
+}
+
+function set_items_localstorage(set) {
+  let obj = {
+    item: set,
+  };
+  let arr;
+
+  arr = localStorage.getItem("search_items");
+  if (arr === null) {
+    arr = [];
+  } else {
+    arr = JSON.parse(arr);
+  }
+  arr.push(obj);
+  localStorage.setItem("search_items", JSON.stringify(arr));
+  console.log(arr);
+}
+
+///apply page function
+/////////apply page json
+
+function apply_page(id) {
+  let apply_page = localStorage.getItem("view_apply");
+  if (apply_page == null) {
+    apply_page = id;
+  } else {
+    apply_page = id;
+  }
+
+  localStorage.setItem("view_apply", apply_page);
+  window.location.href = "management.html";
+}
+// /profile photo
+if (user.length != 0) {
+  let profile_img = document.getElementsByClassName("profile_img");
+  if (
+    user[0].url !=
+    "https://assets.interntheory.com/creative/default-images/girlProfile.jpg"
+  ) {
+    for (let i = 0; i < profile_img.length; i++) {
+      let file_name = user[0].url;
+      file_name = file_name.slice(12, file_name.length);
+      profile_img[i].src = "images/" + file_name;
+    }
+  }
+}
+

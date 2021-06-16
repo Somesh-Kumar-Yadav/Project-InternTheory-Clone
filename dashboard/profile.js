@@ -191,6 +191,7 @@ if (user_active.length != 0) {
 // / set image
 function change_img() {
   let select_img = document.getElementById("select_img");
+  window.location.reload();
   console.log("hi");
   if (select_img.value != "") {
     let reg_data = JSON.parse(localStorage.getItem("register_data"));
