@@ -329,7 +329,20 @@ button:hover {
   letter-spacing: 0.01071em;
   padding: 10px;
 }
-
+#bottom_box > h3 {
+  margin-top: 10px;
+  border-top: 1px dashed #3c4858;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #3c4858;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01071em;
+  padding: 10px;
+  color: #3c4858;
+}
 #lower_box {
   box-shadow: 1px 1px 2px rgba(22, 22, 22, 0.424);
   width: 95%;
@@ -339,7 +352,39 @@ button:hover {
   display: flex;
   flex-flow: column wrap;
 }
+.internship_cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #3c4858;
+}
+.internship_img img {
+  width: 120px;
+  height: 100px;
+}
+.internship_title {
+  display: flex;
 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.internship_title h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01071em;
+  padding: 10px;
+  color: #3c4858;
+}
 /* ////////////////////////////upper carousel ///////////////////*/
 
 .carousel {

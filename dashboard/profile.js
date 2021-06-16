@@ -227,3 +227,37 @@ if (
     profile_img[i].src = "images/" + file_name;
   }
 }
+/// cart of application
+let bottom_box = document.getElementById("bottom_box");
+let internship_obj = JSON.parse(localStorage.getItem("internship_obj"));
+let job_obj = JSON.parse(localStorage.getItem("job_obj"));
+for (key in user[0].internship) {
+  let intern_box = document.createElement("div");
+  intern_box.setAttribute("class", "internship_cart");
+  intern_box.innerHTML = `<div class="internship_img">
+        <img src=${internship_obj[Number(key)].image} />
+      </div>
+      <div class="internship_title">
+        <h3>Internship application(status:pending)</h3>
+
+        <h3>Post: ${internship_obj[Number(key)].post}<br/> Company: ${
+    internship_obj[Number(key)].company
+  }</h3>
+      </div>`;
+  bottom_box.append(intern_box);
+}
+for (key in user[0].jobs) {
+  let intern_box = document.createElement("div");
+  intern_box.setAttribute("class", "internship_cart");
+  intern_box.innerHTML = `<div class="internship_img">
+        <img src=${job_obj[Number(key)].image} />
+      </div>
+      <div class="internship_title">
+        <h3>Job application(status:pending)</h3>
+
+        <h3>Post: ${job_obj[Number(key)].post}<br/> Company: ${
+    job_obj[Number(key)].company
+  }</h3>
+      </div>`;
+  bottom_box.append(intern_box);
+}
