@@ -134,11 +134,22 @@ console.log(search_intern);
 let search_cities_ = document.getElementById("search_cities");
 let search_types_ = document.getElementById("search_types");
 let search_preferences_ = document.getElementById("search_preference");
+let search_post_ = document.getElementById("search_post");
+let search_btn_ = document.getElementById("search_btn_");
 search_cities_.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     addSearch();
   }
+});
+search_btn_.addEventListener("click", function () {
+  let serh = JSON.parse(localStorage.getItem("search_intern"));
+  serh[0].post = search_post_.value;
+  serh[0].cities = "";
+  serh[0].type = "";
+  serh[0].preference = "";
+  localStorage.setItem("search_intern", JSON.stringify(serh));
+  show_content();
 });
 search_types_.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
@@ -155,16 +166,23 @@ search_preferences_.addEventListener("keyup", function (event) {
 let content_div = document.getElementById("intern_add");
 function show_content() {
   let searh = JSON.parse(localStorage.getItem("search_intern"));
-  console.log(searh);
+  // console.log(searh);
   let city = searh[0].cities.toLowerCase();
   let type = searh[0].type.toLowerCase();
   let per = searh[0].preference.toLowerCase();
+  let pos = searh[0].post.toLowerCase();
   content_div.innerHTML = "";
   for (let i = 0; i < intership_obj.length; i++) {
     let city_ = intership_obj[i].location.toLowerCase();
     let type_ = intership_obj[i].type.toLowerCase();
     let per_ = intership_obj[i].preference.toLowerCase();
-    if (city_.includes(city) && type_.includes(type) && per_.includes(per)) {
+    let pos_ = intership_obj[i].post.toLowerCase();
+    if (
+      city_.includes(city) &&
+      type_.includes(type) &&
+      per_.includes(per) &&
+      pos_.includes(pos)
+    ) {
       let create_cart = document.createElement("div");
       create_cart.setAttribute("class", "internship_content");
       create_cart.innerHTML = `
@@ -648,16 +666,19 @@ function addSearch() {
   search_intern[0].cities = search_cities_.value;
   search_intern[0].type = search_types_.value;
   search_intern[0].preference = search_preferences_.value;
+
   let city = search_intern[0].cities.toLowerCase();
   let type = search_intern[0].type.toLowerCase();
   let per = search_intern[0].preference.toLowerCase();
-  console.log(city);
-  console.log(search_intern);
+
+  // console.log(city);
+  // console.log(search_intern);
   content_div.innerHTML = "";
   for (let i = 0; i < intership_obj.length; i++) {
     let city_ = intership_obj[i].location.toLowerCase();
     let type_ = intership_obj[i].type.toLowerCase();
     let per_ = intership_obj[i].preference.toLowerCase();
+
     if (city_.includes(city) && type_.includes(type) && per_.includes(per)) {
       let create_cart = document.createElement("div");
       create_cart.setAttribute("class", "internship_content");

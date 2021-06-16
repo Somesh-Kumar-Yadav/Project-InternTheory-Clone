@@ -1088,9 +1088,6 @@ if (user.length != 0) {
   }
 }
 
-
-
-
 ///intialising the search
 let search_intern = localStorage.getItem("search_intern");
 if (search_intern == null) {
@@ -1099,6 +1096,7 @@ if (search_intern == null) {
       cities: "",
       preference: "",
       type: "",
+      post: "",
     },
   ];
 } else {
@@ -1108,12 +1106,24 @@ if (search_intern == null) {
 let search_cities_ = document.getElementById("search_cities");
 let search_types_ = document.getElementById("search_types");
 let search_preferences_ = document.getElementById("search_preference");
+let search_post_ = document.getElementById("search_post");
+console.log(search_post_);
+let search_btn_ = document.getElementById("search_btn_");
 search_cities_.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    console.log(search_cities_)
+    console.log(search_cities_);
     addSearch();
   }
+});
+search_btn_.addEventListener("click", function (event) {
+  event.preventDefault();
+  search_intern[0].cities = "";
+  search_intern[0].type = "";
+  search_intern[0].preference = "";
+  search_intern[0].post = search_post_.value;
+  localStorage.setItem("search_intern", JSON.stringify(search_intern));
+  window.location.href = "internship/internship.html";
 });
 search_types_.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
@@ -1131,6 +1141,7 @@ function addSearch() {
   search_intern[0].cities = search_cities_.value;
   search_intern[0].type = search_types_.value;
   search_intern[0].preference = search_preferences_.value;
+  search_intern[0].post = "";
   localStorage.setItem("search_intern", JSON.stringify(search_intern));
   window.location.href = "internship/internship.html";
 }
@@ -1234,7 +1245,7 @@ function showSuggitions() {
         currentFocus--;
 
         addActive(x);
-      } 
+      }
     });
     function addActive(x) {
       if (!x) return false;
@@ -1315,4 +1326,3 @@ if (user.length != 0) {
     }
   }
 }
-
