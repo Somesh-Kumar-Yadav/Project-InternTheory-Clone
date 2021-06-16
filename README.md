@@ -42,8 +42,8 @@ We made this website so much optimized way As compared to the original website w
 
 For support, email  
 
-naveen_nj2_040@masai.school 
-ramlala_nj2_075@masai.school 
+naveen_nj2_040@masai.school or
+ramlala_nj2_075@masai.school or
 somesh_nj2_076@masai.school
 
  join our Slack channel.
