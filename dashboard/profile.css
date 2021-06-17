@@ -272,7 +272,7 @@ button:hover {
   align-items: center;
 }
 #box1 > #select_img {
-  width: 37%;
+  width: 34%;
   margin-top: 5%;
   cursor: pointer;
   border: none;
@@ -290,7 +290,7 @@ button:hover {
   text-transform: uppercase;
   border-radius: 4px;
   border: none;
-  box-shadow: 2px 2px 2px 2px rgba(148, 147, 147, 0.185);
+  box-shadow: 2px 2px 2px 2px rgba(238, 233, 233, 0.185);
 }
 
 #left_box p {
@@ -344,11 +344,11 @@ button:hover {
   color: #3c4858;
 }
 #lower_box {
-  box-shadow: 1px 1px 2px rgba(22, 22, 22, 0.424);
+  box-shadow: 1px 1px 2px rgba(88, 88, 88, 0.424);
   width: 95%;
   height: 75%;
   margin: 2%;
-
+  padding: 2%;
   display: flex;
   flex-flow: column wrap;
 }
@@ -385,11 +385,12 @@ button:hover {
   padding: 10px;
   color: #3c4858;
 }
+
 /* ////////////////////////////upper carousel ///////////////////*/
 
 .carousel {
   position: relative;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  box-shadow: 1px 1px 1px rgba(201, 196, 196, 0.096);
   margin-top: 26px;
 }
 
@@ -460,8 +461,7 @@ button:hover {
   color: rgba(255, 255, 255, 1);
   font-family: "Open Sans", sans-serif;
   z-index: 9999;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33),
-    -1px 0px 2px rgba(255, 255, 255, 0);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33);
 }
 
 .boxx {
@@ -647,6 +647,7 @@ button:hover {
   padding-left: 6%;
   margin-top: -6%;
 }
+
 /* ////// FOOTER  /////// */
 .footer {
   background-color: rgb(69, 101, 120);

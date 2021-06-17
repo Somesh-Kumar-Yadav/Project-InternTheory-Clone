@@ -224,7 +224,7 @@ if (
   for (let i = 0; i < profile_img.length; i++) {
     let file_name = user[0].url;
     file_name = file_name.slice(12, file_name.length);
-    profile_img[i].src = "images/" + file_name;
+    profile_img[i].src = "../images/" + file_name;
   }
 }
 /// cart of application
