@@ -24,6 +24,21 @@ You can Contributions with us to make this more functionable.
 - Fullscreen mode
 - Fully Responsive
 - All data are stored in local data storege.
+
+
+## Tech Stack
+
+**Frontend:** Html, CSS, JavaScript, Localstorage, JSON
+
+
+## Tools and Libraries we used
+
+**For font & icons:** Googleapis and fontawesome
+
+**font used:** Roboto
+
+**For Map:** Google Map
+  
   
 ## Lessons Learned
 
