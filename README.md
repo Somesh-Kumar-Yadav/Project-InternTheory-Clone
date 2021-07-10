@@ -20,7 +20,7 @@ You can contribute with us to make this more functionable.
   
 ## Features
 
-- Excatly same as original Website
+- Exactly same as original Website
 - Fullscreen mode
 - Fully Responsive
 - All data are stored in local data storege.
