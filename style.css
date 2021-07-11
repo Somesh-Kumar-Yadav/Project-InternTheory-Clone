@@ -267,7 +267,7 @@ button:hover {
 	position: relative;
 	top: 40px;
 	height: 120px;
-	width: 1210px;
+	width: 1160px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -284,9 +284,9 @@ button:hover {
 .search_box input {
 	border: none;
 	outline: none;
-	font-size: 20px;
-	font-weight: 500;
-	width: 205px;
+	font-size: 18px;
+	font-weight: 450;
+	width: 190px;
 	padding-left: 5px;
 }
 .search_box_1,
@@ -333,7 +333,7 @@ button:hover {
 	font-weight: 500;
 	border-bottom: 1px solid rgb(204, 204, 204);
 	margin-right: 2px;
-	font-size: 20px;
+	font-size: 18px;
 }
 .search_box_2 input:hover {
 	border-bottom: 2px solid black;
