@@ -4,7 +4,7 @@
     
 # InternTheory
 
-In this project we made fullyfunctional clone of InternTheory website that provides internship to students or an employer on a hunt for their dreams.
+In this project we made fully-functional clone of InternTheory website that provides internship to students or an employer on a hunt for their dreams.
 
 
 ## Authors
@@ -16,11 +16,11 @@ In this project we made fullyfunctional clone of InternTheory website that provi
 
 Contributions are always welcome!
 
-You can Contributions with us to make this more functionable.
+You can contribute with us to make this more functionable.
   
 ## Features
 
-- Excatily same as original Website
+- Exactly same as original Website
 - Fullscreen mode
 - Fully Responsive
 - All data are stored in local data storege.
@@ -51,7 +51,7 @@ We are a learner and this is our first clone so faced many issues to build this 
   
 ## Optimizations
 
-We made this website so much optimized way As compared to the original website we write less no. Of code and more functional.
+We made this website so much optimized way as compared to the original website we write less no. Of code and more functional.
   
 ## Support
 
@@ -61,6 +61,6 @@ naveen_nj2_040@masai.school or
 ramlala_nj2_075@masai.school or
 somesh_nj2_076@masai.school
 
- join our Slack channel.
+ Join our Slack channel.
  
   
