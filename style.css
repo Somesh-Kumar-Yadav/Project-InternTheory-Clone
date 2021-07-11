@@ -237,8 +237,11 @@ button:hover {
 	align-items: center;
 	color: #ffffff;
 }
+.section_1 > div > div:nth-child(1) {
+	margin-top: 50px;
+}
 .section_1 h5 {
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 	font-weight: 100;
 	line-height: 1.33;
@@ -251,7 +254,7 @@ button:hover {
 	overflow-wrap: break-word;
 }
 .section_1 p {
-	font-size: 14px;
+	font-size: 16px;
 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 	font-weight: 100;
 	line-height: 1.75;
@@ -262,9 +265,12 @@ button:hover {
 	background: rgba(255, 255, 255, 0.77);
 	padding: 20px 30px;
 	position: relative;
-	top: 66px;
-	height: 98px;
-	width: 1120px;
+	top: 40px;
+	height: 120px;
+	width: 1210px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 0px auto;
 	border-radius: 10px;
 	box-shadow: 2px 2px 2px rgba(94, 91, 91, 0.445);
@@ -273,12 +279,15 @@ button:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-weight: 500;
 }
 .search_box input {
 	border: none;
 	outline: none;
-	font-size: 14px;
-	padding-left: 10px;
+	font-size: 20px;
+	font-weight: 500;
+	width: 205px;
+	padding-left: 5px;
 }
 .search_box_1,
 .search_box_1 > div,
@@ -289,7 +298,7 @@ button:hover {
 }
 .search_box_1 > div {
 	padding: 4px;
-	border-bottom: 1px solid rgb(204, 204, 204);
+	border-bottom: 1px solid rgb(41, 38, 38);
 	margin-right: 10px;
 }
 .search_box_1 > div:hover {
@@ -321,9 +330,13 @@ button:hover {
 	margin-right: 10px;
 	outline: none;
 	padding: 4px;
+	font-weight: 500;
 	border-bottom: 1px solid rgb(204, 204, 204);
-	margin-right: 10px;
-	font-size: 17px;
+	margin-right: 2px;
+	font-size: 20px;
+}
+.search_box_2 input:hover {
+	border-bottom: 2px solid black;
 }
 .search_box_btn > button {
 	color: #fff;
