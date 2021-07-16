@@ -23,7 +23,7 @@ You can contribute with us to make this more functionable.
 - Exactly same as original Website
 - Fullscreen mode
 - Fully Responsive
-- All data are stored in local data storege.
+- All data are stored in local data storage.
 
 
 ## Tech Stack
