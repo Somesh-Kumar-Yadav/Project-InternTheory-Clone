@@ -253,13 +253,25 @@ let slide_content_2 = document.querySelector(".section_6_cart_sec_2_2 > p");
 let slide_name_2 = document.querySelector(".section_6_cart_sec_1_2 > h5");
 let slide_position_2 = document.querySelector(".section_6_cart_sec_1_2 > span");
 let sld = 0;
-let sld_2 = 1;
-setInterval(slide_show, 3000);
+var sld_2;
+setInterval(slide_show, 1700);
 function slide_show() {
-	if (sld == 4) {
+	if (sld >= 4) {
 		sld = 0;
 	}
-	if (sld_2 == 4) {
+	if (sld < 0) {
+		sld = 3;
+	}
+	if (sld == 0) {
+		sld_2 = 1;
+	}
+	if (sld == 1) {
+		sld_2 = 2;
+	}
+	if (sld == 2) {
+		sld_2 = 3;
+	}
+	if (sld == 3) {
 		sld_2 = 0;
 	}
 	slide_img.src = slide[sld].image;
@@ -272,14 +284,12 @@ function slide_show() {
 	sld++;
 	sld_2++;
 }
-function right() {
-	sld += 1;
-	sld_2 += 1;
+function left() {
+	sld-=1;
 	slide_show();
 }
-function left() {
-	sld -= 1;
-	sld_2 -= 1;
+function right() {
+	sld += 1;
 	slide_show();
 }
 
