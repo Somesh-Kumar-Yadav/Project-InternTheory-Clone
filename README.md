@@ -52,7 +52,23 @@ We are a learner and this is our first clone so faced many issues to build this 
 ## Optimizations
 
 We made this website so much optimized way as compared to the original website we write less no. Of code and more functional.
+## Snippets
+ <img src="./images/home.png" width="780" height="450">
+ 
+  <img src="./images/home-1.png" width="780" height="450">
   
+  <img src="./images/home-2.png" width="780" height="450">
+  <img src="./images/home-3.png" width="780" height="450">
+   <img src="./images/menubar.png" width="300" height="450">
+    <img src="./images/internships.png" width="780" height="450">
+     <img src="./images/online course.png" width="780" height="400">
+      <img src="./images/online courses.png" width="780" height="400">
+       <img src="./images/cart.png" width="780" height="400">
+        <img src="./images/order details.png" width="780" height="450">
+         <img src="./images/trasactions.png" width="780" height="300">
+          <img src="./images/contact.png" width="780" height="400">
+          
+          
 ## Support
 
 For support, email  
