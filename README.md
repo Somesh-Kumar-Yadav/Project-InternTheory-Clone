@@ -52,7 +52,8 @@ We are a learner and this is our first clone so faced many issues to build this 
 ## Optimizations
 
 We made this website so much optimized way as compared to the original website we write less no. Of code and more functional.
-  
+## Snippets
+ <img src="https://github.com/Ramlala-Yadav-Git/Instagram-clone/blob/main/app/src/Image/productImages/Screenshot%202021-10-04%20102835.png" width="780" height="450">
 ## Support
 
 For support, email  
